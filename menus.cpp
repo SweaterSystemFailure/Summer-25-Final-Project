@@ -33,7 +33,7 @@ void mainMenu(storage) {
 	std::cout << "2. View all students." << std::endl;
 	std::cout << "3. Generate an individual student report." << std::endl;
 	std::cout << "4. Create new assignments." << std::endl;
-	std::cout << "5. View all assignements." << std::endl;
+	std::cout << "5. View all assignments." << std::endl;
 	std::cout << "6. Enter grades for an existing assignments." << std::endl;
 	std::cout << "7. Export a report for your whole class to a .csv file" << std::endl;
 	std::cout << "8. Save your work." << std::endl;

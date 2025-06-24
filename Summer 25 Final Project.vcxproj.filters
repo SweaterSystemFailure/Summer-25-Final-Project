@@ -18,24 +18,24 @@
     <ClCompile Include="Summer 25 Final Project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="student.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="helperFunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="menus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="containers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="student.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="helperFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="containers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
