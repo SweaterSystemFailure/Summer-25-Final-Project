@@ -1,8 +1,10 @@
+#include "containers.h"
 #include "helperFunctions.h"
 #include "menus.h"
 #include <iostream>
 
 using namespace Helpers;
+using namespace gradebookContainers;
 
 void welcome(storage) {
 	std::cout << "Welcome to your grade book!" << std::endl;
