@@ -15,6 +15,7 @@ namespace gradebookContainers {
 		std::string teacherLastName;
 		unsigned gradeLevel;
 
+		//populates teacher biographical & grade level information for the class
 		static Classroom createClassroom();
 	};
 }
@@ -36,6 +37,13 @@ namespace gradebookContainers {
 		
 		//map keyed to assignment name. value is the score.
 		std::map<std::string, float> assignmentScores;	
+
+		void addStudent(globalStorage& storage);
+		void printStudent(student& newStudent);
+		void addAssignment(globalStorage& storage);
+		void enterGrades(globalStorage& storage);
+		void printAllStudents(const globalStorage& storage);
+		void printAssignments(const vector<assignment>& assignments);
 	};
 
 	class assignment {
@@ -46,6 +54,6 @@ namespace gradebookContainers {
 	struct globalStorage {
 		std::vector<gradebookContainers::student> students; //stores students
 		std::vector<gradebookContainers::assignment> assignments; //stores assignments
-		classroom currentClass; //stores teacher & class info
+		Classroom currentClass; //stores teacher & class info
 	};
 }
