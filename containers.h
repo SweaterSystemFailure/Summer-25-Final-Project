@@ -8,21 +8,57 @@
 
 namespace gradebookContainers {
 	using namespace Helpers;
-	class Classroom {
+	
+	class Gradebook {
+	private:
+		std::vector<Student> students;
+		std::vector<Assignment> assignments;
+		Classroom currentClass;
 	public:
+		//Student Functions
+		void addStudent();
+		void enterGrades();
+		
+		//Assignemnt Functions
+		void addAssignment();
+
+		//Print Functions
+		void printAllStudents() const;
+		void printAllAssignments() const;
+		void printClassReport() const;
+
+	};
+
+	class Classroom {
+	private:
+		//Biographical Variables
 		std::string title;
 		std::string teacherFirstName;
 		std::string teacherLastName;
 		unsigned gradeLevel;
-
-		//populates teacher biographical & grade level information for the class
+	public:
+		//Initializer
 		static Classroom createClassroom();
+
+		//Mutators
+		void setTitle(const std::string& entry);
+		void setTeacherFirstName(const std::string& entry);
+		void setTeacherLastName(const std::string& entry);
+		void setGradeLevel(const unsigned& entry);
+
+		//Accessors
+		std::string getTitle() const;
+		std::string getTeacherFirstName() const;
+		std::string getTeacherLastName() const;
+		unsigned getGradeLevel() const;
+
+		//Print Function
+		void printClassroom();
 	};
-}
 
 	class Student {
-	public:
-		//biographical
+	private:
+		//Biographical Variables
 		std::string firstName;
 		std::string lastName;
 		std::string pronouns;
@@ -30,30 +66,57 @@ namespace gradebookContainers {
 		unsigned id;
 		std::string seat;
 		std::string notes;
-
-		//grades
+	public:
+		//Grade Variables
 		char overallGrade;
 		float gradePercent;
 		
-		//map keyed to assignment name. value is the score.
-		std::map<std::string, float> assignmentScores;	
+		//Individual Student Assignment Container
+		std::map<std::string, float> assignmentScores;
 
-		void addStudent(globalStorage& storage);
-		void printStudent(student& newStudent);
-		void addAssignment(globalStorage& storage);
-		void enterGrades(globalStorage& storage);
-		void printAllStudents(const globalStorage& storage);
-		void printAssignments(const vector<assignment>& assignments);
+		//Initializer
+		static Student createStudent();
+
+		//Mutators
+		void setFirstName(const std::string& entry);
+		void setLastName(const std::string& entry);
+		void setPronouns(const std::string& entry);
+		void setAge(const unsigned& entry);
+		void setID(const unsigned& entry);
+		void setSeat(const std::string& entry);
+		void setNotes(const std::string& entry);
+
+		//Accessors
+		std::string getFirstName() const;
+		std::string getLastName() const;
+		std::string getPronouns() const;
+		unsigned getAge() const;
+		unsigned getID() const;
+		std::string getSeat() const;
+		std::string getNotes() const;
+
+		//Print Function
+		void printStudent() const;
+		void printStudentReport() const;
 	};
 
-	class assignment {
-		std::string name;
+	class Assignment {
+	private:
+		std::string assignmentName;
 		float pointsPossible;
-	};
+	public:
+		//Initializer
+		static Assignment createAssignment();
 
-	struct globalStorage {
-		std::vector<gradebookContainers::student> students; //stores students
-		std::vector<gradebookContainers::assignment> assignments; //stores assignments
-		Classroom currentClass; //stores teacher & class info
+		//Mutators
+		void setAssignmentName(const std::string& entry);
+		void setPointsPossible(float entry);
+		
+		//Accessors
+		std::string getAssignmentName() const;
+		float getPointsPossible() const;
+
+		//Print Function
+		void printAssignments() const;
 	};
 }

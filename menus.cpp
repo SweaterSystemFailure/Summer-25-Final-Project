@@ -25,6 +25,14 @@ void welcome(storage) {
 	}
 }
 
+
+void exitMenu() {
+	//dump globalStorage containers
+	welcome(storage);
+	
+	//exit to desktop w/o saving
+}
+
 void mainMenu(storage) {
 	//menu options
 	std::cout << "Welcome to the main menu." << std::endl;
@@ -69,7 +77,8 @@ void mainMenu(storage) {
 		save(storage);
 		break;
 	case 9:
-		return;
+		exitMenu();
+		break;
 	default:
 		std::cout << "Please select a valid option and try again." << std::endl;
 		return mainMenu(storage);

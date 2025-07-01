@@ -137,6 +137,9 @@
     <ClInclude Include="helperFunctions.h" />
     <ClInclude Include="menus.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="SoWtxt.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
