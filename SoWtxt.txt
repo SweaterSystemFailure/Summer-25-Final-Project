@@ -1,0 +1,28 @@
+1. Overview
+This Statement of Work outlines the development of custom gradebook software a final project for Prof. Brooks' CIS25 course at Laney College in the summer of 2025. This software will allow educators to track student data and learning outcomes in the context of a K-12 learning environment.
+
+2. Scope of Work
+This project will include a the following features:
+	The ability to add and customize student profiles.
+	The ability to add and customize assignment details and assign individual scores for individual students.
+	The ability to generate a number of reports that isolate and combine the above information as appropriate.
+	The ability to export student information and grades to .csv files.
+	The ability to save information to and load information from binary files.
+	Employment of a menu driven UI.
+
+3. Deliverables
+This project will be:
+	Hosted on GitHub at https://github.com/SweaterSystemFailure/Summer-25-Final-Project and coded in C++.
+	Extensively documented.
+	Supplemented with both a powerpoint or equivalent presentation and a YouTube video, both of which will explain and demonstrate functionalilty.
+	Licensed under an open source MIT License which will be included in the GitHub repository.
+
+4. Timeline
+All project updates and developments will be reflected in the project's public GitHub commit history on a rolling basis.
+All work will be completed and submitted no later than July 23, 2025.
+
+5. Roles
+All coding will be done by Ben Fagan.
+
+6. Terms
+All work will be submitted for grading by Prof. Brooks as appropriate.
