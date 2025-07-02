@@ -11,13 +11,18 @@ namespace gradebookContainers {
 	
 	class Gradebook {
 	private:
+		Classroom currentClass;
 		std::vector<Student> students;
 		std::vector<Assignment> assignments;
-		std::vector<Classroom> currentClass;
+		
 	public:
+		//Classroom Functions
+		void createClassroom();
+
 		//Student Functions
 		void addStudent();
 		void enterGrades();
+		void scoreAllStudents();
 		
 		//Assignemnt Functions
 		void addAssignment();
@@ -37,9 +42,6 @@ namespace gradebookContainers {
 		std::string teacherLastName;
 		unsigned gradeLevel;
 	public:
-		//Initializer
-		static Classroom createClassroom();
-
 		//Mutators
 		void setTitle(const std::string& entry);
 		void setTeacherFirstName(const std::string& entry);
@@ -95,14 +97,18 @@ namespace gradebookContainers {
 		std::string getSeat() const;
 		std::string getNotes() const;
 
+		//Grade Calculation
+		void calculateGrade(const std::vector<Assignment>& assignments);
+
 		//Print Function
-		void printStudent() const;
+		void printStudent();
 		void printStudentReport() const;
 	};
 
 	class Assignment {
 	private:
 		std::string assignmentName;
+		std::string assignmentDescription;
 		float pointsPossible;
 	public:
 		//Initializer
@@ -110,10 +116,12 @@ namespace gradebookContainers {
 
 		//Mutators
 		void setAssignmentName(const std::string& entry);
+		void setAssignmentDescription(const std::string& entry);
 		void setPointsPossible(float entry);
 		
 		//Accessors
 		std::string getAssignmentName() const;
+		std::string getAssignmentDescription() const;
 		float getPointsPossible() const;
 
 		//Print Function

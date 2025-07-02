@@ -35,6 +35,7 @@ namespace Helpers {
 	std::string stringValidator(const std::string& prompt);
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
 	char charValidator(const std::string& prompt, const std::vector<char>& validOptions);
+	
 
 }
 
