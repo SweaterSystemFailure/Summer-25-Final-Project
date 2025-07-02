@@ -11,6 +11,7 @@ namespace gradebookContainers {
 	using namespace Helpers;
 
 	//Gradebook
+	//Student Functions
 	void Gradebook::addStudent() {
 		Student newStudent;
 
@@ -19,7 +20,7 @@ namespace gradebookContainers {
 			newStudent.setLastName(stringValidator("Please enter the student's last name: "));
 			newStudent.setPronouns(stringValidator("Please enter the student's pronouns: "));
 			newStudent.setAge(numericValidator("Please enter the student's age: ", 4, 19));
-			newStudent.setID(numericValidator("Please enter the student's ID number: ", 1, 9999));
+			newStudent.setID(numericValidator("Please enter the student's ID number: ", 1, 999999));
 			newStudent.setSeat(stringValidator("Please enter the student's seat location: "));
 			newStudent.setNotes(stringValidator("Enter any additional notes for this student: "));
 			newStudent.printStudent();
@@ -40,28 +41,73 @@ namespace gradebookContainers {
 		}
 	}
 
+	void Gradebook::enterGrades();
+
+	//Assignemnt Functions
+	void Gradebook::addAssignment();
+
+	//Print Functions
+	void Gradebook::printAllStudents() const;
+	void Gradebook::printAllAssignments() const;
+	void Gradebook::printClassReport() const;
+
+
 
 	//Classroom
-	Classroom Classroom::createClassroom() {
+	//Initializer -- this needs to go to Gradebook!
+	void Classroom::createClassroom() {
 		Classroom myClassroom;
 
 		std::cout << "Let's get started by entering some basic information." << std::endl;
 
 		do {
-			myClassroom.title = stringValidator("Which honorific do your students address you by? ...");
-			myClassroom.teacherFirstName = stringValidator("What is your first name? ");
-			myClassroom.teacherLastName = stringValidator("What is your last name? ");
-			myClassroom.gradeLevel = numericValidator<unsigned>("Which grade do you teach? [1–12]: ", 1, 12);
-
-			std::cout << "This is " << myClassroom.title << " " << myClassroom.teacherFirstName << " "
-				<< myClassroom.teacherLastName << "'s grade " << myClassroom.gradeLevel << " book." << std::endl;
+			myClassroom.setTitle(stringValidator("Which honorific do your students address you by? ..."));
+			myClassroom.setTeacherFirstName(stringValidator("What is your first name? "));
+			myClassroom.setTeacherLastName(stringValidator("What is your last name? "));
+			myClassroom.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1–12]: ", 1, 12));
+			myClassroom.printClassroom();
 
 		} while (!userCheck(
 			"Does this look right to you? [Y/N] ",
 			"Great! Let's continue.",
 			"That's okay. Let's try again."));
+		currentClass.push_back(myClassroom);
+		mainMenu();
+		
+	}
+	//Mutators
+	void Classroom::setTitle(const std::string& entry) {
+		title = entry;
+	}
+	void Classroom::setTeacherFirstName(const std::string& entry) {
+		teacherFirstName = entry;
+	}
+	void Classroom::setTeacherLastName(const std::string& entry) {
+		teacherLastName = entry;
+	}
+	void Classroom::setGradeLevel(const unsigned& entry) {
+		gradeLevel = entry;
+	}
 
-		return myClassroom;
+	//Accessors
+	std::string Classroom::getTitle() const {
+		return title;
+	}
+	std::string Classroom::getTeacherFirstName() const {
+		return teacherFirstName;
+	}
+	std::string Classroom::getTeacherLastName() const {
+		return teacherLastName;
+	}
+	unsigned Classroom::getGradeLevel() const {
+		return gradeLevel;
+	}
+
+	//Print Function
+	void printClassroom(Classroom& myClassroom) {
+		std::cout << "This is " << myClassroom.getTitle() << " " << myClassroom.getTeacherFirstName() << " "
+			<< myClassroom.getTeacherLastName() << "'s grade " << myClassroom.getGradeLevel() << " book." << std::endl;
+
 	}
 	
 
@@ -111,6 +157,4 @@ namespace gradebookContainers {
 	std::string Student::getNotes() const {
 		return notes;
 	}
-
-
 }

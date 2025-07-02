@@ -40,6 +40,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="SoWtxt.txt" />
+    <Text Include="SoW.txt" />
   </ItemGroup>
 </Project>

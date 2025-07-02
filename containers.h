@@ -13,7 +13,7 @@ namespace gradebookContainers {
 	private:
 		std::vector<Student> students;
 		std::vector<Assignment> assignments;
-		Classroom currentClass;
+		std::vector<Classroom> currentClass;
 	public:
 		//Student Functions
 		void addStudent();
