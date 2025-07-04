@@ -7,8 +7,7 @@
 #include <string>
 #include <map>
 
-namespace gradebookContainers {
-	using namespace Helpers;
+	namespace gradebook {
 
 	//Gradebook
 	//Classroom Functions

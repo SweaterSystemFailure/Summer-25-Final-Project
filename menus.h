@@ -4,8 +4,9 @@
 #include "menus.h"
 #include <iostream>
 
-using namespace gradebookContainers;
+using namespace gradebook {
 
-void welcome();
-void mainMenu(Gradebook& storage);
-void exitMenu();
+	void welcome();
+	void mainMenu(Gradebook& storage);
+	void exitMenu();
+}

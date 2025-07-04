@@ -5,7 +5,7 @@
 #include <limits>
 #include <cctype>
 
-namespace Helpers {
+namespace gradebook {
 
 	std::string stringValidator(const std::string& prompt) {
 		std::string userInput;

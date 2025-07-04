@@ -6,9 +6,7 @@
 #include <string>
 #include <map>
 
-namespace gradebookContainers {
-	using namespace Helpers;
-	
+namespace gradebook {
 	class Gradebook {
 	private:
 		Classroom currentClass;
@@ -111,9 +109,6 @@ namespace gradebookContainers {
 		std::string assignmentDescription;
 		float pointsPossible;
 	public:
-		//Initializer
-		static Assignment createAssignment();
-
 		//Mutators
 		void setAssignmentName(const std::string& entry);
 		void setAssignmentDescription(const std::string& entry);

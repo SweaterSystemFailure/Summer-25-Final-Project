@@ -3,8 +3,7 @@
 #include "menus.h"
 #include <iostream>
 
-using namespace Helpers;
-using namespace gradebookContainers;
+using namespace gradebook;
 
 int main()
 {

@@ -3,9 +3,7 @@
 #include "menus.h"
 #include <iostream>
 
-using namespace Helpers;
-using namespace gradebookContainers;
-
+namespace gradebook {
 void welcome(storage) {
 	std::cout << "Welcome to your grade book!" << std::endl;
 	std::cout << "Would you like to: " << std::endl;
