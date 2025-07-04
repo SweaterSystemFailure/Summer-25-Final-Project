@@ -7,7 +7,7 @@
 #include <string>
 #include <map>
 
-	namespace gradebook {
+namespace gradebook {
 
 	//Gradebook
 	//Classroom Functions
@@ -54,7 +54,7 @@
 			<< " has been added successfully!" << std::endl;
 
 		if (userCheck("Would you like to add another student? ",
-			"Okay, let's add another",
+			"Okay, let's add another.",
 			"Returning to main menu.")) {
 			addStudent();
 		}
@@ -155,6 +155,14 @@
 			assignment.printAssignments();
 		} while (!userCheck("Does this look right to you ? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
 
+		if (userCheck("Would you like to add another assignment? ",
+			"Okay, let's add another.",
+			"Returning to main menu.")) {
+			addAssignment();
+		}
+		else {
+			mainMenu();
+		}
 
 	}
 
