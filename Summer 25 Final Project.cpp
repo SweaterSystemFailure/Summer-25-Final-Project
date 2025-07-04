@@ -7,7 +7,7 @@ using namespace gradebook;
 
 int main()
 {
-    Classroom::createClassroom();
+    Gradebook::createClassroom();
     mainMenu();
 
     return 0;

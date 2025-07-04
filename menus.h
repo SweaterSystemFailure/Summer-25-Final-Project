@@ -4,7 +4,7 @@
 #include "menus.h"
 #include <iostream>
 
-using namespace gradebook {
+namespace gradebook {
 
 	void welcome();
 	void mainMenu(Gradebook& storage);

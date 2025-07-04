@@ -1,4 +1,202 @@
-﻿  student.cpp
+﻿  containers.cpp
+  helperFunctions.cpp
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,13): error C3646: 'currentClass': unknown override specifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15): error C2065: 'Student': undeclared identifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'containers.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15):
+      see declaration of 'Student'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'containers.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'containers.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'containers.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'containers.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'containers.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(7,27): error C2760: syntax error: '{' was unexpected here; expected ';'
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,7): error C2182: 'mainMenu': this use of 'void' is not valid
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,16): error C2065: 'Gradebook': undeclared identifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,27): error C2065: 'storage': undeclared identifier
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2059: syntax error: '}'
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'containers.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.cpp(10,21): error C2143: syntax error: missing ';' before '{'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.cpp(10,21): error C2447: '{': missing function header (old-style formal list?)
+  menus.cpp
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,13): error C3646: 'currentClass': unknown override specifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15): error C2065: 'Student': undeclared identifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'menus.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15):
+      see declaration of 'Student'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'menus.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'menus.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'menus.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'menus.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'menus.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(7,27): error C2760: syntax error: '{' was unexpected here; expected ';'
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,7): error C2182: 'mainMenu': this use of 'void' is not valid
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,16): error C2065: 'Gradebook': undeclared identifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,27): error C2065: 'storage': undeclared identifier
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2059: syntax error: '}'
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'menus.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.cpp(6,21): error C2143: syntax error: missing ';' before '{'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.cpp(6,21): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.cpp(86,1): error C1004: unexpected end-of-file found
   Summer 25 Final Project.cpp
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,13): error C3646: 'currentClass': unknown override specifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(12,3): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15): error C2065: 'Student': undeclared identifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,15):
+      see declaration of 'Student'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(13,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,15):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(14,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41): error C2065: 'Assignment': undeclared identifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2923: 'std::vector': 'Assignment' is not a valid template type argument for parameter '_Ty'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,41):
+      see declaration of 'Assignment'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\containers.h(101,34): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(7,27): error C2760: syntax error: '{' was unexpected here; expected ';'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,7): error C2182: 'mainMenu': this use of 'void' is not valid
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,16): error C2065: 'Gradebook': undeclared identifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(10,27): error C2065: 'storage': undeclared identifier
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2059: syntax error: '}'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\menus.h(12,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'Summer%2025%20Final%20Project.cpp')
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Summer 25 Final Project.cpp(10,5): error C2653: 'Gradebook': is not a class or namespace name
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Summer 25 Final Project.cpp(10,16): error C3861: 'createClassroom': identifier not found
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Summer 25 Final Project.cpp(11,5): error C2064: term does not evaluate to a function taking 0 arguments
   Generating Code...
-  Summer 25 Final Project.vcxproj -> C:\Users\Ben\source\repos\Summer 25 Final Project\x64\Debug\Summer 25 Final Project.exe

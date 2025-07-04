@@ -92,7 +92,7 @@ namespace gradebook {
 			for (const auto& assign : assignments) {
 				std::string prompt = "Enter score for \"" + assign.getAssignmentName() + "\" (" + std::to_string(assign.getPointsPossible()) + " pts): ";
 				float score = numericValidator<float>(prompt, 0.0f, assign.getPointsPossible());
-				selectedStudent.assignmentScores[assign.getAssignmentName()] = score;
+				selectedStudent.setAssignmentScore(assign.getAssignmentName(), score);
 			}
 			std::cout << "All grades for " << selectedStudent.getFirstName() << " " << selectedStudent.getLastName() << " have been recorded." << std::endl;
 			break;
@@ -107,7 +107,7 @@ namespace gradebook {
 
 			std::string prompt = "Enter score for \"" + selectedAssignment.getAssignmentName() + "\" (" + std::to_string(selectedAssignment.getPointsPossible()) + " pts): ";
 			float score = numericValidator<float>(prompt, 0.0f, selectedAssignment.getPointsPossible());
-			selectedStudent.assignmentScores[selectedAssignment.getAssignmentName()] = score;
+			selectedStudent.setAssignmentScore(selectedAssignment.getAssignmentName(), score);
 
 			std::cout << "Grade recorded for " << selectedAssignment.getAssignmentName() << "." << std::endl;
 			break;
@@ -121,26 +121,8 @@ namespace gradebook {
 	}
 
 	void Gradebook::scoreAllStudents() {
-		for (auto& s : students) {
-			float totalPointsPossible = 0.0f;
-			float totalPointsScored = 0.0f;
-
-			for (const auto& assign : assignments) {
-				totalPointsPossible += assign.getPointsPossible();
-				if (s.assignmentScores.count(assign.getAssignmentName())) {
-					totalPointsScored += s.assignmentScores.at(assign.getAssignmentName());
-				}
-			}
-
-			if (totalPointsPossible > 0) {
-				s.gradePercent = (totalPointsScored / totalPointsPossible) * 100.0f;
-			}
-
-			if (s.gradePercent >= 90.0f) s.overallGrade = 'A';
-			else if (s.gradePercent >= 80.0f) s.overallGrade = 'B';
-			else if (s.gradePercent >= 70.0f) s.overallGrade = 'C';
-			else if (s.gradePercent >= 60.0f) s.overallGrade = 'D';
-			else s.overallGrade = 'F';
+		for (auto& student : students) {
+			student.calculateGrade(assignments);
 		}
 	}
 
@@ -261,6 +243,9 @@ namespace gradebook {
 	void Student::setNotes(const std::string& entry) {
 		notes = entry;
 	}
+	void Student::setAssignmentScore(const std::string& assignmentName, float score) {
+		assignmentScores[assignmentName] = score;
+	}
 
 	//Accessors
 	std::string Student::getFirstName() const {
@@ -283,6 +268,10 @@ namespace gradebook {
 	}
 	std::string Student::getNotes() const {
 		return notes;
+	}
+	float Student::getAssignmentScore(const std::string& assignmentName) const {
+		auto it = assignmentScores.find(assignmentName);
+		return it != assignmentScores.end() ? it->second : 0.0f;
 	}
 
 	//Grade Calculation
