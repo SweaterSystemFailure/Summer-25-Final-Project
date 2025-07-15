@@ -38,4 +38,8 @@ namespace gradebook {
 
 	//user verification check
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
+
+	//basic menus
+	void welcomeMenu();
+	void closeMenu();
 }

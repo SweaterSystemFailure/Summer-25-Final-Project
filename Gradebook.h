@@ -8,13 +8,17 @@
 namespace gradebook {
     	class Gradebook {
 	private:
-		Classroom currentClass;
+		Teacher currentClass;
 		std::vector<Student> students;
 		std::vector<Assignment> assignments;
+        Administrator currentSchool;
 		std::vector<Administrator> school;
 
 	public:
-		//Classroom Functions
+		//Admin Function
+        void createSchool();
+
+        //Classroom Function
 		void createClassroom();
 
 		//Student Functions
@@ -22,7 +26,7 @@ namespace gradebook {
 		void enterGrades();
 		void scoreAllStudents();
 		
-		//Assignemnt Functions
+		//Assignemnt Function
 		void addAssignment();
         
         //Binary Save/Load Functions

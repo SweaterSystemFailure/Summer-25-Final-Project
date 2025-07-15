@@ -37,7 +37,7 @@ namespace gradebook {
 		void setID(const unsigned& entry);
 		void setSeat(const std::string& entry);
 		void setNotes(const std::string& entry);
-		void setStudentPassword(const std::string entry)
+		void setStudentPassword(const std::string entry);
 		void setAssignmentScore(const std::string& assignmentName, float score);
 
 		//Accessors
@@ -48,7 +48,7 @@ namespace gradebook {
 		unsigned getID() const;
 		std::string getSeat() const;
 		std::string getNotes() const;
-		std::string getStudentPassword const;
+		std::string getStudentPassword() const;
 		float getAssignmentScore(const std::string& assignmentName) const;
 
 		//Grade Calculation
@@ -59,6 +59,6 @@ namespace gradebook {
 		void printStudentReport() const;
 
 		//Menu
-		virtual void studentMenu();
+		virtual void mainMenu();
 	};
 }

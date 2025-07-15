@@ -6,13 +6,37 @@
 
 
 namespace gradebook {
+    void Gradebook::createSchool(){
+        Administrator myAdmin;
+        std::string password;
+
+        std::cout << "Let's get started by entering some basic infomation." << std::endl;
+
+        do{
+            myAdmin.setAdminTitle(stringValidator("Which honorific are you addressed by? "));
+            myAdmin.setAdminLastName(stringValidator("What is your last name?"));
+            myAdmin.setSchoolName(stringValidator("What is the name of your school?"));
+        }while (!userCheck("Does this look right to you? [Y/N] ",
+			"Great! Let's continue.",
+			"That's okay. Let's try again."));
+        
+        do{
+            password = stringValidator("Please select a strong password that is at least 8 characters long, and that contains a mix of upper and lower case characters, numbers, and special symbols.");            
+        }while(!isStrongPassword(password));
+
+        myAdmin.setAdminPassword(password);
+
+        school.push_back(myAdmin);
+    }
+
+    
     void Gradebook::createClassroom() {
-		Classroom myClassroom;
+		Teacher myClassroom;
 
 		std::cout << "Let's get started by entering some basic information." << std::endl;
 
 		do {
-			myClassroom.setTitle(stringValidator("Which honorific do your students address you by? ..."));
+			myClassroom.setTitle(stringValidator("Which honorific do your students address you by? "));
 			myClassroom.setTeacherFirstName(stringValidator("What is your first name? "));
 			myClassroom.setTeacherLastName(stringValidator("What is your last name? "));
 			myClassroom.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1�12]: ", 1, 12));

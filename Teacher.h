@@ -1,35 +1,35 @@
 #pragma once
-#include <iostream>
-
+#include "Student.h"  // inherit from Student for shared user features
+#include <string>
 
 namespace gradebook {
-	class Classroom : public Student {
+	class Teacher : public Student {
 	private:
-		//Biographical Variables
 		std::string title;
 		std::string teacherFirstName;
 		std::string teacherLastName;
 		unsigned gradeLevel;
-        std::string teacherPassword
+		std::string teacherPassword;
+
 	public:
 		//Mutators
 		void setTitle(const std::string& entry);
 		void setTeacherFirstName(const std::string& entry);
 		void setTeacherLastName(const std::string& entry);
 		void setGradeLevel(const unsigned& entry);
-        void setTeacherPassword(const std::string entry);
+		void setTeacherPassword(const std::string entry);
 
 		//Accessors
 		std::string getTitle() const;
 		std::string getTeacherFirstName() const;
 		std::string getTeacherLastName() const;
 		unsigned getGradeLevel() const;
-        std::string getTeacherPassword() const;
+		std::string getTeacherPassword() const;
 
-		//Print Function
+		//Print
 		void printClassroomReport();
 
-        //Menu
-        void teacherMainMenu() override;
+		//Menu
+		void mainMenu() override;
 	};
 }

@@ -4,31 +4,8 @@
 #include <iostream>
 
 namespace gradebook {
-	void menus::welcome(storage) {
-		std::cout << "Welcome to your grade book!" << std::endl;
-		std::cout << "Would you like to: " << std::endl;
-		std::cout << "1. Create a new classroom." << std::endl;
-		std::cout << "2. Load an existing classroom?" << std::endl;
 
-		switch (numericValidator("Please enter the number of the option that you would like to select: [1-2]", 1, 2)) {
-		case 1:
-			//create classroom function
-			break;
-		case 2:
-			// import file function
-			break;
-		default:
-			std::cout << "It looks like something went wrong. Let's try again." << std::endl;
-			welcome(storage);
-		}
-	}
 
-	void exitMenu() {
-		//dump globalStorage containers
-		welcome(storage);
-
-		//exit to desktop w/o saving
-	}
 
 	void mainMenu(storage) {
 		//menu options

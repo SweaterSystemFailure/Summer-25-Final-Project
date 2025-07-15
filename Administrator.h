@@ -28,6 +28,6 @@ namespace gradebook{
         void printSchoolReport() const;
 
         //Menu
-        void adminMainMenu() const override;
+        void adminMainMenu() override;
     };
 }

@@ -76,16 +76,15 @@ namespace gradebook {
 			gradePercent = (totalPointsScored / totalPointsPossible) * 100.0f;
 		}
 
-		if (gradePercent >= 90.0f) overallGrade = 'A';
-		else if (gradePercent >= 80.0f) overallGrade = 'B';
-		else if (gradePercent >= 70.0f) overallGrade = 'C';
-		else if (gradePercent >= 60.0f) overallGrade = 'D';
-		else overallGrade = 'F';
+		overallGrade = (gradePercent >= 90.0f) ? 'A' :
+               (gradePercent >= 80.0f) ? 'B' :
+               (gradePercent >= 70.0f) ? 'C' :
+               (gradePercent >= 60.0f) ? 'D' : 'F';
 	}
 
 	//Print Functions
 	void Student::printStudent() {
-		std::cout << "New Student Profile\n";
+		std::cout << "Student Profile\n";
 		std::cout << "------------------------\n";
 		std::cout << "First Name      : " << firstName << std::endl;
 		std::cout << "Last Name       : " << lastName << std::endl;
@@ -98,6 +97,47 @@ namespace gradebook {
 	}
 
 	void Student::printStudentReport() const {
-
+		printStudent();
+		
+	std::cout << std::endl <<"=== Assignment Scores ===" << std::endl;
+	if (assignmentScores.empty()) {
+		std::cout << "No assignments have been graded yet.\n";
+	} else {
+		for (const auto& pair : assignmentScores) {
+			std::cout << std::left << std::setw(20) << pair.first
+				<< "Score: " << std::fixed << std::setprecision(2)
+				<< pair.second << " pts\n";
+		}
 	}
+
+	std::endl;
+	std::cout << "Overall Grade: " << overallGrade
+		<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
+	}
+
+void Student::mainMenu() {
+	while (true) {
+		std::cout << "\n=== Student Menu ===\n";
+		std::cout << "1. View My Profile." << std::cout;
+		std::cout << "2. View My Grades." <<std::cout;
+		std::cout << "3. Log Out." <<std::cout;
+
+		unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 3);
+
+		switch (choice) {
+		case 1:
+			printStudent();
+			break;
+		case 2:
+			printStudentReport();
+			break;
+		case 3:
+			closeMenu();
+			return;
+		default:
+			std::cout << "Invalid selection. Please try again.\n";
+			break;
+		}
+	}
+}
 }
