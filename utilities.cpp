@@ -6,14 +6,12 @@
 #include <cctype>
 
 namespace gradebook {
-	//user character input validators
 std::string stringValidator(const std::string& prompt) {
     std::string userInput;
     while (true) {
         std::cout << prompt;
         std::getline(std::cin, userInput);
 
-        // Trim leading/trailing whitespace
         userInput.erase(0, userInput.find_first_not_of(" \t\n\r\f\v"));
         userInput.erase(userInput.find_last_not_of(" \t\n\r\f\v") + 1);
 
@@ -75,10 +73,6 @@ bool isStrongPassword(const std::string& password) {
     return true;
 	}
 
-	bool isCorrectPassword(const std::string& entry){
-
-	}
-
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt) {
 		char choice;
 		while (true) {
@@ -102,39 +96,49 @@ bool isStrongPassword(const std::string& password) {
 	}
 
 	//basic menus
-	void welcomeMenu(){
-		std::cout << "Weclome to Gradebook!" <<std::endl;
+	void welcomeMenu(Gradebook& gradebook) {
+	std::cout << "Welcome to Gradebook!" << std::endl;
 
-		//load binary
-		if(//!binary loaded){
-			std::cout << "No saved school could be found. Let's set up a new school."
-		//create new binary
-			createAdmin();	
+	// Load binary if available
+	if (/* !binaryLoaded() */ false) {  // replace with actual check
+		std::cout << "No saved school could be found. Let's set up a new school.\n";
+		gradebook.createSchool();
+	} 
+
+	while (true) {
+		std::cout << "\nPlease select a login type:\n";
+		std::cout << "1. Administrator\n";
+		std::cout << "2. Teacher\n";
+		std::cout << "3. Student\n";
+		std::cout << "4. Exit\n";
+
+		int choice = numericValidator("Choose an option [1-4]: ", 1, 4);
+
+		std::unique_ptr<User> user = nullptr;
+
+		switch (choice) {
+			case 1:
+				user = attemptLogin<Administrator>(gradebook.getAdmins());
+				break;
+			case 2:
+				user = attemptLogin<Teacher>(gradebook.getTeachers());
+				break;
+			case 3:
+				user = attemptLogin<Student>(gradebook.getStudents());
+				break;
+			case 4:
+				closeMenu();
+				break;
 		}
-		else{
-			std::cout <<"Would you like to: " << std::endl;
-			std::cout << "1. Log in as an administrator." << std:: endl;
-			std::cout << "2. Log in as a teacher." << std::endl;
-			std::cout << "3. Log in as a student." << std::endl;
-			std::cout << "4. Exit." << std::endl;
-			switch (numericValidator("Please enter the number of the option that you would like to select: [1-9] ", 1, 9)) {
-		case 1:
-			adminMenu();
-			break;
-		case 2:
-			teacherMenu();
-			break;
-		case 3:
-			studentMenu();
-			break;
-		case 4:
-			closeMenu();
-			break;	
+
+		if (user) {
+			std::cout << "Login successful. Launching menu for " << user->getRole() << ".\n\n";
+			user->menu(gradebook);
+		} else {
+			std::cout << "Login failed. Please try again.\n";
 		}
-		default:
-			cout << std::cout << "Please select a valid option and try again." << std::endl;
-			welcomeMenu();
 	}
+}
 	
 	void closeMenu(){
 		if(userCheck("Would you like to save before exiting?", "School saved! Exiting.", "Exiting without saving.")){

@@ -132,7 +132,7 @@ void Student::mainMenu() {
 			printStudentReport();
 			break;
 		case 3:
-			closeMenu();
+			welcomeMenu();
 			return;
 		default:
 			std::cout << "Invalid selection. Please try again.\n";

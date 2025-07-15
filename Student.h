@@ -1,5 +1,6 @@
 #pragma once
 #include "Assignment.h"
+#include "Gradebook.h"
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -42,13 +43,13 @@ namespace gradebook {
 
 		//Accessors
 		std::string getFirstName() const;
-		std::string getLastName() const;
+		std::string getLastName() const override;
 		std::string getPronouns() const;
 		unsigned getAge() const;
 		unsigned getID() const;
 		std::string getSeat() const;
 		std::string getNotes() const;
-		std::string getStudentPassword() const;
+		std::string getStudentPassword() const override;
 		float getAssignmentScore(const std::string& assignmentName) const;
 
 		//Grade Calculation
@@ -59,6 +60,8 @@ namespace gradebook {
 		void printStudentReport() const;
 
 		//Menu
-		virtual void mainMenu();
+		void menu(Gradebook& book) override;
+    	std::string getRole() const override { return "Student"; };
+
 	};
 }

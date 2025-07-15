@@ -1,6 +1,9 @@
 #pragma once
-#include "Student.h"  // inherit from Student for shared user features
+#include "Student.h"
 #include <string>
+#include <vector>
+#include "Assignment.h"
+#include "Gradebook.h"
 
 namespace gradebook {
 	class Teacher : public Student {
@@ -10,26 +13,39 @@ namespace gradebook {
 		std::string teacherLastName;
 		unsigned gradeLevel;
 		std::string teacherPassword;
+		bool autosave;
+
+		std::vector<Student> students;
+		std::vector<Assignment> assignments;
 
 	public:
-		//Mutators
+		// Mutators
 		void setTitle(const std::string& entry);
 		void setTeacherFirstName(const std::string& entry);
 		void setTeacherLastName(const std::string& entry);
 		void setGradeLevel(const unsigned& entry);
 		void setTeacherPassword(const std::string entry);
+		void setAutoSave(const bool entry);
 
-		//Accessors
+		// Accessors
 		std::string getTitle() const;
 		std::string getTeacherFirstName() const;
-		std::string getTeacherLastName() const;
+		std::string getTeacherLastName() const override;
 		unsigned getGradeLevel() const;
-		std::string getTeacherPassword() const;
+		std::string getTeacherPassword() const override;
+		bool getAutoSave() const;
 
-		//Print
-		void printClassroomReport();
+		// Assignment Construction and Grading
+		void addStudentToClassroom(const Student& student);
+		void enterGrades(const std::vector<Assignment>& assignments);
+		void scoreAllStudents(const std::vector<Assignment>& assignments);
+		void addAssignment(std::vector<Assignment>& assignments);
 
-		//Menu
-		void mainMenu() override;
+		// Print
+		void printClassroomReport() const;
+
+		// Menu override
+		void menu(Gradebook& book) override;
+		std::string getRole() const override { return "Teacher"; }
 	};
 }

@@ -34,12 +34,28 @@ namespace gradebook {
 	}
 	//user password validators
 	bool isStrongPassword(const std::string& password);
-	bool isCorrectPassword(const std::string& entry);
+	
+template <typename T>
+std::unique_ptr<gradebook::User> attemptLogin(const std::vector<T>& users) {
+	using namespace gradebook;
+
+	std::string lastName = stringValidator("Enter your last name: ");
+	std::string password = stringValidator("Enter your password: ");
+
+	for (const T& user : users) {
+		if (user.getLastName() == lastName && user.getPassword() == password) {
+			return std::make_unique<T>(user);  // Copy constructor
+		}
+	}
+
+	std::cout << "No matching user found.\n";
+	return nullptr;
+}
 
 	//user verification check
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
 
 	//basic menus
-	void welcomeMenu();
+	void welcomeMenu(Gradebook& gradebook);
 	void closeMenu();
 }

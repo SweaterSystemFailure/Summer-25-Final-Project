@@ -8,10 +8,8 @@
 namespace gradebook {
     	class Gradebook {
 	private:
-		Teacher currentClass;
+        std::vector<Teacher> teacher;
 		std::vector<Student> students;
-		std::vector<Assignment> assignments;
-        Administrator currentSchool;
 		std::vector<Administrator> school;
 
 	public:
@@ -23,11 +21,8 @@ namespace gradebook {
 
 		//Student Functions
 		void addStudent();
-		void enterGrades();
 		void scoreAllStudents();
 		
-		//Assignemnt Function
-		void addAssignment();
         
         //Binary Save/Load Functions
         void serializeAndSave();

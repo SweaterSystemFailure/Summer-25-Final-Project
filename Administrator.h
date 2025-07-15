@@ -1,5 +1,5 @@
 #pragma once
-#include "Classroom.h"
+#include "Teacher.h"
 #include <iostream>
 
 namespace gradebook{
@@ -20,14 +20,15 @@ namespace gradebook{
 
         //Accessors
         std::string getAdminTitle() const;
-        std::string getAdminLastName() const;
+        std::string getAdminLastName() const override;
         std::string getSchoolName() const;
-        std::string getAdminPassword() const;
+        std::string getAdminPassword() const override;
 
         //Print
         void printSchoolReport() const;
 
         //Menu
-        void adminMainMenu() override;
+        void menu(Gradebook& book) override;
+        std::string getRole() const override { return "Administrator"; }
     };
 }

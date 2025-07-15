@@ -53,119 +53,46 @@ namespace gradebook {
 	}
 
 	//Student Functions
-	void Gradebook::addStudent() {
-		Student newStudent;
+void Gradebook::addStudent() {
+    Student newStudent;
 
-		do {
-			newStudent.setFirstName(stringValidator("Please enter the student's first name: "));
-			newStudent.setLastName(stringValidator("Please enter the student's last name: "));
-			newStudent.setPronouns(stringValidator("Please enter the student's pronouns: "));
-			newStudent.setAge(numericValidator("Please enter the student's age: ", 4, 19));
-			newStudent.setID(numericValidator("Please enter the student's ID number: ", 1, 999999));
-			newStudent.setSeat(stringValidator("Please enter the student's seat location: "));
-			newStudent.setNotes(stringValidator("Enter any additional notes for this student: "));
-			newStudent.printStudent();
-		} while (!userCheck("Does this look right to you ? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
+    do {
+        newStudent.setFirstName(stringValidator("Please enter the student's first name: "));
+        newStudent.setLastName(stringValidator("Please enter the student's last name: "));
+        newStudent.setPronouns(stringValidator("Please enter the student's pronouns: "));
+        newStudent.setAge(numericValidator("Please enter the student's age: ", 4, 19));
+        newStudent.setID(numericValidator("Please enter the student's ID number: ", 1, 999999));
+        newStudent.setSeat(stringValidator("Please enter the student's seat location: "));
+        newStudent.setNotes(stringValidator("Enter any additional notes for this student: "));
+        newStudent.printStudent();
+    } while (!userCheck("Does this look right to you ? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
 
-		students.push_back(newStudent);
+    students.push_back(newStudent);
 
-		std::cout << "Student " << newStudent.getFirstName() << " " << newStudent.getLastName()
-			<< " has been added successfully!" << std::endl;
+    if (teachers.empty()) {
+        std::cout << "No teachers available to assign this student to.\n";
+    } else {
+        std::cout << "Assign student to which teacher?\n";
+        for (size_t i = 0; i < teachers.size(); ++i) {
+            std::cout << i + 1 << ". " << teachers[i].getTeacherFirstName() << " " << teachers[i].getTeacherLastName() << std::endl;
+        }
+        unsigned teacherChoice = numericValidator<unsigned>("Enter the number of the teacher: ", 1, teachers.size());
+        teachers[teacherChoice - 1].addStudentToClassroom(newStudent);
+    }
 
-		if (userCheck("Would you like to add another student? ",
-			"Okay, let's add another.",
-			"Returning to main menu.")) {
-			addStudent();
-		}
-		else {
-			mainMenu();
-		}
-	}
+    std::cout << "Student " << newStudent.getFirstName() << " " << newStudent.getLastName()
+        << " has been added successfully!" << std::endl;
 
-	void Gradebook::enterGrades() {
-		if (students.empty()) {
-			std::cout << "No students in the system. Please add students first." << std::endl;
-			return;
-		}
-		if (assignments.empty()) {
-			std::cout << "No assignments available to grade. Please add assignments first." << std::endl;
-			return;
-		}
+    if (userCheck("Would you like to add another student? ",
+        "Okay, let's add another.",
+        "Returning to main menu.")) {
+        addStudent();
+    }
+    else {
+        mainMenu();
+    }
+}
 
-		// Select student
-		std::cout << "Select a student to enter grades for:" << std::endl;
-		for (size_t i = 0; i < students.size(); ++i) {
-			std::cout << i + 1 << ". " << students[i].getFirstName() << " " << students[i].getLastName() << std::endl;
-		}
-		unsigned studentChoice = numericValidator<unsigned>("Enter the number of the student: ", 1, students.size());
-		Student& selectedStudent = students[studentChoice - 1];
-
-		// Grading choice
-		std::cout << "Would you like to:" << std::endl;
-		std::cout << "1. Enter grades for all assignments" << std::endl;
-		std::cout << "2. Enter grade for one specific assignment" << std::endl;
-		unsigned choice = numericValidator<unsigned>("Choose an option [1-2]: ", 1, 2);
-
-		switch (choice) {
-		case 1: {
-			for (const auto& assign : assignments) {
-				std::string prompt = "Enter score for \"" + assign.getAssignmentName() + "\" (" + std::to_string(assign.getPointsPossible()) + " pts): ";
-				float score = numericValidator<float>(prompt, 0.0f, assign.getPointsPossible());
-				selectedStudent.setAssignmentScore(assign.getAssignmentName(), score);
-			}
-			std::cout << "All grades for " << selectedStudent.getFirstName() << " " << selectedStudent.getLastName() << " have been recorded." << std::endl;
-			break;
-		}
-		case 2: {
-			std::cout << "Select an assignment:" << std::endl;
-			for (size_t i = 0; i < assignments.size(); ++i) {
-				std::cout << i + 1 << ". " << assignments[i].getAssignmentName() << " (" << assignments[i].getPointsPossible() << " pts)" << std::endl;
-			}
-			unsigned assignmentChoice = numericValidator<unsigned>("Enter the number of the assignment: ", 1, assignments.size());
-			Assignment& selectedAssignment = assignments[assignmentChoice - 1];
-
-			std::string prompt = "Enter score for \"" + selectedAssignment.getAssignmentName() + "\" (" + std::to_string(selectedAssignment.getPointsPossible()) + " pts): ";
-			float score = numericValidator<float>(prompt, 0.0f, selectedAssignment.getPointsPossible());
-			selectedStudent.setAssignmentScore(selectedAssignment.getAssignmentName(), score);
-
-			std::cout << "Grade recorded for " << selectedAssignment.getAssignmentName() << "." << std::endl;
-			break;
-		}
-		default:
-			std::cout << "Invalid choice, please try again." << std::endl;
-			return;
-		}
-
-		selectedStudent.calculateGrade(assignments);
-	}
-
-	void Gradebook::scoreAllStudents() {
-		for (auto& student : students) {
-			student.calculateGrade(assignments);
-		}
-	}
-
-	//Assignment Functions
-	void Gradebook::addAssignment() {
-		Assignment assignment;
-
-		do {
-			assignment.setAssignmentName(stringValidator("Please enter the name of this assignment: "));
-			assignment.setAssignmentDescription(stringValidator("Please enter a description of this assignment: "));
-			assignment.setPointsPossible(numericValidator("Please enter the number of points it is possible to receive on this assignment: ", 1, 500));
-			assignment.printAssignments();
-		} while (!userCheck("Does this look right to you ? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
-
-		if (userCheck("Would you like to add another assignment? ",
-			"Okay, let's add another.",
-			"Returning to main menu.")) {
-			addAssignment();
-		}
-		else {
-			mainMenu();
-		}
-
-	}
 
 	//Print Functions
 	void Gradebook::printAllStudents() const {
