@@ -1,10 +1,10 @@
-#include "containers.h"
-#include "helperFunctions.h"
 #include "menus.h"
+#include "Gradebook.h"
+#include "utilities.h"
 #include <iostream>
 
 namespace gradebook {
-	void welcome(storage) {
+	void menus::welcome(storage) {
 		std::cout << "Welcome to your grade book!" << std::endl;
 		std::cout << "Would you like to: " << std::endl;
 		std::cout << "1. Create a new classroom." << std::endl;
@@ -22,7 +22,6 @@ namespace gradebook {
 			welcome(storage);
 		}
 	}
-
 
 	void exitMenu() {
 		//dump globalStorage containers

@@ -6,7 +6,7 @@
 #include <cctype>
 
 namespace gradebook {
-
+	//user character input validators
 	std::string stringValidator(const std::string& prompt) {
 		std::string userInput;
 		while (true) {
@@ -20,6 +20,44 @@ namespace gradebook {
 			}
 		}
 	}
+char charValidator(const std::string& prompt, const std::vector<char>& validOptions) {
+		char input;
+		while (true) {
+			std::cout << prompt << std::endl;
+			std::cin >> input;
+			input = static_cast<char>(std::tolower(static_cast<unsigned char>(input)));
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+			for (char option : validOptions) {
+				if (static_cast<char>(std::tolower(static_cast<unsigned char>(option))) == input) {
+					return input;
+				}
+			}
+
+			std::cout << "Invalid input. Please enter one of the following: ";
+			for (char option : validOptions) {
+				std::cout << option << " ";
+			}
+			std::cout << std::endl;
+		}
+	}
+	
+	//user password validators
+	bool isStrongPassword(const std::string& password){
+		if (password.length() < 8) return false;
+
+        bool hasUpper = false, hasLower = false, hasDigit = false, hasSymbol = false;
+        for (char ch : password) {
+            if (std::isupper(ch)) hasUpper = true;
+            else if (std::islower(ch)) hasLower = true;
+            else if (std::isdigit(ch)) hasDigit = true;
+            else hasSymbol = true;
+        }
+
+        return hasUpper && hasLower && hasDigit && hasSymbol;
+	}
+	
+	bool isCorrectPassword(const std::string& entry);
 
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt) {
 		char choice;
@@ -43,26 +81,6 @@ namespace gradebook {
 		}
 	}
 
-	char charValidator(const std::string& prompt, const std::vector<char>& validOptions) {
-		char input;
-		while (true) {
-			std::cout << prompt << std::endl;
-			std::cin >> input;
-			input = static_cast<char>(std::tolower(static_cast<unsigned char>(input)));
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			for (char option : validOptions) {
-				if (static_cast<char>(std::tolower(static_cast<unsigned char>(option))) == input) {
-					return input;
-				}
-			}
-
-			std::cout << "Invalid input. Please enter one of the following: ";
-			for (char option : validOptions) {
-				std::cout << option << " ";
-			}
-			std::cout << std::endl;
-		}
-	}
+	
 	
 }

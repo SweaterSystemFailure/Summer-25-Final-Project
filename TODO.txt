@@ -1,0 +1,13 @@
+TODOs:
+--binary serialization
+--binary save/load
+--tiered menu system student->teacher->administrator
+--disband menu.h & menu.cpp. migrate start menu & end menu to utilities
+--student/teacher/admin .csv export
+--administrator reports: by class, global
+--teacher reports: by student, class
+--student reports: by student, assignment
+--password validation & implementation for each tier of access
+--autosave toggle for teacher work
+--templatized documentation for each function
+--

@@ -1,13 +1,14 @@
-#ifndef HELPER_FUNCTIONS_H
-#define HELPER_FUNCTIONS_H
-
+#pragma once
 #include <string>
 #include <vector>
 #include <iostream>
 #include <limits>
 
 namespace gradebook {
-
+	//user character input validators
+	std::string stringValidator(const std::string& prompt);
+	char charValidator(const std::string& prompt, const std::vector<char>& validOptions);
+	
 	template <typename T>
 	T numericValidator(const std::string& prompt, T min, T max) {
 		T number;
@@ -31,10 +32,10 @@ namespace gradebook {
 		}
 		return number;
 	}
+	//user password validators
+	bool isStrongPassword(const std::string& password);
+	bool isCorrectPassword(const std::string& entry);
 
-	std::string stringValidator(const std::string& prompt);
+	//user verification check
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
-	char charValidator(const std::string& prompt, const std::vector<char>& validOptions);
 }
-
-#endif

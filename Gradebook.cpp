@@ -28,8 +28,6 @@ namespace gradebook {
 		mainMenu();
 	}
 
-
-
 	//Student Functions
 	void Gradebook::addStudent() {
 		Student newStudent;
