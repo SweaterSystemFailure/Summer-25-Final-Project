@@ -1,17 +1,12 @@
-#include "containers.h"
-#include "helperFunctions.h"
-#include "menus.h"
+#include "Gradebook.h"
+#include "Classroom.h"
+#include "utilities.h"
 #include <iostream>
 #include <iomanip>
-#include <vector>
-#include <string>
-#include <map>
+
 
 namespace gradebook {
-
-	//Gradebook
-	//Classroom Functions
-	void Gradebook::createClassroom() {
+    void Gradebook::createClassroom() {
 		Classroom myClassroom;
 
 		std::cout << "Let's get started by entering some basic information." << std::endl;
@@ -20,7 +15,7 @@ namespace gradebook {
 			myClassroom.setTitle(stringValidator("Which honorific do your students address you by? ..."));
 			myClassroom.setTeacherFirstName(stringValidator("What is your first name? "));
 			myClassroom.setTeacherLastName(stringValidator("What is your last name? "));
-			myClassroom.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1–12]: ", 1, 12));
+			myClassroom.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1ï¿½12]: ", 1, 12));
 			myClassroom.printClassroom();
 
 		} while (!userCheck(
@@ -32,6 +27,8 @@ namespace gradebook {
 
 		mainMenu();
 	}
+
+
 
 	//Student Functions
 	void Gradebook::addStudent() {
@@ -181,164 +178,4 @@ namespace gradebook {
 
 	}
 	void Gradebook::printClassReport() const {}
-
-
-
-	//Classroom
-	//Mutators
-	void Classroom::setTitle(const std::string& entry) {
-		title = entry;
-	}
-	void Classroom::setTeacherFirstName(const std::string& entry) {
-		teacherFirstName = entry;
-	}
-	void Classroom::setTeacherLastName(const std::string& entry) {
-		teacherLastName = entry;
-	}
-	void Classroom::setGradeLevel(const unsigned& entry) {
-		gradeLevel = entry;
-	}
-
-	//Accessors
-	std::string Classroom::getTitle() const {
-		return title;
-	}
-	std::string Classroom::getTeacherFirstName() const {
-		return teacherFirstName;
-	}
-	std::string Classroom::getTeacherLastName() const {
-		return teacherLastName;
-	}
-	unsigned Classroom::getGradeLevel() const {
-		return gradeLevel;
-	}
-
-	//Print Function
-	void printClassroom(Classroom& myClassroom) {
-		std::cout << "This is " << myClassroom.getTitle() << " " << myClassroom.getTeacherFirstName() << " "
-			<< myClassroom.getTeacherLastName() << "'s grade " << myClassroom.getGradeLevel() << " book." << std::endl;
-	}
-
-
-	//Student
-	//Mutators
-	void Student::setFirstName(const std::string& entry) {
-		firstName = entry;
-	}
-	void Student::setLastName(const std::string& entry) {
-		lastName = entry;
-	}
-	void Student::setPronouns(const std::string& entry) {
-		pronouns = entry;
-	}
-	void Student::setAge(const unsigned& entry) {
-		age = entry;
-	}
-	void Student::setID(const unsigned& entry) {
-		id = entry;
-	}
-	void Student::setSeat(const std::string& entry) {
-		seat = entry;
-	}
-	void Student::setNotes(const std::string& entry) {
-		notes = entry;
-	}
-	void Student::setAssignmentScore(const std::string& assignmentName, float score) {
-		assignmentScores[assignmentName] = score;
-	}
-
-	//Accessors
-	std::string Student::getFirstName() const {
-		return firstName;
-	}
-	std::string Student::getLastName() const {
-		return lastName;
-	}
-	std::string Student::getPronouns() const {
-		return pronouns;
-	}
-	unsigned Student::getAge() const {
-		return age;
-	}
-	unsigned Student::getID() const {
-		return id;
-	}
-	std::string Student::getSeat() const {
-		return seat;
-	}
-	std::string Student::getNotes() const {
-		return notes;
-	}
-	float Student::getAssignmentScore(const std::string& assignmentName) const {
-		auto it = assignmentScores.find(assignmentName);
-		return it != assignmentScores.end() ? it->second : 0.0f;
-	}
-
-	//Grade Calculation
-	void Student::calculateGrade(const std::vector<Assignment>& assignments) {
-		float totalPointsPossible = 0.0f;
-		float totalPointsScored = 0.0f;
-
-		for (const auto& assign : assignments) {
-			totalPointsPossible += assign.getPointsPossible();
-			if (assignmentScores.count(assign.getAssignmentName())) {
-				totalPointsScored += assignmentScores.at(assign.getAssignmentName());
-			}
-		}
-
-		if (totalPointsPossible > 0.0f) {
-			gradePercent = (totalPointsScored / totalPointsPossible) * 100.0f;
-		}
-
-		if (gradePercent >= 90.0f) overallGrade = 'A';
-		else if (gradePercent >= 80.0f) overallGrade = 'B';
-		else if (gradePercent >= 70.0f) overallGrade = 'C';
-		else if (gradePercent >= 60.0f) overallGrade = 'D';
-		else overallGrade = 'F';
-	}
-
-	//Print Functions
-	void Student::printStudent() {
-		std::cout << "New Student Profile\n";
-		std::cout << "------------------------\n";
-		std::cout << "First Name      : " << firstName << std::endl;
-		std::cout << "Last Name       : " << lastName << std::endl;
-		std::cout << "Pronouns        : " << pronouns << std::endl;
-		std::cout << "Age             : " << age << std::endl;
-		std::cout << "Student ID      : " << id << std::endl;
-		std::cout << "Seat Location   : " << seat << std::endl;
-		std::cout << "Notes           : " << notes << std::endl;
-		std::cout << "------------------------\n" << std::endl;
-	}
-
-	void Student::printStudentReport() const {
-
-	}
-
-	//Assignments
-	//Mutators
-	void Assignment::setAssignmentName(const std::string& entry) {
-		assignmentName = entry;
-	}
-	void Assignment::setAssignmentDescription(const std::string& entry) {
-		assignmentDescription = entry;
-	}
-	void Assignment::setPointsPossible(float entry) {
-		pointsPossible = entry;
-	}
-
-	//Accessors
-	std::string Assignment::getAssignmentName() const {
-		return assignmentName;
-	}
-	std::string Assignment::getAssignmentDescription() const {
-		return assignmentDescription;
-	}
-	float Assignment::getPointsPossible() const {
-		return pointsPossible;
-	}
-
-	//Print Function
-	void Assignment::printAssignments() const {}
-
 }
