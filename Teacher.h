@@ -12,8 +12,7 @@ namespace gradebook {
 		std::string teacherFirstName;
 		std::string teacherLastName;
 		unsigned gradeLevel;
-		std::string teacherPassword;
-		bool autosave;
+		std::string password;
 
 		std::vector<Student> students;
 		std::vector<Assignment> assignments;
@@ -24,16 +23,14 @@ namespace gradebook {
 		void setTeacherFirstName(const std::string& entry);
 		void setTeacherLastName(const std::string& entry);
 		void setGradeLevel(const unsigned& entry);
-		void setTeacherPassword(const std::string entry);
-		void setAutoSave(const bool entry);
+		void setPassword(const std::string entry);
 
 		// Accessors
 		std::string getTitle() const;
 		std::string getTeacherFirstName() const;
 		std::string getTeacherLastName() const override;
 		unsigned getGradeLevel() const;
-		std::string getTeacherPassword() const override;
-		bool getAutoSave() const;
+		std::string getPassword() const override;
 		std::vector<Student>& getClassroomStudents();
 		const std::vector<Student>& getClassroomStudents() const;
 

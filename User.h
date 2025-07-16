@@ -12,17 +12,15 @@ namespace gradebook {
 
     public:
         virtual ~User() = default;
-        virtual void menu(Gradebook& gradebook) = 0;
-        
 
-        void setPassword(const std::string& entry) {
+        virtual void setPassword(const std::string& entry) {
             password = entry;
         }
-        std::string getPassword() const {
-            return password;
-        }
+
+        virtual void menu(Gradebook& gradebook) = 0;
         virtual std::string getRole() const = 0;
         virtual std::string getLastName() const = 0;
         virtual std::string getPassword() const = 0;
+      
     };
 }

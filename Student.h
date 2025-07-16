@@ -21,7 +21,6 @@ namespace gradebook {
 		unsigned id;
 		std::string seat;
 		std::string notes;
-		std::string studentPassword;
 		
 		//Grade Variables
 		char overallGrade;
@@ -30,11 +29,6 @@ namespace gradebook {
 		//Individual Student Assignment Container
 		std::map<std::string, float> assignmentScores;
 	public:
-
-		
-		//Initializer
-		static Student createStudent();
-
 		//Mutators
 		void setFirstName(const std::string& entry);
 		void setLastName(const std::string& entry);
@@ -44,7 +38,7 @@ namespace gradebook {
 		void setID(const unsigned& entry);
 		void setSeat(const std::string& entry);
 		void setNotes(const std::string& entry);
-		void setStudentPassword(const std::string entry);
+		void setPassword(const std::string entry);
 		void setOverallGrade(const char& entry);
 		void setGradePercent(const float& entry);
 		void setAssignmentScore(const std::string& assignmentName, float score);
@@ -58,7 +52,7 @@ namespace gradebook {
 		unsigned getID() const;
 		std::string getSeat() const;
 		std::string getNotes() const;
-		std::string getStudentPassword() const override;
+		std::string getPassword() const override;
 		char getOverallGrade() const;
 		float getGradePercent() const;
 		float getAssignmentScore(const std::string& assignmentName) const;

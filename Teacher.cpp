@@ -17,11 +17,8 @@ namespace gradebook {
 	void Teacher::setGradeLevel(const unsigned& entry) {
 		gradeLevel = entry;
 	}
-	void Teacher::setTeacherPassword(const std::string& entry) {
-		teacherPassword = entry;
-	}
-	void Teacher::setAutoSave(const bool& entry) {
-		autosave = entry;
+	void Teacher::setPassword(const std::string& entry) {
+		password = entry;
 	}
 
 	// Accessors
@@ -37,16 +34,12 @@ namespace gradebook {
 	unsigned Teacher::getGradeLevel() const {
 		return gradeLevel;
 	}
-	std::string Teacher::getTeacherPassword() const {
-		return teacherPassword;
-	}
-	bool Teacher::getAutoSave() const {
-		return autosave;
+	std::string Teacher::getPassword() const {
+		return password;
 	}
 	std::vector<Student>& Teacher::getClassroomStudents() {
 		return students;
 	}
-
 	const std::vector<Student>& Teacher::getClassroomStudents() const {
 		return students;
 	}

@@ -33,8 +33,8 @@ namespace gradebook {
 	void Student::setNotes(const std::string& entry) {
 		notes = entry;
 	}
-	void Student::setStudentPassword(const std::string entry) {
-		studentPassword = entry;
+	void Student::setPassword(const std::string entry) {
+		password = entry;
 	}
 	void Student::setOverallGrade(const char& entry) {
 		overallGrade = entry;
@@ -71,8 +71,8 @@ namespace gradebook {
 	std::string Student::getNotes() const {
 		return notes;
 	}
-	std::string Student::getStudentPassword() const {
-		return studentPassword;
+	std::string Student::getPassword() const {
+		return password;
 	}
 	char Student::getOverallGrade() const {
 		return overallGrade;
@@ -141,7 +141,7 @@ namespace gradebook {
 			<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
 	}
 
-	void Student::menu() {
+	void Student::menu(Gradebook& gradebook) {
 		while (true) {
 			std::cout << "\n=== Student Menu ===\n";
 			std::cout << "1. View My Profile." << std::cout;

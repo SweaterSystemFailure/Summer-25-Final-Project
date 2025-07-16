@@ -6,5 +6,5 @@ TODOs:
 --student reports: by student, assignment
 --admin reports: by class
 --password validation & implementation for each tier of access
---autosave toggle for teacher/admin work
 --templatized documentation for each function
+--add autosave toggle to admin & teacher menus

@@ -14,25 +14,24 @@ namespace gradebook {
 		bool autosaveEnabled = true;
 
 	public:
-		//Mutators
-		void setAutosaveEnabled(const bool& entry);
-		
 		//Accessors
 		std::vector<Teacher>& getTeachers();
 		const std::vector<Teacher>& getTeachers() const;
-
 		std::vector<Student>& getStudents();
 		const std::vector<Student>& getStudents();
-
 		bool getAutosaveEnabled() const;
 		
 		//Admin Function
         void createSchool();
 		
+		//Login Function
+		bool handlePassword(User& user);
+		bool login();
+
         //Binary Save/Load Functions
         void serializeAndSave();
         void deserializeAndLoad();
-		void autosaveToggle(Gradebook& gradebook);
+		void autosaveToggle();
 
 		//Print Functions
 		void printAllStudents() const;

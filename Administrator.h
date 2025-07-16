@@ -7,21 +7,24 @@ namespace gradebook{
     {
         private:
         std::string adminTitle;
+        std::string adminFirstName;
         std::string adminLastName;
         std::string schoolName;
-        std::string adminPassword;
+        std::string password;
         
 
         public:
         //Mutators
         void setAdminTitle(const std::string& entry);
+        void setAdminFirstName(const std::string& entry);
         void setAdminLastName(const std::string& entry);
         void setSchoolName(const std::string& entry);
-        void setAdminPassword(const std::string& entry);
+        void setPassword(const std::string& entry);
        
 
         //Accessors
         std::string getAdminTitle() const;
+        std::string getFirstName() const;
         std::string getLastName() const override;
         std::string getSchoolName() const;
         std::string getPassword() const override;

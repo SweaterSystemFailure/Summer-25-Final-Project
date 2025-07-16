@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <limits>
+#include "User.h"
 
 namespace gradebook {
 	//user character input validators
@@ -44,7 +45,7 @@ std::unique_ptr<gradebook::User> attemptLogin(const std::vector<T>& users) {
 
 	for (const T& user : users) {
 		if (user.getLastName() == lastName && user.getPassword() == password) {
-			return std::make_unique<T>(user);  // Copy constructor
+			return std::make_unique<T>(user);
 		}
 	}
 

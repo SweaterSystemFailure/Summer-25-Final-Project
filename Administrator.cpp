@@ -12,19 +12,25 @@ namespace gradebook {
     void Administrator::setAdminTitle(const std::string& entry) {
         adminTitle = entry;
     }
+    void Administrator::setAdminFirstName(const std::string& entry) {
+        adminFirstName = entry;
+    }
     void Administrator::setAdminLastName(const std::string& entry) {
         adminLastName = entry;
     }
     void Administrator::setSchoolName(const std::string& entry) {
         schoolName = entry;
     }
-    void Administrator::setAdminPassword(const std::string& entry) {
-        adminPassword = entry;
+    void Administrator::setPassword(const std::string& entry) {
+        password = entry;
     }
 
     // Accessors
     std::string Administrator::getAdminTitle() const {
         return adminTitle;
+    }
+    std::string Administrator::getFirstName() const {
+        return adminFirstName;
     }
     std::string Administrator::getLastName() const {
         return adminLastName;
@@ -33,7 +39,7 @@ namespace gradebook {
         return schoolName;
     }
     std::string Administrator::getPassword() const {
-        return adminPassword;
+        return password;
     }
 
     //Add Students & Teachers
@@ -219,10 +225,12 @@ namespace gradebook {
                 std::cout << "\n=== Administrator Menu ===\n";
                 std::cout << "1. Add Teacher." << std::endl;
                 std::cout << "2. Add Student." << std::endl;
-                std::cout << "3. Print School Report" << std::endl;
-                std::cout << "4. Save School Report to CSV" << std::endl;
-                std::cout << "5. Save All Work." << std::endl;
-                std::cout << "5. Log Out." << std::endl;
+                std::cout << "3. Overwrite Administrator Profile." << std::endl;
+                std::cout << "4. Print School Report" << std::endl;
+                std::cout << "5. Save School Report to CSV" << std::endl;
+                std::cout << "6. Save All Work." << std::endl;
+                std::cout << "7. Toggle Autosave." << std::endl;
+                std::cout << "8. Log Out." << std::endl;
 
                 unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 5);
 
@@ -234,15 +242,23 @@ namespace gradebook {
                     addStudent(gradebook);
                     break;
                 case 3:
-                    printSchoolReport(gradebook);
+                    gradebook.createSchool();
                     break;
                 case 4:
-                    saveSchoolReportToCSV(gradebook);
+                    printSchoolReport(gradebook);
                     break;
                 case 5:
+                    saveSchoolReportToCSV(gradebook);
+                    break;
+                case 6:
                     gradebook.serializeAndSave(gradebook);
+                case 7:
+                    gradebook.autosaveToggle();
+                    break;
+                case 8:
+                    gradebook.exitMenu();
                 default:
-                    std::cout << "Invalid selection. Please try again.\n";
+                    std::cout << "Invalid selection. Please try again." << std::endl;
                    return;
                 }
             }
