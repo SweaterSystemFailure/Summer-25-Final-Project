@@ -18,28 +18,53 @@
     <ClCompile Include="Summer 25 Final Project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="helperFunctions.cpp">
+    <ClCompile Include="Administrator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="menus.cpp">
+    <ClCompile Include="Assignment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="containers.cpp">
+    <ClCompile Include="Gradebook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Teacher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="helperFunctions.h">
+    <ClInclude Include="Administrator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="menus.h">
+    <ClInclude Include="Assignment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="containers.h">
+    <ClInclude Include="Gradebook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Teacher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="SoW.txt" />
+    <Text Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE" />
   </ItemGroup>
 </Project>

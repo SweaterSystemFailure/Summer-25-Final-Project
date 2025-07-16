@@ -1,5 +1,5 @@
 #pragma once
-#include "Classroom.h"
+#include "Teacher.h"
 #include "Student.h"
 #include "Administrator.h"
 #include <iostream>
@@ -8,31 +8,35 @@
 namespace gradebook {
     	class Gradebook {
 	private:
-        std::vector<Teacher> teacher;
+        std::vector<Teacher> teachers;
 		std::vector<Student> students;
 		std::vector<Administrator> school;
+		bool autosaveEnabled = true;
 
 	public:
+		//Mutators
+		void setAutosaveEnabled(const bool& entry);
+		
+		//Accessors
+		std::vector<Teacher>& getTeachers();
+		const std::vector<Teacher>& getTeachers() const;
+
+		std::vector<Student>& getStudents();
+		const std::vector<Student>& getStudents();
+
+		bool getAutosaveEnabled() const;
+		
 		//Admin Function
         void createSchool();
-
-        //Classroom Function
-		void createClassroom();
-
-		//Student Functions
-		void addStudent();
-		void scoreAllStudents();
 		
-        
         //Binary Save/Load Functions
         void serializeAndSave();
         void deserializeAndLoad();
+		void autosaveToggle(Gradebook& gradebook);
 
 		//Print Functions
 		void printAllStudents() const;
 		void printAllAssignments() const;
 		void printClassReport() const;
-        void exportToCSV();
-
 	};
 }

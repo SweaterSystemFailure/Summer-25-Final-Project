@@ -6,7 +6,7 @@
 #include "Gradebook.h"
 
 namespace gradebook {
-	class Teacher : public Student {
+	class Teacher : public User {
 	private:
 		std::string title;
 		std::string teacherFirstName;
@@ -34,6 +34,8 @@ namespace gradebook {
 		unsigned getGradeLevel() const;
 		std::string getTeacherPassword() const override;
 		bool getAutoSave() const;
+		std::vector<Student>& getClassroomStudents();
+		const std::vector<Student>& getClassroomStudents() const;
 
 		// Assignment Construction and Grading
 		void addStudentToClassroom(const Student& student);
@@ -45,7 +47,7 @@ namespace gradebook {
 		void printClassroomReport() const;
 
 		// Menu override
-		void menu(Gradebook& book) override;
+		void menu(Gradebook& gradebook) override;
 		std::string getRole() const override { return "Teacher"; }
 	};
 }

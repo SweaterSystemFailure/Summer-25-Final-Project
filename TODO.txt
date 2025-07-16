@@ -1,10 +1,10 @@
 TODOs:
 --binary serialization
 --binary save/load
---student/teacher/admin .csv export
---administrator reports: by class, global
+--student/teacher .csv export
 --teacher reports: by student, class
 --student reports: by student, assignment
+--admin reports: by class
 --password validation & implementation for each tier of access
---autosave toggle for teacher work
+--autosave toggle for teacher/admin work
 --templatized documentation for each function

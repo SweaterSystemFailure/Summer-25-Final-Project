@@ -4,24 +4,25 @@
 
 namespace gradebook {
 
-class Gradebook;
+    class Gradebook;
 
-class User {
-protected:
-    std::string password;
+    class User {
+    protected:
+        std::string password;
 
-public:
-    virtual ~User() = default;
-    virtual void menu(Gradebook& book) = 0;
-    void setPassword(const std::string& entry) {
-        password = entry;
-    }
-    std::string getPassword() const {
-        return password;
-    }
-    virtual std::string getRole() const = 0;
-    virtual std::string getLastName() const = 0;
-    virtual std::string getPassword() const = 0;
-};
+    public:
+        virtual ~User() = default;
+        virtual void menu(Gradebook& gradebook) = 0;
+        
 
+        void setPassword(const std::string& entry) {
+            password = entry;
+        }
+        std::string getPassword() const {
+            return password;
+        }
+        virtual std::string getRole() const = 0;
+        virtual std::string getLastName() const = 0;
+        virtual std::string getPassword() const = 0;
+    };
 }

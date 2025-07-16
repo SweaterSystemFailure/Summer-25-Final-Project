@@ -1,12 +1,13 @@
-#include "utilities.h"
+#include "Student.h"
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <string>
 #include <map>
+#include "User.h"
+#include "utilities.h"
 
 namespace gradebook {
-	//Student
 	//Mutators
 	void Student::setFirstName(const std::string& entry) {
 		firstName = entry;
@@ -20,6 +21,9 @@ namespace gradebook {
 	void Student::setAge(const unsigned& entry) {
 		age = entry;
 	}
+	void Student::setGradeLevel(const unsigned& entry) {
+		gradelevel = entry;
+	}
 	void Student::setID(const unsigned& entry) {
 		id = entry;
 	}
@@ -28,6 +32,15 @@ namespace gradebook {
 	}
 	void Student::setNotes(const std::string& entry) {
 		notes = entry;
+	}
+	void Student::setStudentPassword(const std::string entry) {
+		studentPassword = entry;
+	}
+	void Student::setOverallGrade(const char& entry) {
+		overallGrade = entry;
+	}
+	void Student::setGradePercent(const float& entry) {
+		gradePercent = entry;
 	}
 	void Student::setAssignmentScore(const std::string& assignmentName, float score) {
 		assignmentScores[assignmentName] = score;
@@ -46,6 +59,9 @@ namespace gradebook {
 	unsigned Student::getAge() const {
 		return age;
 	}
+	unsigned Student::getGradeLevel() const {
+		return gradelevel;
+	}
 	unsigned Student::getID() const {
 		return id;
 	}
@@ -54,6 +70,15 @@ namespace gradebook {
 	}
 	std::string Student::getNotes() const {
 		return notes;
+	}
+	std::string Student::getStudentPassword() const {
+		return studentPassword;
+	}
+	char Student::getOverallGrade() const {
+		return overallGrade;
+	}
+	float Student::getGradePercent() const {
+		return gradePercent;
 	}
 	float Student::getAssignmentScore(const std::string& assignmentName) const {
 		auto it = assignmentScores.find(assignmentName);
@@ -77,9 +102,9 @@ namespace gradebook {
 		}
 
 		overallGrade = (gradePercent >= 90.0f) ? 'A' :
-               (gradePercent >= 80.0f) ? 'B' :
-               (gradePercent >= 70.0f) ? 'C' :
-               (gradePercent >= 60.0f) ? 'D' : 'F';
+			(gradePercent >= 80.0f) ? 'B' :
+			(gradePercent >= 70.0f) ? 'C' :
+			(gradePercent >= 60.0f) ? 'D' : 'F';
 	}
 
 	//Print Functions
@@ -98,46 +123,47 @@ namespace gradebook {
 
 	void Student::printStudentReport() const {
 		printStudent();
-		
-	std::cout << std::endl <<"=== Assignment Scores ===" << std::endl;
-	if (assignmentScores.empty()) {
-		std::cout << "No assignments have been graded yet.\n";
-	} else {
-		for (const auto& pair : assignmentScores) {
-			std::cout << std::left << std::setw(20) << pair.first
-				<< "Score: " << std::fixed << std::setprecision(2)
-				<< pair.second << " pts\n";
+
+		std::cout << std::endl << "=== Assignment Scores ===" << std::endl;
+		if (assignmentScores.empty()) {
+			std::cout << "No assignments have been graded yet.\n";
+		}
+		else {
+			for (const auto& pair : assignmentScores) {
+				std::cout << std::left << std::setw(20) << pair.first
+					<< "Score: " << std::fixed << std::setprecision(2)
+					<< pair.second << " pts\n";
+			}
+		}
+
+		std::cout << std::endl;
+		std::cout << "Overall Grade: " << overallGrade
+			<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
+	}
+
+	void Student::menu() {
+		while (true) {
+			std::cout << "\n=== Student Menu ===\n";
+			std::cout << "1. View My Profile." << std::cout;
+			std::cout << "2. View My Grades." << std::cout;
+			std::cout << "3. Log Out." << std::cout;
+
+			unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 3);
+
+			switch (choice) {
+			case 1:
+				printStudent();
+				break;
+			case 2:
+				printStudentReport();
+				break;
+			case 3:
+				welcomeMenu();
+				return;
+			default:
+				std::cout << "Invalid selection. Please try again.\n";
+				break;
+			}
 		}
 	}
-
-	std::endl;
-	std::cout << "Overall Grade: " << overallGrade
-		<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
-	}
-
-void Student::mainMenu() {
-	while (true) {
-		std::cout << "\n=== Student Menu ===\n";
-		std::cout << "1. View My Profile." << std::cout;
-		std::cout << "2. View My Grades." <<std::cout;
-		std::cout << "3. Log Out." <<std::cout;
-
-		unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 3);
-
-		switch (choice) {
-		case 1:
-			printStudent();
-			break;
-		case 2:
-			printStudentReport();
-			break;
-		case 3:
-			welcomeMenu();
-			return;
-		default:
-			std::cout << "Invalid selection. Please try again.\n";
-			break;
-		}
-	}
-}
 }

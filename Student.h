@@ -1,31 +1,36 @@
 #pragma once
-#include "Assignment.h"
-#include "Gradebook.h"
+
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <string>
 #include <map>
+#include "Assignment.h"
+#include "Gradebook.h"
+#include "User.h"
 
 namespace gradebook {
-	class Student {
+	class Student : public User {
 	private:
 		//Biographical Variables
 		std::string firstName;
 		std::string lastName;
 		std::string pronouns;
 		unsigned age;
+		unsigned gradelevel;
 		unsigned id;
 		std::string seat;
 		std::string notes;
 		std::string studentPassword;
+		
+		//Grade Variables
+		char overallGrade;
+		float gradePercent;
 
 		//Individual Student Assignment Container
 		std::map<std::string, float> assignmentScores;
 	public:
-		//Grade Variables
-		char overallGrade;
-		float gradePercent;
+
 		
 		//Initializer
 		static Student createStudent();
@@ -35,10 +40,13 @@ namespace gradebook {
 		void setLastName(const std::string& entry);
 		void setPronouns(const std::string& entry);
 		void setAge(const unsigned& entry);
+		void setGradeLevel(const unsigned& entry);
 		void setID(const unsigned& entry);
 		void setSeat(const std::string& entry);
 		void setNotes(const std::string& entry);
 		void setStudentPassword(const std::string entry);
+		void setOverallGrade(const char& entry);
+		void setGradePercent(const float& entry);
 		void setAssignmentScore(const std::string& assignmentName, float score);
 
 		//Accessors
@@ -46,10 +54,13 @@ namespace gradebook {
 		std::string getLastName() const override;
 		std::string getPronouns() const;
 		unsigned getAge() const;
+		unsigned getGradeLevel() const;
 		unsigned getID() const;
 		std::string getSeat() const;
 		std::string getNotes() const;
 		std::string getStudentPassword() const override;
+		char getOverallGrade() const;
+		float getGradePercent() const;
 		float getAssignmentScore(const std::string& assignmentName) const;
 
 		//Grade Calculation
@@ -62,6 +73,5 @@ namespace gradebook {
 		//Menu
 		void menu(Gradebook& book) override;
     	std::string getRole() const override { return "Student"; };
-
 	};
 }
