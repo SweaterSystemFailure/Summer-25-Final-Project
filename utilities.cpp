@@ -4,26 +4,28 @@
 #include <iostream>
 #include <limits>
 #include <cctype>
+#include "Gradebook.h"
 
 namespace gradebook {
-std::string stringValidator(const std::string& prompt) {
-    std::string userInput;
-    while (true) {
-        std::cout << prompt;
-        std::getline(std::cin, userInput);
+	std::string stringValidator(const std::string& prompt) {
+		std::string userInput;
+		while (true) {
+			std::cout << prompt;
+			std::getline(std::cin, userInput);
 
-        userInput.erase(0, userInput.find_first_not_of(" \t\n\r\f\v"));
-        userInput.erase(userInput.find_last_not_of(" \t\n\r\f\v") + 1);
+			userInput.erase(0, userInput.find_first_not_of(" \t\n\r\f\v"));
+			userInput.erase(userInput.find_last_not_of(" \t\n\r\f\v") + 1);
 
-        if (userInput.empty()) {
-            std::cout << "Invalid input. This field can't be empty or just whitespace. Try again:\n";
-        } else {
-            return userInput;
-        }
-    }
-}
+			if (userInput.empty()) {
+				std::cout << "Invalid input. This field can't be empty or just whitespace. Try again:\n";
+			}
+			else {
+				return userInput;
+			}
+		}
+	}
 
-char charValidator(const std::string& prompt, const std::vector<char>& validOptions) {
+	char charValidator(const std::string& prompt, const std::vector<char>& validOptions) {
 		char input;
 		while (true) {
 			std::cout << prompt << std::endl;
@@ -44,33 +46,33 @@ char charValidator(const std::string& prompt, const std::vector<char>& validOpti
 			std::cout << std::endl;
 		}
 	}
-	
+
 	//user password validators
-bool isStrongPassword(const std::string& password) {
-    bool hasLength = password.length() >= 8;
-    bool hasUpper = false, hasLower = false, hasDigit = false, hasSymbol = false;
+	bool isStrongPassword(const std::string& password) {
+		bool hasLength = password.length() >= 8;
+		bool hasUpper = false, hasLower = false, hasDigit = false, hasSymbol = false;
 
-    for (char ch : password) {
-        if (std::isupper(ch)) hasUpper = true;
-        else if (std::islower(ch)) hasLower = true;
-        else if (std::isdigit(ch)) hasDigit = true;
-        else hasSymbol = true;
-    }
+		for (char ch : password) {
+			if (std::isupper(ch)) hasUpper = true;
+			else if (std::islower(ch)) hasLower = true;
+			else if (std::isdigit(ch)) hasDigit = true;
+			else hasSymbol = true;
+		}
 
-    if (!hasLength || !hasUpper || !hasLower || !hasDigit || !hasSymbol) {
-        std::cout << "Invalid password. Passwords must include at least 8 characters, a mix of upper and lower case letters, numbers, and special symbols.\n";
-        return false;
-    }
+		if (!hasLength || !hasUpper || !hasLower || !hasDigit || !hasSymbol) {
+			std::cout << "Invalid password. Passwords must include at least 8 characters, a mix of upper and lower case letters, numbers, and special symbols.\n";
+			return false;
+		}
 
-    std::string rematchChallenge;
-    do {
-        rematchChallenge = stringValidator("Please reenter your password: ");
-        if (rematchChallenge != password) {
-            std::cout << "Passwords do not match. Please try again.\n";
-        }
-    } while (rematchChallenge != password);
+		std::string rematchChallenge;
+		do {
+			rematchChallenge = stringValidator("Please reenter your password: ");
+			if (rematchChallenge != password) {
+				std::cout << "Passwords do not match. Please try again.\n";
+			}
+		} while (rematchChallenge != password);
 
-    return true;
+		return true;
 	}
 
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt) {
@@ -97,55 +99,54 @@ bool isStrongPassword(const std::string& password) {
 
 	//basic menus
 	void welcomeMenu(Gradebook& gradebook) {
-	std::cout << "Welcome to Gradebook!" << std::endl;
+		std::cout << "Welcome to Gradebook!" << std::endl;
 
-	// Load binary if available
-	if (/* !binaryLoaded() */ false) {  // replace with actual check
-		std::cout << "No saved school could be found. Let's set up a new school.\n";
-		gradebook.createSchool();
-	} 
-
-	while (true) {
-		std::cout << "\nPlease select a login type:\n";
-		std::cout << "1. Administrator\n";
-		std::cout << "2. Teacher\n";
-		std::cout << "3. Student\n";
-		std::cout << "4. Exit\n";
-
-		int choice = numericValidator("Choose an option [1-4]: ", 1, 4);
-
-		std::unique_ptr<User> user = nullptr;
-
-		switch (choice) {
-			case 1:
-				user = attemptLogin<Administrator>(gradebook.getAdmins());
-				break;
-			case 2:
-				user = attemptLogin<Teacher>(gradebook.getTeachers());
-				break;
-			case 3:
-				user = attemptLogin<Student>(gradebook.getStudents());
-				break;
-			case 4:
-				closeMenu();
-				break;
+		// Load binary if available
+		if (/* !binaryLoaded() */ false) {  // replace with actual check
+			std::cout << "No saved school could be found. Let's set up a new school.\n";
+			gradebook.createSchool();
 		}
 
-		if (user) {
-			std::cout << "Login successful. Launching menu for " << user->getRole() << ".\n\n";
-			user->menu(gradebook);
-		} else {
-			std::cout << "Login failed. Please try again.\n";
+		while (true) {
+			std::cout << "\nPlease select a login type:\n";
+			std::cout << "1. Administrator." << std::endl;
+			std::cout << "2. Teacher." << std::endl;
+			std::cout << "3. Student." << std::endl;
+			std::cout << "4. Exit." << std::endl;
+
+			int choice = numericValidator("Choose an option [1-4]: ", 1, 4);
+
+			std::unique_ptr<User> user = nullptr;
+
+			std::unique_ptr<User> user = nullptr;
+			switch (choice) {
+			case 1: user = attemptLogin<Administrator>(gradebook.getAdmins()); break;
+			case 2: user = attemptLogin<Teacher>(gradebook.getTeachers()); break;
+			case 3: user = attemptLogin<Student>(gradebook.getStudents()); break;
+			case 4: closeMenu(); break;
+			}
+
+			if (user) {
+				std::cout << "Login successful. Welcome, "
+					<< user->getRole() << " "
+					<< static_cast<std::string>(user->getFirstName()) << " "
+					<< user->getLastName()
+					<< "Launching menu." << std::endl << std::endl;
+			}
+			else {
+				std::cout << "Login failed. Please try again." << std::endl;
+			}
+
 		}
 	}
-}
-	
-	void closeMenu(){
-		if(userCheck("Would you like to save before exiting?", "School saved! Exiting.", "Exiting without saving.")){
-			//savefunction
+	void closeMenu(Gradebook& gradebook) {
+		if (userCheck("Would you like to save before exiting? [Y/N]",
+			"School saved! Exiting.",
+			"Exiting without saving.")) {
+			gradebook.serializeAndSave();
 		}
-		else{
-			//dump cached containers
+		else {
+			gradebook.clearCachedData();
 		}
 	}
 }

@@ -1,4 +1,5 @@
 #include "Student.h"
+#include <fstream>
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -139,7 +140,54 @@ namespace gradebook {
 		std::cout << std::endl;
 		std::cout << "Overall Grade: " << overallGrade
 			<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
+		
+		if (userCheck("Would you like to export this student report to CSV? [Y/N] ",
+			"Exporting student report to CSV...",
+			"Skipping export.")) {
+			exportStudentReportToCSV();
+		}
 	}
+
+	//Export
+	void Student::exportStudentReportToCSV() const {
+		// Use a file name that includes the student's full name or ID to keep it unique
+		std::string filename = lastName + "_" + firstName + "_Report.csv";
+
+		std::ofstream file(filename);
+		if (!file) {
+			std::cerr << "Failed to open file for writing: " << filename << std::endl;
+			return;
+		}
+
+		// Write biographical info
+		file << "First Name," << firstName << "\n";
+		file << "Last Name," << lastName << "\n";
+		file << "Pronouns," << pronouns << "\n";
+		file << "Age," << age << "\n";
+		file << "Student ID," << id << "\n";
+		file << "Seat Location," << seat << "\n";
+		file << "Notes," << notes << "\n\n";
+
+		// Write assignment scores header
+		file << "Assignment,Score\n";
+
+		if (assignmentScores.empty()) {
+			file << "No assignments graded yet,\n";
+		}
+		else {
+			for (const auto& pair : assignmentScores) {
+				file << pair.first << "," << std::fixed << std::setprecision(2) << pair.second << "\n";
+			}
+		}
+
+		file << "\nOverall Grade," << overallGrade << "\n";
+		file << "Grade Percent," << std::fixed << std::setprecision(2) << gradePercent << "\n";
+
+		file.close();
+
+		std::cout << "Student report exported successfully to " << filename << std::endl;
+	}
+
 
 	void Student::menu(Gradebook& gradebook) {
 		while (true) {
@@ -158,7 +206,6 @@ namespace gradebook {
 				printStudentReport();
 				break;
 			case 3:
-				welcomeMenu();
 				return;
 			default:
 				std::cout << "Invalid selection. Please try again.\n";

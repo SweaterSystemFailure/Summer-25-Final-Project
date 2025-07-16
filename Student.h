@@ -64,6 +64,9 @@ namespace gradebook {
 		void printStudent();
 		void printStudentReport() const;
 
+		//Export
+		void exportStudentReportToCSV() const;
+
 		//Menu
 		void menu(Gradebook& book) override;
     	std::string getRole() const override { return "Student"; };

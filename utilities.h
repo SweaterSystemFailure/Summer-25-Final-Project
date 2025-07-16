@@ -36,27 +36,58 @@ namespace gradebook {
 	//user password validators
 	bool isStrongPassword(const std::string& password);
 	
-template <typename T>
-std::unique_ptr<gradebook::User> attemptLogin(const std::vector<T>& users) {
-	using namespace gradebook;
+	template<typename T>
+	std::unique_ptr<User> attemptLogin(std::vector<T>& users) {
+		using namespace gradebook;
 
-	std::string lastName = stringValidator("Enter your last name: ");
-	std::string password = stringValidator("Enter your password: ");
-
-	for (const T& user : users) {
-		if (user.getLastName() == lastName && user.getPassword() == password) {
-			return std::make_unique<T>(user);
+		if (users.empty()) {
+			std::cout << "No users of this type are registered.\n";
+			return nullptr;
 		}
+
+		T* userPtr = nullptr;
+
+		if constexpr (std::is_same_v<T, Student>) {
+			unsigned id = numericValidator<unsigned>("Enter your Student ID: ", 1, 999999);
+			for (auto& student : users) {
+				if (student.getID() == id) {
+					userPtr = &student;
+					break;
+				}
+			}
+		}
+		else {
+			std::string first = stringValidator("Enter your first name: ");
+			std::string last = stringValidator("Enter your last name: ");
+			for (auto& user : users) {
+				if constexpr (std::is_same_v<T, Teacher>) {
+					if (user.getTeacherFirstName() == first && user.getTeacherLastName() == last)
+						userPtr = &user;
+				}
+				else if constexpr (std::is_same_v<T, Administrator>) {
+					if (user.getFirstName() == first && user.getLastName() == last)
+						userPtr = &user;
+				}
+				if (userPtr) break;
+			}
+		}
+
+		if (!userPtr) {
+			std::cout << "User not found.\n";
+			return nullptr;
+		}
+
+		if (!handlePassword(*userPtr)) {
+			return nullptr;
+		}
+		return std::unique_ptr<User>(userPtr, [](User*) {});
 	}
 
-	std::cout << "No matching user found.\n";
-	return nullptr;
-}
 
 	//user verification check
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
 
 	//basic menus
 	void welcomeMenu(Gradebook& gradebook);
-	void closeMenu();
+	void closeMenu(Gradebook& gradebook);
 }

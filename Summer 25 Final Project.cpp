@@ -7,7 +7,8 @@ using namespace gradebook;
 int main()
 {
     Gradebook gradebook;
-    weclomeMenu(gradebook);
+    gradebook.deserializeAndLoad();
+    gradebook.weclomeMenu(gradebook);
 
     return 0;
 }

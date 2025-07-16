@@ -64,7 +64,7 @@ namespace gradebook {
 
             gradebook.getTeachers().push_back(newTeacher);
 
-            std::cout << "Teacher " << newTeacher.getTeacherFirstName() << " " << newTeacher.getTeacherLastName()
+            std::cout << "Teacher " << newTeacher.getFirstName() << " " << newTeacher.getLastName()
                 << " has been added successfully!" << std::endl;
 
             addMore = userCheck("Would you like to add another teacher? ",
@@ -114,8 +114,8 @@ namespace gradebook {
                 std::cout << "Assign student to which teacher?" << std::endl;
                 for (size_t i = 0; i < eligibleTeachers.size(); ++i) {
                     std::cout << i + 1 << ". "
-                        << eligibleTeachers[i]->getTeacherFirstName() << " "
-                        << eligibleTeachers[i]->getTeacherLastName() << std::endl;
+                        << eligibleTeachers[i]->getFirstName() << " "
+                        << eligibleTeachers[i]->getLastName() << std::endl;
                 }
 
                 unsigned teacherChoice = numericValidator<unsigned>("Enter the number of the teacher: ", 1, eligibleTeachers.size());
@@ -125,8 +125,12 @@ namespace gradebook {
                 chosenTeacher->addStudentToClassroom(newStudent);
 
                 std::cout << "Student " << newStudent.getFirstName() << " " << newStudent.getLastName()
-                    << " has been added and assigned to " << chosenTeacher->getTeacherFirstName() << " "
-                    << chosenTeacher->getTeacherLastName() << " successfully!" << std::endl;
+                    << " has been added and assigned to " << chosenTeacher->getFirstName() << " "
+                    << chosenTeacher->getLastName() << " successfully!" << std::endl;
+            }
+            
+            if (gradebook.getAutoSaveEnabled()) {
+                gradebook.serializeAndSave();
             }
 
             addMore = userCheck("Would you like to add another student? ",
@@ -147,8 +151,8 @@ namespace gradebook {
         std::cout << "===== School-Wide Student Report =====" << std::endl << std::endl;
 
         for (const auto& teacher : teachers) {
-            std::cout << teacher.getTitle() << " " << teacher.getTeacherFirstName()
-                << " " << teacher.getTeacherLastName()
+            std::cout << teacher.getTitle() << " " << teacher.getFirstName()
+                << " " << teacher.getLastName()
                 << " (Grade " << teacher.getGradeLevel() << ")" << std::endl;
 
             const auto& students = teacher.getClassroomStudents();
@@ -197,7 +201,7 @@ namespace gradebook {
         const auto& teachers = gradebook.getTeachers();
 
         for (const auto& teacher : teachers) {
-            std::string teacherName = teacher.getTeacherFirstName() + " " + teacher.getTeacherLastName();
+            std::string teacherName = teacher.getFirstName() + " " + teacher.getLastName();
             const auto& students = teacher.getClassroomStudents();
 
             for (const auto& student : students) {
@@ -251,12 +255,12 @@ namespace gradebook {
                     saveSchoolReportToCSV(gradebook);
                     break;
                 case 6:
-                    gradebook.serializeAndSave(gradebook);
+                    gradebook.serializeAndSave();
                 case 7:
                     gradebook.autosaveToggle();
                     break;
                 case 8:
-                    gradebook.exitMenu();
+                    gradebook.closeMenu(gradebook);
                 default:
                     std::cout << "Invalid selection. Please try again." << std::endl;
                    return;

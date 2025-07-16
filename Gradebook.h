@@ -26,16 +26,11 @@ namespace gradebook {
 		
 		//Login Function
 		bool handlePassword(User& user);
-		bool login();
 
         //Binary Save/Load Functions
         void serializeAndSave();
         void deserializeAndLoad();
 		void autosaveToggle();
-
-		//Print Functions
-		void printAllStudents() const;
-		void printAllAssignments() const;
-		void printClassReport() const;
+		void clearCachedData();
 	};
 }

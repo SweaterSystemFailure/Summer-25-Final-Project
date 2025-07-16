@@ -1,7 +1,9 @@
 #include "Gradebook.h"
 #include "Administrator.h"
+#include "Student.h"
 #include "Teacher.h"
 #include "utilities.h"
+#include <fstream>
 #include <iostream>
 #include <iomanip>
 
@@ -37,7 +39,7 @@ namespace gradebook {
             if (!userCheck("Would you like to overwrite this school and administrator? [Y/N] ",
                 "Overwriting existing school and administrator.",
                 "Keeping existing data.")) {
-                return; 
+                return;
             }
 
             school.clear();
@@ -95,108 +97,286 @@ namespace gradebook {
             }
         }
     }
-
-    bool Gradebook::login() {
-        std::cout << "Select your role to log in:" << std::endl
-            << "1. Student" << std::endl
-            << "2. Teacher" << std::endl
-            << "3. Administrator" << std::endl;
-
-        int roleChoice = numericValidator<int>("Enter the number for your role: ", 1, 3);
-
-        switch (roleChoice) {
-        case 1: {
-            unsigned studentID = numericValidator<unsigned>("Enter your Student ID: ", 1, 999999);
-
-            Student* studentPtr = nullptr;
-            for (auto& student : students) {
-                if (student.getID() == studentID) {
-                    studentPtr = &student;
-                    break;
-                }
-            }
-            if (!studentPtr) {
-                std::cout << "Student ID not found." << std::endl;
-                return false;
-            }
-            return handlePassword(*studentPtr);
-        }
-        case 2: {
-            std::string firstName = stringValidator("Enter your first name: ");
-            std::string lastName = stringValidator("Enter your last name: ");
-
-            User* userPtr = nullptr;
-            for (auto& teacher : teachers) {
-                if (teacher.getTeacherFirstName() == firstName &&
-                    teacher.getTeacherLastName() == lastName) {
-                    userPtr = &teacher;
-                    break;
-                }
-            }
-            if (!userPtr) {
-                std::cout << "Teacher not found." << std::endl;
-                return false;
-            }
-            return handlePassword(*userPtr);
-        }
-        case 3: {
-            std::string firstName = stringValidator("Enter your first name: ");
-            std::string lastName = stringValidator("Enter your last name: ");
-
-            User* userPtr = nullptr;
-            for (auto& admin : school) {
-                if (admin.getFirstName() == firstName &&
-                    admin.getLastName() == lastName) {
-                    userPtr = &admin;
-                    break;
-                }
-            }
-            if (!userPtr) {
-                std::cout << "Administrator not found." << std::endl;
-                return false;
-            }
-            return handlePassword(*userPtr);
-        }
-        default:
-            std::cout << "Invalid selection." << std::endl;
-            return false;
-        }
-    }
-
     //Save/Load Functions
     void Gradebook::autosaveToggle() {
         autosaveEnabled = !autosaveEnabled;
         std::cout << "Autosave " << (autosaveEnabled ? "enabled." : "disabled.") << std::endl;
     }
 
-    //Print Functions
-    void Gradebook::printAllStudents() const {
-        if (students.empty()) {
-            std::cout << "No students in the system." << std::endl;
+    void Gradebook::serializeAndSave() {
+        std::ofstream outFile("gradebook.dat", std::ios::binary);
+        if (!outFile) {
+            std::cerr << "Failed to open file for saving.\n";
             return;
         }
 
-        std::vector<Student> sortedStudents = students;
+        // Save number of administrators
+        size_t adminCount = school.size();
+        outFile.write(reinterpret_cast<char*>(&adminCount), sizeof(adminCount));
+        for (const auto& admin : school) {
+            size_t len;
 
-        for (size_t i = 0; i < sortedStudents.size(); ++i) {
-            for (size_t j = 0; j < sortedStudents.size() - 1 - i; ++j) {
-                if (sortedStudents[j].getLastName() > sortedStudents[j + 1].getLastName() ||
-                    (sortedStudents[j].getLastName() == sortedStudents[j + 1].getLastName() && sortedStudents[j].getFirstName() > sortedStudents[j + 1].getFirstName())) {
-                    Student temp = sortedStudents[j];
-                    sortedStudents[j] = sortedStudents[j + 1];
-                    sortedStudents[j + 1] = temp;
-                }
+            len = admin.getAdminTitle().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(admin.getAdminTitle().c_str(), len);
+
+            len = admin.getFirstName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(admin.getFirstName().c_str(), len);
+
+            len = admin.getLastName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(admin.getLastName().c_str(), len);
+
+            len = admin.getSchoolName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(admin.getSchoolName().c_str(), len);
+
+            len = admin.getPassword().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(admin.getPassword().c_str(), len);
+        }
+
+        // Save number of students
+        size_t studentCount = students.size();
+        outFile.write(reinterpret_cast<char*>(&studentCount), sizeof(studentCount));
+        for (const auto& student : students) {
+            size_t len;
+
+            len = student.getFirstName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(student.getFirstName().c_str(), len);
+
+            len = student.getLastName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(student.getLastName().c_str(), len);
+
+            len = student.getPronouns().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(student.getPronouns().c_str(), len);
+
+            outFile.write(reinterpret_cast<const char*>(&student.getAge()), sizeof(unsigned));
+            outFile.write(reinterpret_cast<const char*>(&student.getGradeLevel()), sizeof(unsigned));
+            outFile.write(reinterpret_cast<const char*>(&student.getID()), sizeof(unsigned));
+
+            len = student.getSeat().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(student.getSeat().c_str(), len);
+
+            len = student.getNotes().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(student.getNotes().c_str(), len);
+
+            outFile.write(reinterpret_cast<const char*>(&student.getOverallGrade()), sizeof(char));
+            outFile.write(reinterpret_cast<const char*>(&student.getGradePercent()), sizeof(float));
+
+            // Save assignment scores
+            const auto& scores = student.getAssignmentScores();
+            size_t mapSize = scores.size();
+            outFile.write(reinterpret_cast<char*>(&mapSize), sizeof(mapSize));
+            for (const auto& [name, score] : scores) {
+                len = name.size();
+                outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+                outFile.write(name.c_str(), len);
+                outFile.write(reinterpret_cast<const char*>(&score), sizeof(float));
             }
         }
 
-        int count = 1;
-        std::cout << "List of students:" << std::endl;
-        for (const auto& s : sortedStudents) {
-            std::cout << std::setw(2) << count++ << ". " << s.getFirstName() << " " << s.getLastName() << std::endl;
-        }
-    }
-    void Gradebook::printAllAssignments() const {
+        // Save number of teachers
+        size_t teacherCount = teachers.size();
+        outFile.write(reinterpret_cast<char*>(&teacherCount), sizeof(teacherCount));
+        for (const auto& teacher : teachers) {
+            size_t len;
 
+            len = teacher.getTitle().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(teacher.getTitle().c_str(), len);
+
+            len = teacher.getFirstName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(teacher.getFirstName().c_str(), len);
+
+            len = teacher.getLastName().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(teacher.getLastName().c_str(), len);
+
+            outFile.write(reinterpret_cast<const char*>(&teacher.getGradeLevel()), sizeof(unsigned));
+
+            len = teacher.getPassword().size();
+            outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+            outFile.write(teacher.getPassword().c_str(), len);
+
+            // Save classroom students
+            const auto& classroom = teacher.getClassroomStudents();
+            size_t classSize = classroom.size();
+            outFile.write(reinterpret_cast<char*>(&classSize), sizeof(classSize));
+            for (const auto& student : classroom) {
+                len = student.getFirstName().size();
+                outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+                outFile.write(student.getFirstName().c_str(), len);
+
+                len = student.getLastName().size();
+                outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+                outFile.write(student.getLastName().c_str(), len);
+            }
+
+            // Save assignments (by name only)
+            const auto& assignments = teacher.getAssignments();
+            size_t assignSize = assignments.size();
+            outFile.write(reinterpret_cast<char*>(&assignSize), sizeof(assignSize));
+            for (const auto& assignment : assignments) {
+                len = assignment.getAssignmentName().size();
+                outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
+                outFile.write(assignment.getAssignmentName().c_str(), len);
+                float totalPoints = assignment.getTotalPoints();
+                outFile.write(reinterpret_cast<const char*>(&totalPoints), sizeof(float));
+            }
+        }
+
+        outFile.close();
+        std::cout << "Gradebook data saved to gradebook.dat.\n";
     }
-    void Gradebook::printClassReport() const {}
+
+    void Gradebook::deserializeAndLoad() {
+        std::ifstream inFile("gradebook.dat", std::ios::binary);
+        if (!inFile) {
+            std::cerr << "Failed to load gradebook.dat.\n";
+            return;
+        }
+
+        school.clear();
+        students.clear();
+        teachers.clear();
+
+        size_t count;
+        size_t len;
+        std::string tempStr;
+
+        // === Load Administrators ===
+        inFile.read(reinterpret_cast<char*>(&count), sizeof(count));
+        for (size_t i = 0; i < count; ++i) {
+            Administrator admin;
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); admin.setAdminTitle(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); admin.setAdminFirstName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); admin.setAdminLastName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); admin.setSchoolName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); admin.setPassword(tempStr);
+
+            school.push_back(admin);
+        }
+
+        // === Load Students ===
+        inFile.read(reinterpret_cast<char*>(&count), sizeof(count));
+        for (size_t i = 0; i < count; ++i) {
+            Student student;
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); student.setFirstName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); student.setLastName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); student.setPronouns(tempStr);
+
+            unsigned tempUInt;
+            inFile.read(reinterpret_cast<char*>(&tempUInt), sizeof(tempUInt)); student.setAge(tempUInt);
+            inFile.read(reinterpret_cast<char*>(&tempUInt), sizeof(tempUInt)); student.setGradeLevel(tempUInt);
+            inFile.read(reinterpret_cast<char*>(&tempUInt), sizeof(tempUInt)); student.setID(tempUInt);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); student.setSeat(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); student.setNotes(tempStr);
+
+            char grade;
+            float percent;
+            inFile.read(reinterpret_cast<char*>(&grade), sizeof(grade)); student.setOverallGrade(grade);
+            inFile.read(reinterpret_cast<char*>(&percent), sizeof(percent)); student.setGradePercent(percent);
+
+            size_t mapSize;
+            inFile.read(reinterpret_cast<char*>(&mapSize), sizeof(mapSize));
+            for (size_t j = 0; j < mapSize; ++j) {
+                float score;
+                inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+                tempStr.resize(len); inFile.read(&tempStr[0], len);
+                inFile.read(reinterpret_cast<char*>(&score), sizeof(score));
+                student.setAssignmentScore(tempStr, score);
+            }
+
+            students.push_back(student);
+        }
+
+        // === Load Teachers ===
+        inFile.read(reinterpret_cast<char*>(&count), sizeof(count));
+        for (size_t i = 0; i < count; ++i) {
+            Teacher teacher;
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); teacher.setTitle(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); teacher.setTeacherFirstName(tempStr);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); teacher.setTeacherLastName(tempStr);
+
+            unsigned grade;
+            inFile.read(reinterpret_cast<char*>(&grade), sizeof(grade)); teacher.setGradeLevel(grade);
+
+            inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+            tempStr.resize(len); inFile.read(&tempStr[0], len); teacher.setPassword(tempStr);
+
+            // Load classroom students (name only)
+            size_t classSize;
+            inFile.read(reinterpret_cast<char*>(&classSize), sizeof(classSize));
+            for (size_t j = 0; j < classSize; ++j) {
+                Student student;
+                inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+                tempStr.resize(len); inFile.read(&tempStr[0], len); student.setFirstName(tempStr);
+
+                inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+                tempStr.resize(len); inFile.read(&tempStr[0], len); student.setLastName(tempStr);
+
+                teacher.addStudentToClassroom(student);
+            }
+
+            size_t assignCount;
+            inFile.read(reinterpret_cast<char*>(&assignCount), sizeof(assignCount));
+            for (size_t j = 0; j < assignCount; ++j) {
+                Assignment a;
+                float points;
+                inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+                tempStr.resize(len); inFile.read(&tempStr[0], len); a.setAssignmentName(tempStr);
+                inFile.read(reinterpret_cast<char*>(&points), sizeof(points));
+                a.setTotalPoints(points);
+                teacher.addAssignment(a);
+            }
+
+            teachers.push_back(teacher);
+        }
+
+        inFile.close();
+        std::cout << "Gradebook data loaded from gradebook.dat.\n";
+    }
+    void Gradebook::clearCachedData() {
+        teachers.clear();
+        students.clear();
+        school.clear();
+        std::cout << "All cached data cleared from memory.\n";
+    }
 }
+
+
+   
