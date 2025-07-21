@@ -27,6 +27,8 @@ namespace gradebook {
 		std::string getLastName() const override;
 		unsigned getGradeLevel() const;
 		std::string getPassword() const override;
+		std::vector<Assignment>& getAssignments();
+		const std::vector<Assignment>& getAssignments() const;
 		std::vector<Student>& getClassroomStudents();
 		const std::vector<Student>& getClassroomStudents() const;
 

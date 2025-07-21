@@ -33,6 +33,12 @@ namespace gradebook {
 	std::string Teacher::getPassword() const {
 		return password;
 	}
+	std::vector<Assignment>& Teacher::getAssignments() {
+		return assignments;
+	}
+	const std::vector<Assignment>& Teacher::getAssignments() const {
+		return assignments;
+	}
 	std::vector<Student>& Teacher::getClassroomStudents() {
 		return students;
 	}
@@ -78,7 +84,7 @@ namespace gradebook {
 			}
 			std::cout << "All grades for " << selectedStudent.getFirstName() << " " << selectedStudent.getLastName() << " have been recorded." << std::endl;
 
-			if (gradebook.getAutoSaveEnabled()) {
+			if (gradebook.isAutosaveEnabled()) {
 				gradebook.serializeAndSave();
 			}
 			break;
@@ -97,7 +103,7 @@ namespace gradebook {
 
 			std::cout << "Grade recorded for " << selectedAssignment.getAssignmentName() << "." << std::endl;
 
-			if (gradebook.getAutoSaveEnabled()) {
+			if (gradebook.isAutosaveEnabled()) {
 				gradebook.serializeAndSave();
 			}
 			break;
@@ -128,7 +134,7 @@ namespace gradebook {
 
 		assignments.push_back(assignment);
 		
-		if (gradebook.getAutoSaveEnabled()) {
+		if (gradebook.isAutosaveEnabled()) {
 			gradebook.serializeAndSave();
 		}
 
@@ -396,7 +402,7 @@ namespace gradebook {
 				}
 				break;
 			case 4:
-				if (gradebook.getAssignments().empty()) {
+				if (getAssignments().empty()) {
 					std::cout << "There are no assignments in the system.\n";
 				}
 				else {
@@ -404,27 +410,27 @@ namespace gradebook {
 				}
 				break;
 			case 5:
-				addAssignment(gradebook.getAssignments(), gradebook);
+				addAssignment(getAssignments(), gradebook);
 				break;
 			case 6:
 				if (students.empty()) {
 					std::cout << "There are no students in your class.\n";
 				}
-				else if (book.getAssignments().empty()) {
+				else if (getAssignments().empty()) {
 					std::cout << "There are no assignments available to grade.\n";
 				}
 				else {
-					enterGrades(book.getAssignments());
+					enterGrades(getAssignments(), gradebook);
 				}
 				break;
 			case 7:
 				gradebook.serializeAndSave();
 				break;
 			case 8:
-				gradebook.toggleAutosave();
+				gradebook.autosaveToggle();
 				break;
 			case 9:
-				gradebook.closeMenu();
+				closeMenu(gradebook);
 				return;
 			default:
 				std::cout << "Invalid option. Please try again.\n";

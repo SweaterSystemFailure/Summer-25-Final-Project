@@ -44,15 +44,15 @@ namespace gradebook {
     void Administrator::createClassroom(Gradebook& gradebook) {
         Teacher newTeacher;
 
-        std::cout << "Let's get started by entering some basic information." << std::endl;
+        std::cout << "Let's get started by entering some basic information about your teacher." << std::endl;
         bool addMore = true;
         while (addMore) {
 
             do {
-                newTeacher.setTitle(stringValidator("Which honorific do your students address you by? "));
-                newTeacher.setFirstName(stringValidator("What is your first name? "));
-                newTeacher.setLastName(stringValidator("What is your last name? "));
-                newTeacher.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1–12]: ", 1, 12));
+                newTeacher.setTitle(stringValidator("Which honorific do their students address them by? "));
+                newTeacher.setFirstName(stringValidator("What is their first name? "));
+                newTeacher.setLastName(stringValidator("What is their last name? "));
+                newTeacher.setGradeLevel(numericValidator<unsigned>("Which grade do they teach? [1–12]: ", 1, 12));
                 newTeacher.printClassroomReport();
 
             } while (!userCheck(
@@ -127,7 +127,7 @@ namespace gradebook {
                     << chosenTeacher->getLastName() << " successfully!" << std::endl;
             }
             
-            if (gradebook.getAutosaveEnabled()) {
+            if (gradebook.isAutosaveEnabled()) {
                 gradebook.serializeAndSave();
             }
 

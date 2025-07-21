@@ -22,7 +22,7 @@ namespace gradebook {
 		std::vector<Student>& getStudents();
 		const std::vector<Student>& getStudents() const;
 		std::vector<Administrator>& getSchool();
-		bool getAutosaveEnabled() const;
+		bool isAutosaveEnabled() const;
 		
 		//Admin Function
         void createSchool();

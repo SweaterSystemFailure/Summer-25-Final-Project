@@ -1,5 +1,6 @@
 #include "utilities.h"
 #include <vector>
+#include <fstream>
 #include <string>
 #include <iostream>
 #include <limits>
@@ -98,50 +99,68 @@ namespace gradebook {
 	}
 
 	//basic menus
-	void welcomeMenu(Gradebook& gradebook) {
-		std::cout << "Welcome to Gradebook!" << std::endl;
+	bool fileExists(const std::string& filename) {
+		std::ifstream file(filename, std::ios::binary);
+		return file.good();
+	}
 
-		// Load binary if available
-		if (/* !binaryLoaded() */ false) {  // replace with actual check
-			std::cout << "No saved school could be found. Let's set up a new school.\n";
+
+	void welcomeMenu(Gradebook& gradebook) {
+		std::cout << "Welcome to Gradebook!" << std::endl << std::endl;
+
+		const std::string filename = "gradebook.dat";
+
+		if (fileExists("gradebook.dat")) {
+			std::cout << "Loading saved data..." << std::endl;
+			gradebook.deserializeAndLoad();
+		}
+		else {
+			std::cout << "No saved school found. Let's set up a new school." << std::endl;
 			gradebook.createSchool();
+			gradebook.serializeAndSave();
 		}
 
 		while (true) {
-			std::cout << "\nPlease select a login type:\n";
-			std::cout << "1. Administrator." << std::endl;
-			std::cout << "2. Teacher." << std::endl;
-			std::cout << "3. Student." << std::endl;
-			std::cout << "4. Exit." << std::endl;
+			std::cout << std::endl << "Please select a login type:" << std::endl;
+			std::cout << "  1. Administrator" << std::endl;
+			std::cout << "  2. Teacher" << std::endl;
+			std::cout << "  3. Student" << std::endl;
+			std::cout << "  4. Exit" << std::endl;
 
 			int choice = numericValidator("Choose an option [1-4]: ", 1, 4);
 
 			std::unique_ptr<User> user = nullptr;
 
 			switch (choice) {
-			case 1: user = attemptLogin<Administrator>(gradebook.getSchool()); 
+			case 1:
+				user = attemptLogin<Administrator>(gradebook.getSchool());
 				break;
-			case 2: user = attemptLogin<Teacher>(gradebook.getTeachers()); 
+			case 2:
+				user = attemptLogin<Teacher>(gradebook.getTeachers());
 				break;
-			case 3: user = attemptLogin<Student>(gradebook.getStudents()); 
+			case 3:
+				user = attemptLogin<Student>(gradebook.getStudents());
 				break;
-			case 4: closeMenu(gradebook); 
-				break;
+			case 4:
+				closeMenu(gradebook);
+				return;
 			}
 
 			if (user) {
-				std::cout << "Login successful. Welcome, "
+				std::cout << std::endl << "Login successful. Welcome, "
 					<< user->getRole() << " "
 					<< user->getFirstName() << " "
-					<< user->getLastName()
-					<< "Launching menu." << std::endl << std::endl;
+					<< user->getLastName() << "." << std::endl << std::endl;
+
+				user->menu(gradebook);
 			}
 			else {
 				std::cout << "Login failed. Please try again." << std::endl;
 			}
-
 		}
 	}
+
+
 	void closeMenu(Gradebook& gradebook) {
 		if (userCheck("Would you like to save before exiting? [Y/N]",
 			"School saved! Exiting.",

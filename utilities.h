@@ -91,6 +91,7 @@ namespace gradebook {
 	bool userCheck(const std::string& prompt, const std::string& yesPrompt, const std::string& noPrompt);
 
 	//basic menus
+	bool fileExists(const std::string& filename);
 	void welcomeMenu(Gradebook& gradebook);
 	void closeMenu(Gradebook& gradebook);
 }

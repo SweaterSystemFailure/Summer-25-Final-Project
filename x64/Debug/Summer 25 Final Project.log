@@ -42,103 +42,10 @@ C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Admini
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         ]
   Assignment.cpp
   Gradebook.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(266,43): error C2039: 'getAssignment': is not a member of 'gradebook::Teacher'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(12,8):
-      see declaration of 'gradebook::Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(266,33): error C2530: 'assigns': references must be initialized
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(267,26): error C3536: 'assigns': cannot be used before it is initialized
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C2672: 'begin': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1962,27):
-      could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          '_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1944,30):
-      or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-              With the following template arguments:
-                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-                  '_Container=int'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1945,23):
-              left of '.begin' must have class/struct/union
-                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1945,23):
-                  type is 'const _Container'
-          with
-          [
-              _Container=int
-          ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1938,30):
-      or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-              With the following template arguments:
-                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-                  '_Container=int'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1939,23):
-              left of '.begin' must have class/struct/union
-                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1939,23):
-                  type is '_Container'
-          with
-          [
-              _Container=int
-          ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\initializer_list(54,35):
-      or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C2672: 'end': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1967,27):
-      could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          '_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1956,30):
-      or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-              With the following template arguments:
-                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-                  '_Container=int'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1957,23):
-              left of '.end' must have class/struct/union
-                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1957,23):
-                  type is 'const _Container'
-          with
-          [
-              _Container=int
-          ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1950,30):
-      or       'unknown-type std::end(_Container &) noexcept(<expr>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-              With the following template arguments:
-                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-                  '_Container=int'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1951,23):
-              left of '.end' must have class/struct/union
-                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1951,23):
-                  type is '_Container'
-          with
-          [
-              _Container=int
-          ]
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\initializer_list(59,35):
-      or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
-          'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C3536: '<begin>$L5': cannot be used before it is initialized
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C3536: '<end>$L5': cannot be used before it is initialized
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,41): error C2100: you cannot dereference an operand of type 'int'
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(449,25): error C2664: 'void gradebook::Teacher::addAssignment(std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &,gradebook::Gradebook &)': cannot convert argument 1 from 'gradebook::Assignment' to 'std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(310,19): error C2664: 'void gradebook::Teacher::addAssignment(std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &,gradebook::Gradebook &)': cannot convert argument 1 from 'gradebook::Assignment' to 'std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(39,8):
       see declaration of 'gradebook::Teacher::addAssignment'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(449,25):
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(310,19):
       while trying to match the argument list '(gradebook::Assignment, gradebook::Gradebook)'
   
   Student.cpp
@@ -180,66 +87,26 @@ C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradeb
   
   Summer 25 Final Project.cpp
   Teacher.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(81,18): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(100,18): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:             T=int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,17): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(142,18): error C2039: 'isAutosaveEnabled': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(399,19): error C2039: 'getAssignments': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(407,29): error C2039: 'getAssignments': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(413,14): error C2065: 'book': undeclared identifier
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,18): error C2065: 'book': undeclared identifier
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,6): error C2660: 'gradebook::Teacher::enterGrades': function does not take 1 arguments
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(48,16):
-      see declaration of 'gradebook::Teacher::enterGrades'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,6):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,15): error C2039: 'toggleAutosave': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(427,15): error C2039: 'closeMenu': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
-      see declaration of 'gradebook::Gradebook'
-  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(97,118): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(97,118): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(97,118): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(97,118): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(97,118): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,49): warning C4244:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,49): warning C4244:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,49): warning C4244:             T=int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,49): warning C4244:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:         ]
   utilities.cpp
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'utilities.cpp')
@@ -277,10 +144,10 @@ C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradeb
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(122,19): error C2664: 'std::unique_ptr<gradebook::User,std::default_delete<gradebook::User>> gradebook::attemptLogin<gradebook::Administrator>(std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &)': cannot convert argument 1 from 'std::vector' to 'std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(136,12): error C2664: 'std::unique_ptr<gradebook::User,std::default_delete<gradebook::User>> gradebook::attemptLogin<gradebook::Administrator>(std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &)': cannot convert argument 1 from 'std::vector' to 'std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &'
       C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(43,24):
       see declaration of 'gradebook::attemptLogin'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(122,19):
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(136,12):
       while trying to match the argument list '(std::vector)'
   
   Generating Code...
