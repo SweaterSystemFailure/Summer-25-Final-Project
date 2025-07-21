@@ -2,8 +2,10 @@
 #include "Teacher.h"
 #include "Student.h"
 #include "Administrator.h"
+#include "User.h"
 #include <iostream>
 #include <vector>
+#include <map>
 
 namespace gradebook {
     	class Gradebook {
@@ -18,7 +20,8 @@ namespace gradebook {
 		std::vector<Teacher>& getTeachers();
 		const std::vector<Teacher>& getTeachers() const;
 		std::vector<Student>& getStudents();
-		const std::vector<Student>& getStudents();
+		const std::vector<Student>& getStudents() const;
+		std::vector<Administrator>& getSchool();
 		bool getAutosaveEnabled() const;
 		
 		//Admin Function

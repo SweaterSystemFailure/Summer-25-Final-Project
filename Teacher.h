@@ -1,32 +1,29 @@
 #pragma once
-#include "Student.h"
+#include "User.h"
+#include "Assignment.h"
+
 #include <string>
 #include <vector>
-#include "Assignment.h"
-#include "Gradebook.h"
 
 namespace gradebook {
+	class Student;
+	class Gradebook;
+
 	class Teacher : public User {
 	private:
 		std::string title;
-		std::string teacherFirstName;
-		std::string teacherLastName;
 		unsigned gradeLevel;
-		std::string password;
 
 		std::vector<Student> students;
 		std::vector<Assignment> assignments;
 	public:
 		// Mutators
 		void setTitle(const std::string& entry);
-		void setTeacherFirstName(const std::string& entry);
-		void setTeacherLastName(const std::string& entry);
 		void setGradeLevel(const unsigned& entry);
-		void setPassword(const std::string entry);
 
 		// Accessors
 		std::string getTitle() const;
-		std::string getFirstName() const;
+		std::string getFirstName() const override;
 		std::string getLastName() const override;
 		unsigned getGradeLevel() const;
 		std::string getPassword() const override;

@@ -1,1639 +1,286 @@
 ﻿  Administrator.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(26,29): error C2535: 'std::string gradebook::User::getPassword(void) const': member function already defined or declared
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(21,21):
-      see declaration of 'gradebook::User::getPassword'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,15): error C2065: 'Student': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'Administrator.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,15):
-      see declaration of 'Student'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
+      see declaration of 'Administrator'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,8): error C2976: 'std::vector': too few template arguments
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
   (compiling source file 'Administrator.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,24): error C2955: 'std::vector': use of class template requires template argument list
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
   (compiling source file 'Administrator.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,15): error C2065: 'Student': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'Administrator.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,25): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,21): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,14): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,21):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(41,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(41,43): error C2143: syntax error: missing ',' before '&'
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(33,15): error C3668: 'gradebook::Teacher::getTeacherLastName': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(35,15): error C3668: 'gradebook::Teacher::getTeacherPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,24): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'Administrator.cpp')
       C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Student'
+      see declaration of 'Administrator'
   
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
   (compiling source file 'Administrator.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25): error C2955: 'std::vector': use of class template requires template argument list
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
   (compiling source file 'Administrator.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2556: 'const std::vector &gradebook::Gradebook::getStudents(void)': overloaded function differs only by return type from 'std::vector &gradebook::Gradebook::getStudents(void)'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2373: 'gradebook::Gradebook::getStudents': redefinition; different type modifiers
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(61,15): error C3668: 'gradebook::Student::getStudentPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(41,17): error C2259: 'gradebook::Teacher': cannot instantiate abstract class
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(9,8):
-      see declaration of 'gradebook::Teacher'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(41,17):
-      due to following members:
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(41,17):
-      'std::string gradebook::User::getLastName(void) const': is abstract
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(25,29):
-      see declaration of 'gradebook::User::getLastName'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(52,2): error C2512: 'std::vector': no appropriate default constructor available
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(52,2):
-      This diagnostic occurred in the compiler generated function 'gradebook::Teacher::Teacher(void)'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(41,17):
-      see reference to function 'gradebook::Teacher::Teacher(void)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(115,130): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(115,130): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(115,130): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(115,130): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(115,130): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,32): error C2664: 'void gradebook::Teacher::addStudentToClassroom(const int)': cannot convert argument 1 from 'gradebook::Student' to 'const int'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,54):
-      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(41,8):
-      see declaration of 'gradebook::Teacher::addStudentToClassroom'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,32):
-      while trying to match the argument list '(gradebook::Student)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(150,26): error C2662: 'bool std::vector<_Ty,_Alloc>::empty(void) noexcept const': cannot convert 'this' pointer from 'const std::vector' to 'const std::vector<_Ty,_Alloc> &'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(150,17):
-      Reason: cannot convert from 'const std::vector' to 'const std::vector<_Ty,_Alloc>'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(150,17):
-      Conversion requires a second user-defined-conversion operator or constructor
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1866,47):
-      see declaration of 'std::vector<_Ty,_Alloc>::empty'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(150,26):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_begin': no overloaded function has valid conversion for 'this' pointer
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1854,40):
-      could be 'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-          'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const': cannot convert 'this' pointer from 'const std::vector' to 'const std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Reason: cannot convert from 'const std::vector' to 'const std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1850,34):
-      or       '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-          '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept': cannot convert 'this' pointer from 'const std::vector' to 'std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Reason: cannot convert from 'const std::vector' to 'std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_end': no overloaded function has valid conversion for 'this' pointer
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1862,40):
-      could be 'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-          'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const': cannot convert 'this' pointer from 'const std::vector' to 'const std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Reason: cannot convert from 'const std::vector' to 'const std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1858,34):
-      or       '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-          '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept': cannot convert 'this' pointer from 'const std::vector' to 'std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Reason: cannot convert from 'const std::vector' to 'std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(166,40):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_begin': no overloaded function has valid conversion for 'this' pointer
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1854,40):
-      could be 'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-          'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept const': cannot convert 'this' pointer from 'const std::vector' to 'const std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Reason: cannot convert from 'const std::vector' to 'const std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1850,34):
-      or       '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-          '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_begin(void) noexcept': cannot convert 'this' pointer from 'const std::vector' to 'std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Reason: cannot convert from 'const std::vector' to 'std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40): error C2663: 'std::vector<_Ty,_Alloc>::_Unchecked_end': no overloaded function has valid conversion for 'this' pointer
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1862,40):
-      could be 'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-          'const _Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept const': cannot convert 'this' pointer from 'const std::vector' to 'const std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Reason: cannot convert from 'const std::vector' to 'const std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(1858,34):
-      or       '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-          '_Ty *std::vector<_Ty,_Alloc>::_Unchecked_end(void) noexcept': cannot convert 'this' pointer from 'const std::vector' to 'std::vector<_Ty,_Alloc> &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Reason: cannot convert from 'const std::vector' to 'std::vector<_Ty,_Alloc>'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-              Conversion requires a second user-defined-conversion operator or constructor
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(197,40):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(199,29): error C2672: 'std::quoted': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(367,46):
-      could be 'std::_Quote_in<_Elem,_Traits,_Alloc> std::quoted(std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(360,47):
-      or       'std::_Quote_out<_Elem,_Traits,size_t> std::quoted(const std::basic_string_view<_Elem,_Traits>,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(353,97):
-      or       'std::_Quote_out<_Elem,_Traits,basic_string<_Elem,_Traits,_Alloc>::size_type> std::quoted(const std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(346,44):
-      or       'std::_Quote_out<_Elem,void,size_t> std::quoted(const _Elem *,_Elem,_Elem)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(200,29): error C2672: 'std::quoted': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(367,46):
-      could be 'std::_Quote_in<_Elem,_Traits,_Alloc> std::quoted(std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(360,47):
-      or       'std::_Quote_out<_Elem,_Traits,size_t> std::quoted(const std::basic_string_view<_Elem,_Traits>,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(353,97):
-      or       'std::_Quote_out<_Elem,_Traits,basic_string<_Elem,_Traits,_Alloc>::size_type> std::quoted(const std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(346,44):
-      or       'std::_Quote_out<_Elem,void,size_t> std::quoted(const _Elem *,_Elem,_Elem)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(201,29): error C2672: 'std::quoted': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(367,46):
-      could be 'std::_Quote_in<_Elem,_Traits,_Alloc> std::quoted(std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(360,47):
-      or       'std::_Quote_out<_Elem,_Traits,size_t> std::quoted(const std::basic_string_view<_Elem,_Traits>,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(353,97):
-      or       'std::_Quote_out<_Elem,_Traits,basic_string<_Elem,_Traits,_Alloc>::size_type> std::quoted(const std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(346,44):
-      or       'std::_Quote_out<_Elem,void,size_t> std::quoted(const _Elem *,_Elem,_Elem)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(205,29): error C2672: 'std::quoted': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(367,46):
-      could be 'std::_Quote_in<_Elem,_Traits,_Alloc> std::quoted(std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(360,47):
-      or       'std::_Quote_out<_Elem,_Traits,size_t> std::quoted(const std::basic_string_view<_Elem,_Traits>,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(353,97):
-      or       'std::_Quote_out<_Elem,_Traits,basic_string<_Elem,_Traits,_Alloc>::size_type> std::quoted(const std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(346,44):
-      or       'std::_Quote_out<_Elem,void,size_t> std::quoted(const _Elem *,_Elem,_Elem)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(206,29): error C2672: 'std::quoted': no matching overloaded function found
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(367,46):
-      could be 'std::_Quote_in<_Elem,_Traits,_Alloc> std::quoted(std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(360,47):
-      or       'std::_Quote_out<_Elem,_Traits,size_t> std::quoted(const std::basic_string_view<_Elem,_Traits>,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(353,97):
-      or       'std::_Quote_out<_Elem,_Traits,basic_string<_Elem,_Traits,_Alloc>::size_type> std::quoted(const std::basic_string<_Elem,_Traits,_Alloc> &,_Elem,_Elem)'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iomanip(346,44):
-      or       'std::_Quote_out<_Elem,void,size_t> std::quoted(const _Elem *,_Elem,_Elem)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(243,31): error C2660: 'gradebook::Gradebook::serializeAndSave': function does not take 1 arguments
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(33,14):
-      see declaration of 'gradebook::Gradebook::serializeAndSave'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(243,31):
-      while trying to match the argument list '(gradebook::Gradebook)'
-  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         ]
   Assignment.cpp
   Gradebook.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(26,29): error C2535: 'std::string gradebook::User::getPassword(void) const': member function already defined or declared
-  (compiling source file 'Gradebook.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(21,21):
-      see declaration of 'gradebook::User::getPassword'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(266,43): error C2039: 'getAssignment': is not a member of 'gradebook::Teacher'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(12,8):
+      see declaration of 'gradebook::Teacher'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(61,15): error C3668: 'gradebook::Student::getStudentPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Gradebook.cpp')
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(266,33): error C2530: 'assigns': references must be initialized
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(267,26): error C3536: 'assigns': cannot be used before it is initialized
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C2672: 'begin': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1962,27):
+      could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          '_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1944,30):
+      or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+              With the following template arguments:
+                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+                  '_Container=int'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1945,23):
+              left of '.begin' must have class/struct/union
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1945,23):
+                  type is 'const _Container'
+          with
+          [
+              _Container=int
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1938,30):
+      or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+              With the following template arguments:
+                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+                  '_Container=int'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1939,23):
+              left of '.begin' must have class/struct/union
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1939,23):
+                  type is '_Container'
+          with
+          [
+              _Container=int
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\initializer_list(54,35):
+      or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(33,15): error C3668: 'gradebook::Teacher::getTeacherLastName': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Gradebook.cpp')
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C2672: 'end': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1967,27):
+      could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          '_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1956,30):
+      or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+              With the following template arguments:
+                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+                  '_Container=int'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1957,23):
+              left of '.end' must have class/struct/union
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1957,23):
+                  type is 'const _Container'
+          with
+          [
+              _Container=int
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1950,30):
+      or       'unknown-type std::end(_Container &) noexcept(<expr>)'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+              With the following template arguments:
+                  C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+                  '_Container=int'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1951,23):
+              left of '.end' must have class/struct/union
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(1951,23):
+                  type is '_Container'
+          with
+          [
+              _Container=int
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\initializer_list(59,35):
+      or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34):
+          'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(35,15): error C3668: 'gradebook::Teacher::getTeacherPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Gradebook.cpp')
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C3536: '<begin>$L5': cannot be used before it is initialized
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,34): error C3536: '<end>$L5': cannot be used before it is initialized
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(269,41): error C2100: you cannot dereference an operand of type 'int'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(449,25): error C2664: 'void gradebook::Teacher::addAssignment(std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &,gradebook::Gradebook &)': cannot convert argument 1 from 'gradebook::Assignment' to 'std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8):
+      see declaration of 'gradebook::Teacher::addAssignment'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(449,25):
+      while trying to match the argument list '(gradebook::Assignment, gradebook::Gradebook)'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2556: 'const std::vector<gradebook::Student,std::allocator<gradebook::Student>> &gradebook::Gradebook::getStudents(void)': overloaded function differs only by return type from 'std::vector<gradebook::Student,std::allocator<gradebook::Student>> &gradebook::Gradebook::getStudents(void)'
-  (compiling source file 'Gradebook.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2373: 'gradebook::Gradebook::getStudents': redefinition; different type modifiers
-  (compiling source file 'Gradebook.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(26,44): error C2761: 'std::vector<gradebook::Student,std::allocator<gradebook::Student>> &gradebook::Gradebook::getStudents(void)': redeclaration of member is not allowed
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(26,65): error C2447: '{': missing function header (old-style formal list?)
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(58,13): warning C4551: function call missing argument list
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(61,18): warning C4551: function call missing argument list
   Student.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(9,25): error C2504: 'User': base class undefined
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'Student.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,15): error C2065: 'Student': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'Student.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
+      see declaration of 'Administrator'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,8): error C2976: 'std::vector': too few template arguments
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
   (compiling source file 'Student.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(18,24): error C2955: 'std::vector': use of class template requires template argument list
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
   (compiling source file 'Student.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,15): error C2065: 'Student': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'Student.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(37,25): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,21): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,14): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,21):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(38,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(41,30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(41,43): error C2143: syntax error: missing ',' before '&'
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(50,13): error C2061: syntax error: identifier 'Gradebook'
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(33,15): error C3668: 'gradebook::Teacher::getTeacherLastName': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(35,15): error C3668: 'gradebook::Teacher::getTeacherPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(50,8): error C3668: 'gradebook::Teacher::menu': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(51,15): error C3668: 'gradebook::Teacher::getRole': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(26,29): error C2535: 'std::string gradebook::User::getPassword(void) const': member function already defined or declared
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(21,21):
-      see declaration of 'gradebook::User::getPassword'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,24): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'Student.cpp')
       C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Student'
+      see declaration of 'Administrator'
   
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
   (compiling source file 'Student.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25): error C2955: 'std::vector': use of class template requires template argument list
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
   (compiling source file 'Student.cpp')
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
       see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2556: 'const std::vector &gradebook::Gradebook::getStudents(void)': overloaded function differs only by return type from 'std::vector &gradebook::Gradebook::getStudents(void)'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2373: 'gradebook::Gradebook::getStudents': redefinition; different type modifiers
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(61,15): error C3668: 'gradebook::Student::getStudentPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(125,3): error C2662: 'void gradebook::Student::printStudent(void)': cannot convert 'this' pointer from 'const gradebook::Student' to 'gradebook::Student &'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(125,3):
-      Conversion loses qualifiers
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(111,16):
-      see declaration of 'gradebook::Student::printStudent'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(125,3):
-      while trying to match the argument list '()'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(144,16): error C2511: 'void gradebook::Student::menu(void)': overloaded member function not found in 'gradebook::Student'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(13,8):
-      see declaration of 'gradebook::Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14): error C2678: binary '<<': no operator found which takes a left-hand operand of type 'std::basic_ostream<char,std::char_traits<char>>' (or there is no acceptable conversion)
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(486,39):
-      could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)': cannot convert argument 2 from 'std::ostream' to 'std::basic_streambuf<char,std::char_traits<char>> *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(454,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)': cannot convert argument 2 from 'std::ostream' to 'const void *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(436,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)': cannot convert argument 2 from 'std::ostream' to 'long double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)': cannot convert argument 2 from 'std::ostream' to 'double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(400,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)': cannot convert argument 2 from 'std::ostream' to 'float'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(382,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)': cannot convert argument 2 from 'std::ostream' to 'unsigned __int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(364,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)': cannot convert argument 2 from 'std::ostream' to '__int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(346,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)': cannot convert argument 2 from 'std::ostream' to 'unsigned long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(328,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)': cannot convert argument 2 from 'std::ostream' to 'long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(309,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)': cannot convert argument 2 from 'std::ostream' to 'unsigned int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(283,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)': cannot convert argument 2 from 'std::ostream' to 'int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(264,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)': cannot convert argument 2 from 'std::ostream' to 'unsigned short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(230,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)': cannot convert argument 2 from 'std::ostream' to 'short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(212,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)': cannot convert argument 2 from 'std::ostream' to 'bool'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(206,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))': cannot convert argument 2 from 'std::ostream' to 'std::ios_base &(__cdecl *)(std::ios_base &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(200,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(195,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-      or       'built-in C++ operator<<(int, int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          '<<': cannot convert argument 1 from 'std::basic_ostream<char,std::char_traits<char>>' to 'int'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(481,20):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::nullptr_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'std::nullptr_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(37,27):
-      or       'std::byte std::operator <<(const std::byte,const _IntType) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::byte std::operator <<(const std::byte,const _IntType) noexcept': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(36,39):
-              'std::enable_if_t<false,int>' : Failed to specialize alias template
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\__msvc_string_view.hpp(1779,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)': could not deduce template argument for 'const std::basic_string_view<_Elem,_Traits>' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(3420,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1979,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)': could not deduce template argument for 'const std::shared_ptr<_Ty> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3761,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)': could not deduce template argument for 'const std::unique_ptr<_Ty2,_Dx2> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(694,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(738,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(774,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(819,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(857,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)': could not deduce template argument for 'const _Elem *' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(900,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': template parameter '_Elem' is ambiguous
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-              could be 'std::ostream'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-              or       'char'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': could not deduce template argument for '_Elem' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(936,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const signed char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(942,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'signed char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(947,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const unsigned char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(953,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'unsigned char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(961,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const char8_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(963,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(967,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'char8_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(969,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(975,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,wchar_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'wchar_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(978,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const wchar_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const wchar_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(982,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'char16_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(984,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'char32_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(987,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(989,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(992,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const char16_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(994,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const char32_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(997,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(999,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1011,9):
-      or       '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-          '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1010,103):
-              '<template-parameter>': you cannot create a pointer to a reference
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1088,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-          'initializing': cannot convert from 'std::ostream' to 'const std::error_code &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              Reason: cannot convert from 'std::ostream' to 'const std::error_code'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,47):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(147,14):
-      while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, std::ostream)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14): error C2678: binary '<<': no operator found which takes a left-hand operand of type 'std::basic_ostream<char,std::char_traits<char>>' (or there is no acceptable conversion)
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(486,39):
-      could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)': cannot convert argument 2 from 'std::ostream' to 'std::basic_streambuf<char,std::char_traits<char>> *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(454,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)': cannot convert argument 2 from 'std::ostream' to 'const void *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(436,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)': cannot convert argument 2 from 'std::ostream' to 'long double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)': cannot convert argument 2 from 'std::ostream' to 'double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(400,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)': cannot convert argument 2 from 'std::ostream' to 'float'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(382,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)': cannot convert argument 2 from 'std::ostream' to 'unsigned __int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(364,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)': cannot convert argument 2 from 'std::ostream' to '__int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(346,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)': cannot convert argument 2 from 'std::ostream' to 'unsigned long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(328,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)': cannot convert argument 2 from 'std::ostream' to 'long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(309,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)': cannot convert argument 2 from 'std::ostream' to 'unsigned int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(283,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)': cannot convert argument 2 from 'std::ostream' to 'int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(264,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)': cannot convert argument 2 from 'std::ostream' to 'unsigned short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(230,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)': cannot convert argument 2 from 'std::ostream' to 'short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(212,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)': cannot convert argument 2 from 'std::ostream' to 'bool'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(206,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))': cannot convert argument 2 from 'std::ostream' to 'std::ios_base &(__cdecl *)(std::ios_base &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(200,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(195,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-      or       'built-in C++ operator<<(int, int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          '<<': cannot convert argument 1 from 'std::basic_ostream<char,std::char_traits<char>>' to 'int'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(481,20):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::nullptr_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'std::nullptr_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(37,27):
-      or       'std::byte std::operator <<(const std::byte,const _IntType) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::byte std::operator <<(const std::byte,const _IntType) noexcept': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(36,39):
-              'std::enable_if_t<false,int>' : Failed to specialize alias template
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\__msvc_string_view.hpp(1779,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)': could not deduce template argument for 'const std::basic_string_view<_Elem,_Traits>' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(3420,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1979,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)': could not deduce template argument for 'const std::shared_ptr<_Ty> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3761,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)': could not deduce template argument for 'const std::unique_ptr<_Ty2,_Dx2> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(694,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(738,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(774,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(819,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(857,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)': could not deduce template argument for 'const _Elem *' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(900,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': template parameter '_Elem' is ambiguous
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-              could be 'std::ostream'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-              or       'char'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': could not deduce template argument for '_Elem' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(936,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const signed char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(942,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'signed char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(947,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const unsigned char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(953,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'unsigned char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(961,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const char8_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(963,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(967,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'char8_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(969,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(975,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,wchar_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'wchar_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(978,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const wchar_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const wchar_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(982,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'char16_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(984,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'char32_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(987,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(989,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(992,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const char16_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(994,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const char32_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(997,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(999,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1011,9):
-      or       '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-          '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1010,103):
-              '<template-parameter>': you cannot create a pointer to a reference
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1088,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-          'initializing': cannot convert from 'std::ostream' to 'const std::error_code &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              Reason: cannot convert from 'std::ostream' to 'const std::error_code'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,46):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(148,14):
-      while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, std::ostream)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14): error C2678: binary '<<': no operator found which takes a left-hand operand of type 'std::basic_ostream<char,std::char_traits<char>>' (or there is no acceptable conversion)
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(486,39):
-      could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)': cannot convert argument 2 from 'std::ostream' to 'std::basic_streambuf<char,std::char_traits<char>> *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(454,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)': cannot convert argument 2 from 'std::ostream' to 'const void *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(436,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)': cannot convert argument 2 from 'std::ostream' to 'long double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(418,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)': cannot convert argument 2 from 'std::ostream' to 'double'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(400,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)': cannot convert argument 2 from 'std::ostream' to 'float'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(382,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)': cannot convert argument 2 from 'std::ostream' to 'unsigned __int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(364,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)': cannot convert argument 2 from 'std::ostream' to '__int64'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(346,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)': cannot convert argument 2 from 'std::ostream' to 'unsigned long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(328,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)': cannot convert argument 2 from 'std::ostream' to 'long'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(309,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)': cannot convert argument 2 from 'std::ostream' to 'unsigned int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(283,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)': cannot convert argument 2 from 'std::ostream' to 'int'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(264,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)': cannot convert argument 2 from 'std::ostream' to 'unsigned short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(230,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)': cannot convert argument 2 from 'std::ostream' to 'short'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(212,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)': cannot convert argument 2 from 'std::ostream' to 'bool'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(206,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))': cannot convert argument 2 from 'std::ostream' to 'std::ios_base &(__cdecl *)(std::ios_base &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(200,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(195,39):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))': cannot convert argument 2 from 'std::ostream' to 'std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &)'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-      or       'built-in C++ operator<<(int, int)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          '<<': cannot convert argument 1 from 'std::basic_ostream<char,std::char_traits<char>>' to 'int'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(481,20):
-      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::nullptr_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'std::nullptr_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(37,27):
-      or       'std::byte std::operator <<(const std::byte,const _IntType) noexcept'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::byte std::operator <<(const std::byte,const _IntType) noexcept': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\cstddef(36,39):
-              'std::enable_if_t<false,int>' : Failed to specialize alias template
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\__msvc_string_view.hpp(1779,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string_view<_Elem,_Traits>)': could not deduce template argument for 'const std::basic_string_view<_Elem,_Traits>' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(3420,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::basic_string<_Elem,_Traits,_Alloc> &)': could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1979,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::shared_ptr<_Ty> &)': could not deduce template argument for 'const std::shared_ptr<_Ty> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3761,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::unique_ptr<_Ty2,_Dx2> &)': could not deduce template argument for 'const std::unique_ptr<_Ty2,_Dx2> &' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(694,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(738,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(774,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(819,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(857,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const _Elem *)': could not deduce template argument for 'const _Elem *' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(900,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': template parameter '_Elem' is ambiguous
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-              could be 'std::ostream'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-              or       'char'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,_Elem)': could not deduce template argument for '_Elem' from 'std::ostream'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(936,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const signed char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const signed char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(942,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,signed char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'signed char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(947,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const unsigned char *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const unsigned char *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(953,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,unsigned char)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'unsigned char'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(961,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const char8_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(963,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char8_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(967,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'char8_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(969,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char8_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(975,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,wchar_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'wchar_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(978,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const wchar_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const wchar_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(982,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'char16_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(984,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'char32_t'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(987,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char16_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(989,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,char32_t)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(992,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const char16_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(994,31):
-      or       'std::basic_ostream<char,_Traits> &std::operator <<(std::basic_ostream<char,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const char32_t *'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(997,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char16_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(999,34):
-      or       'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          'std::basic_ostream<wchar_t,_Traits> &std::operator <<(std::basic_ostream<wchar_t,_Traits> &,const char32_t *)': could not deduce template argument for 'std::basic_ostream<wchar_t,_Traits> &' from 'std::basic_ostream<char,std::char_traits<char>>'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1011,9):
-      or       '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-          '_Ostr &&std::operator <<(_Ostr &&,const _Ty &)': could not deduce template argument for '__formal'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1010,103):
-              '<template-parameter>': you cannot create a pointer to a reference
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\ostream(1088,32):
-      or       'std::basic_ostream<_Elem,_Traits> &std::operator <<(std::basic_ostream<_Elem,_Traits> &,const std::error_code &)'
-          C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-          'initializing': cannot convert from 'std::ostream' to 'const std::error_code &'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              Reason: cannot convert from 'std::ostream' to 'const std::error_code'
-              C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,39):
-              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(149,14):
-      while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, std::ostream)'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(155,5): error C2352: 'gradebook::Student::printStudent': a call of a non-static member function requires an object
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(111,16):
-      see declaration of 'gradebook::Student::printStudent'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(158,5): error C2352: 'gradebook::Student::printStudentReport': a call of a non-static member function requires an object
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(124,16):
-      see declaration of 'gradebook::Student::printStudentReport'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(161,5): error C2660: 'gradebook::welcomeMenu': function does not take 0 arguments
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(59,7):
-      see declaration of 'gradebook::welcomeMenu'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.cpp(161,5):
-      while trying to match the argument list '()'
   
   Summer 25 Final Project.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(26,29): error C2535: 'std::string gradebook::User::getPassword(void) const': member function already defined or declared
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(21,21):
-      see declaration of 'gradebook::User::getPassword'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(61,15): error C3668: 'gradebook::Student::getStudentPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(33,15): error C3668: 'gradebook::Teacher::getTeacherLastName': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(35,15): error C3668: 'gradebook::Teacher::getTeacherPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2556: 'const std::vector<gradebook::Student,std::allocator<gradebook::Student>> &gradebook::Gradebook::getStudents(void)': overloaded function differs only by return type from 'std::vector<gradebook::Student,std::allocator<gradebook::Student>> &gradebook::Gradebook::getStudents(void)'
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2373: 'gradebook::Gradebook::getStudents': redefinition; different type modifiers
-  (compiling source file 'Summer%2025%20Final%20Project.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Summer 25 Final Project.cpp(10,5): error C3861: 'weclomeMenu': identifier not found
   Teacher.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(26,29): error C2535: 'std::string gradebook::User::getPassword(void) const': member function already defined or declared
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\User.h(21,21):
-      see declaration of 'gradebook::User::getPassword'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,21): error C2065: 'Teacher': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,14): error C2923: 'std::vector': 'Teacher' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,21):
-      see declaration of 'Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,30): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(12,24): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(21,15): error C2065: 'Teacher': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(21,8): error C2923: 'std::vector': 'Teacher' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(21,15):
-      see declaration of 'Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(21,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(21,25): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(22,21): error C2065: 'Teacher': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(22,14): error C2923: 'std::vector': 'Teacher' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(22,21):
-      see declaration of 'Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(22,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(22,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21): error C2065: 'Student': undeclared identifier
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2923: 'std::vector': 'Student' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,21):
-      see declaration of 'Student'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,14): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Teacher.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2556: 'const std::vector &gradebook::Gradebook::getStudents(void)': overloaded function differs only by return type from 'std::vector &gradebook::Gradebook::getStudents(void)'
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(25,31): error C2373: 'gradebook::Gradebook::getStudents': redefinition; different type modifiers
-  (compiling source file 'Teacher.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,25):
-      see declaration of 'gradebook::Gradebook::getStudents'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Student.h(61,15): error C3668: 'gradebook::Student::getStudentPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(33,15): error C3668: 'gradebook::Teacher::getTeacherLastName': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(35,15): error C3668: 'gradebook::Teacher::getTeacherPassword': method with override specifier 'override' did not override any base class methods
-  (compiling source file 'Teacher.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(20,16): error C2511: 'void gradebook::Teacher::setTeacherPassword(const std::string &)': overloaded member function not found in 'gradebook::Teacher'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(9,8):
-      see declaration of 'gradebook::Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(21,3): error C2597: illegal reference to non-static member 'gradebook::Teacher::teacherPassword'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(15,15):
-      see declaration of 'gradebook::Teacher::teacherPassword'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(23,16): error C2511: 'void gradebook::Teacher::setAutoSave(const bool &)': overloaded member function not found in 'gradebook::Teacher'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(9,8):
-      see declaration of 'gradebook::Teacher'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(24,3): error C2597: illegal reference to non-static member 'gradebook::Teacher::autosave'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(16,8):
-      see declaration of 'gradebook::Teacher::autosave'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(74,108): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(74,108): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(74,108): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(74,108): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(74,108): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(98,118): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(98,118): warning C4267:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(98,118): warning C4267:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(98,118): warning C4267:             T=unsigned int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(98,118): warning C4267:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(128,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(128,49): warning C4244:         with
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(128,49): warning C4244:         [
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(128,49): warning C4244:             T=int
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(128,49): warning C4244:         ]
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(173,10): error C2039: 'addStudent': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(63,108): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(81,18): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(179,10): error C2039: 'printStudentReport': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(91,118): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(100,18): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(182,10): error C2039: 'addAssignment': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:             T=int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(125,49): warning C4244:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(131,17): error C2039: 'getAutoSaveEnabled': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(188,10): error C2039: 'enterGrades': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(142,18): error C2039: 'isAutosaveEnabled': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(191,10): error C2039: 'exportToCSV': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(382,102): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(399,19): error C2039: 'getAssignments': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(197,10): error C2039: 'welcomeMenu': is not a member of 'gradebook::Gradebook'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(9,12):
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(407,29): error C2039: 'getAssignments': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
+      see declaration of 'gradebook::Gradebook'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(413,14): error C2065: 'book': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,18): error C2065: 'book': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,6): error C2660: 'gradebook::Teacher::enterGrades': function does not take 1 arguments
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(48,16):
+      see declaration of 'gradebook::Teacher::enterGrades'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(417,6):
+      while trying to match the argument list '()'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,15): error C2039: 'toggleAutosave': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
+      see declaration of 'gradebook::Gradebook'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(427,15): error C2039: 'closeMenu': is not a member of 'gradebook::Gradebook'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(11,12):
       see declaration of 'gradebook::Gradebook'
   
   utilities.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,28): error C2039: 'User': is not a member of 'gradebook'
-  (compiling source file 'utilities.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(7,11):
-      see declaration of 'gradebook'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,28): error C2065: 'User': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'utilities.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,6): error C2923: 'std::unique_ptr': 'User' is not a valid template type argument for parameter '_Ty'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'utilities.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,28):
-      see declaration of 'User'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
+      see declaration of 'Administrator'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,6): error C2976: 'std::unique_ptr': too few template arguments
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
   (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(39,34): error C2955: 'std::unique_ptr': use of class template requires template argument list
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
   (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(59,7): error C2182: 'welcomeMenu': this use of 'void' is not valid
-  (compiling source file 'utilities.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(59,19): error C2065: 'Gradebook': undeclared identifier
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
   (compiling source file 'utilities.cpp')
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(59,30): error C2882: 'gradebook': illegal use of namespace identifier in expression
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
   (compiling source file 'utilities.cpp')
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
+      see declaration of 'Administrator'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,7): error C2182: 'welcomeMenu': this use of 'void' is not valid
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,7): error C2374: 'gradebook::welcomeMenu': redefinition; multiple initialization
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(59,7):
-      see declaration of 'gradebook::welcomeMenu'
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
+  (compiling source file 'utilities.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
   
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,19): error C2065: 'Gradebook': undeclared identifier
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,30): error C2882: 'gradebook': illegal use of namespace identifier in expression
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,41): error C2143: syntax error: missing ';' before '{'
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(99,41): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
+  (compiling source file 'utilities.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      see declaration of 'std::vector'
+  
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(122,19): error C2664: 'std::unique_ptr<gradebook::User,std::default_delete<gradebook::User>> gradebook::attemptLogin<gradebook::Administrator>(std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &)': cannot convert argument 1 from 'std::vector' to 'std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(43,24):
+      see declaration of 'gradebook::attemptLogin'
+      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(122,19):
+      while trying to match the argument list '(std::vector)'
+  
   Generating Code...

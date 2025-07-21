@@ -3,6 +3,9 @@
 #include <vector>
 #include <iostream>
 #include <limits>
+#include "Administrator.h"
+#include "Teacher.h"
+#include "Student.h"
 #include "User.h"
 
 namespace gradebook {

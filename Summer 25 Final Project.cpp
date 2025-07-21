@@ -8,7 +8,7 @@ int main()
 {
     Gradebook gradebook;
     gradebook.deserializeAndLoad();
-    gradebook.weclomeMenu(gradebook);
+    welcomeMenu(gradebook);
 
     return 0;
 }

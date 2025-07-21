@@ -5,17 +5,13 @@
 #include <vector>
 #include <string>
 #include <map>
+#include "Teacher.h"
 #include "User.h"
 #include "utilities.h"
 
 namespace gradebook {
 	//Mutators
-	void Student::setFirstName(const std::string& entry) {
-		firstName = entry;
-	}
-	void Student::setLastName(const std::string& entry) {
-		lastName = entry;
-	}
+
 	void Student::setPronouns(const std::string& entry) {
 		pronouns = entry;
 	}
@@ -33,9 +29,6 @@ namespace gradebook {
 	}
 	void Student::setNotes(const std::string& entry) {
 		notes = entry;
-	}
-	void Student::setPassword(const std::string entry) {
-		password = entry;
 	}
 	void Student::setOverallGrade(const char& entry) {
 		overallGrade = entry;
@@ -81,9 +74,9 @@ namespace gradebook {
 	float Student::getGradePercent() const {
 		return gradePercent;
 	}
-	float Student::getAssignmentScore(const std::string& assignmentName) const {
-		auto it = assignmentScores.find(assignmentName);
-		return it != assignmentScores.end() ? it->second : 0.0f;
+	const std::map<std::string, float>&
+		Student::getAssignmentScores() const {
+		return assignmentScores;
 	}
 
 	//Grade Calculation
@@ -109,7 +102,7 @@ namespace gradebook {
 	}
 
 	//Print Functions
-	void Student::printStudent() {
+	void Student::printStudent() const {
 		std::cout << "Student Profile\n";
 		std::cout << "------------------------\n";
 		std::cout << "First Name      : " << firstName << std::endl;
@@ -192,9 +185,9 @@ namespace gradebook {
 	void Student::menu(Gradebook& gradebook) {
 		while (true) {
 			std::cout << "\n=== Student Menu ===\n";
-			std::cout << "1. View My Profile." << std::cout;
-			std::cout << "2. View My Grades." << std::cout;
-			std::cout << "3. Log Out." << std::cout;
+			std::cout << "1. View My Profile." << std::endl;
+			std::cout << "2. View My Grades." << std::endl;
+			std::cout << "3. Log Out." << std::endl;
 
 			unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 3);
 

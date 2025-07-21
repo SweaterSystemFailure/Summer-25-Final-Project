@@ -118,18 +118,21 @@ namespace gradebook {
 
 			std::unique_ptr<User> user = nullptr;
 
-			std::unique_ptr<User> user = nullptr;
 			switch (choice) {
-			case 1: user = attemptLogin<Administrator>(gradebook.getAdmins()); break;
-			case 2: user = attemptLogin<Teacher>(gradebook.getTeachers()); break;
-			case 3: user = attemptLogin<Student>(gradebook.getStudents()); break;
-			case 4: closeMenu(); break;
+			case 1: user = attemptLogin<Administrator>(gradebook.getSchool()); 
+				break;
+			case 2: user = attemptLogin<Teacher>(gradebook.getTeachers()); 
+				break;
+			case 3: user = attemptLogin<Student>(gradebook.getStudents()); 
+				break;
+			case 4: closeMenu(gradebook); 
+				break;
 			}
 
 			if (user) {
 				std::cout << "Login successful. Welcome, "
 					<< user->getRole() << " "
-					<< static_cast<std::string>(user->getFirstName()) << " "
+					<< user->getFirstName() << " "
 					<< user->getLastName()
 					<< "Launching menu." << std::endl << std::endl;
 			}

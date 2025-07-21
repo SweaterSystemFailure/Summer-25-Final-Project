@@ -1,43 +1,41 @@
 #include "Administrator.h"
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <sstream>
-#include "Student.h"
 #include "Gradebook.h"
 #include "utilities.h"
+#include "Student.h"
+#include "Teacher.h"
+#include <fstream>
+#include <iomanip> 
+#include <iostream>
+#include <sstream>
+#include <vector> 
 
 namespace gradebook {
     // Mutators
     void Administrator::setAdminTitle(const std::string& entry) {
         adminTitle = entry;
     }
-    void Administrator::setAdminFirstName(const std::string& entry) {
-        adminFirstName = entry;
-    }
-    void Administrator::setAdminLastName(const std::string& entry) {
-        adminLastName = entry;
-    }
+
     void Administrator::setSchoolName(const std::string& entry) {
         schoolName = entry;
-    }
-    void Administrator::setPassword(const std::string& entry) {
-        password = entry;
     }
 
     // Accessors
     std::string Administrator::getAdminTitle() const {
         return adminTitle;
     }
+
     std::string Administrator::getFirstName() const {
-        return adminFirstName;
+        return firstName;
     }
+
     std::string Administrator::getLastName() const {
-        return adminLastName;
+        return lastName;
     }
+
     std::string Administrator::getSchoolName() const {
         return schoolName;
     }
+
     std::string Administrator::getPassword() const {
         return password;
     }
@@ -52,8 +50,8 @@ namespace gradebook {
 
             do {
                 newTeacher.setTitle(stringValidator("Which honorific do your students address you by? "));
-                newTeacher.setTeacherFirstName(stringValidator("What is your first name? "));
-                newTeacher.setTeacherLastName(stringValidator("What is your last name? "));
+                newTeacher.setFirstName(stringValidator("What is your first name? "));
+                newTeacher.setLastName(stringValidator("What is your last name? "));
                 newTeacher.setGradeLevel(numericValidator<unsigned>("Which grade do you teach? [1–12]: ", 1, 12));
                 newTeacher.printClassroomReport();
 
@@ -129,7 +127,7 @@ namespace gradebook {
                     << chosenTeacher->getLastName() << " successfully!" << std::endl;
             }
             
-            if (gradebook.getAutoSaveEnabled()) {
+            if (gradebook.getAutosaveEnabled()) {
                 gradebook.serializeAndSave();
             }
 
@@ -171,9 +169,9 @@ namespace gradebook {
                 << std::setw(13) << "Letter Grade:"
                 << std::endl;
 
-            std::cout << std::string(75, '-') << std::endl;
+            std::cout << std::string(81, '-') << "\n";
 
-            for (const auto& student : students) {
+            for (const Student& student : students) {
                 std::cout << std::left
                     << std::setw(16) << student.getFirstName()
                     << std::setw(16) << student.getLastName()
@@ -181,9 +179,8 @@ namespace gradebook {
                     << std::setw(11) << student.getID()
                     << std::setw(16) << std::fixed << std::setprecision(2) << student.getGradePercent()
                     << std::setw(13) << student.getOverallGrade()
-                    << std::endl;
+                    << "\n";
             }
-
             std::cout << std::endl;
         }
     }
@@ -236,7 +233,7 @@ namespace gradebook {
                 std::cout << "7. Toggle Autosave." << std::endl;
                 std::cout << "8. Log Out." << std::endl;
 
-                unsigned choice = numericValidator<unsigned>("Choose an option [1-3]: ", 1, 5);
+                unsigned choice = numericValidator<unsigned>("Choose an option [1-8]: ", 1, 8);
 
                 switch (choice) {
                 case 1:
@@ -256,11 +253,13 @@ namespace gradebook {
                     break;
                 case 6:
                     gradebook.serializeAndSave();
+                    break;
                 case 7:
                     gradebook.autosaveToggle();
                     break;
                 case 8:
-                    gradebook.closeMenu(gradebook);
+                    closeMenu(gradebook);
+                    break;
                 default:
                     std::cout << "Invalid selection. Please try again." << std::endl;
                    return;

@@ -1,5 +1,7 @@
 #include "Teacher.h"
 #include "Student.h"
+#include "User.h"
+#include "Gradebook.h"
 #include "utilities.h"
 #include <fstream>
 #include <iostream>
@@ -11,17 +13,8 @@ namespace gradebook {
 	void Teacher::setTitle(const std::string& entry) {
 		title = entry;
 	}
-	void Teacher::setTeacherFirstName(const std::string& entry) {
-		teacherFirstName = entry;
-	}
-	void Teacher::setTeacherLastName(const std::string& entry) {
-		teacherLastName = entry;
-	}
 	void Teacher::setGradeLevel(const unsigned& entry) {
 		gradeLevel = entry;
-	}
-	void Teacher::setPassword(const std::string entry) {
-		password = entry;
 	}
 
 	// Accessors
@@ -29,10 +22,10 @@ namespace gradebook {
 		return title;
 	}
 	std::string Teacher::getFirstName() const {
-		return teacherFirstName;
+		return firstName;
 	}
 	std::string Teacher::getLastName() const {
-		return teacherLastName;
+		return lastName;
 	}
 	unsigned Teacher::getGradeLevel() const {
 		return gradeLevel;
@@ -134,10 +127,11 @@ namespace gradebook {
 		} while (!userCheck("Does this look right to you? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
 
 		assignments.push_back(assignment);
-
-		if (gradebook.isAutosaveEnabled()) {
+		
+		if (gradebook.getAutoSaveEnabled()) {
 			gradebook.serializeAndSave();
 		}
+
 
 		if (userCheck("Would you like to add another assignment? ",
 			"Okay, let's add another.",
@@ -343,7 +337,7 @@ namespace gradebook {
 				}
 			}
 
-			outFile << "\n"
+			outFile << "\n";
 		}
 
 		outFile.close();
@@ -352,7 +346,7 @@ namespace gradebook {
 
 
 	// Menu
-	void Teacher::menu(Gradebook& book) {
+	void Teacher::menu(Gradebook& gradebook) {
 		while (true) {
 			std::cout << "Welcome to the main menu.\n";
 			std::cout << "From here you can enter student information and grades.\n\n";
@@ -402,7 +396,7 @@ namespace gradebook {
 				}
 				break;
 			case 4:
-				if (book.getAssignments().empty()) {
+				if (gradebook.getAssignments().empty()) {
 					std::cout << "There are no assignments in the system.\n";
 				}
 				else {
@@ -410,7 +404,7 @@ namespace gradebook {
 				}
 				break;
 			case 5:
-				addAssignment(book.getAssignments());
+				addAssignment(gradebook.getAssignments(), gradebook);
 				break;
 			case 6:
 				if (students.empty()) {
@@ -424,13 +418,13 @@ namespace gradebook {
 				}
 				break;
 			case 7:
-				book.serializeAndSave();
+				gradebook.serializeAndSave();
 				break;
 			case 8:
-				book.toggleAutosave();
+				gradebook.toggleAutosave();
 				break;
 			case 9:
-				book.closeMenu();
+				gradebook.closeMenu();
 				return;
 			default:
 				std::cout << "Invalid option. Please try again.\n";
