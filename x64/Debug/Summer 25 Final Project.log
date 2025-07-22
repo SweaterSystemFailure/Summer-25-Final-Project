@@ -1,2 +1,34 @@
-﻿  Gradebook.cpp
+﻿  Administrator.cpp
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,74): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,74): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,74): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,74): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,74): warning C4267:         ]
+  Assignment.cpp
+  Gradebook.cpp
+  Student.cpp
+  Summer 25 Final Project.cpp
+  Teacher.cpp
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(75,20): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(75,20): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(75,20): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(75,20): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(75,20): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(107,24): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(107,24): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(107,24): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(107,24): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(107,24): warning C4267:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(143,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(143,49): warning C4244:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(143,49): warning C4244:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(143,49): warning C4244:             T=int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(143,49): warning C4244:         ]
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,102): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,102): warning C4267:         with
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,102): warning C4267:         [
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,102): warning C4267:             T=unsigned int
+C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(424,102): warning C4267:         ]
+  utilities.cpp
+  Generating Code...
   Summer 25 Final Project.vcxproj -> C:\Users\Ben\source\repos\Summer 25 Final Project\x64\Debug\Summer 25 Final Project.exe

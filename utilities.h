@@ -43,7 +43,7 @@ namespace gradebook {
 
     template<typename T>
     std::unique_ptr<gradebook::User, std::function<void(gradebook::User*)>>
-        attemptLogin(std::vector<T>& users, gradebook::Gradebook& gradebook) {
+        attemptLogin(std::vector<std::unique_ptr<T>>& users, gradebook::Gradebook& gradebook) {
         using namespace gradebook;
 
         if (users.empty()) {
@@ -54,9 +54,9 @@ namespace gradebook {
         T* userPtr = nullptr;
         if constexpr (std::is_same_v<T, Student>) {
             unsigned id = numericValidator<unsigned>("Enter your Student ID: ", 1, 999999);
-            for (auto& student : users) {
-                if (student.getID() == id) {
-                    userPtr = &student;
+            for (auto& studentPtr : users) {
+                if (studentPtr->getID() == id) {
+                    userPtr = studentPtr.get();
                     break;
                 }
             }
@@ -64,11 +64,10 @@ namespace gradebook {
         else {
             std::string first = stringValidator("Enter your first name: ");
             std::string last = stringValidator("Enter your last name: ");
-            for (auto& u : users) {
-                if constexpr (std::is_same_v<T, Teacher> ||
-                    std::is_same_v<T, Administrator>) {
-                    if (u.getFirstName() == first && u.getLastName() == last) {
-                        userPtr = &u;
+            for (auto& uPtr : users) {
+                if constexpr (std::is_same_v<T, Teacher> || std::is_same_v<T, Administrator>) {
+                    if (uPtr->getFirstName() == first && uPtr->getLastName() == last) {
+                        userPtr = uPtr.get();
                         break;
                     }
                 }
@@ -80,7 +79,6 @@ namespace gradebook {
             return nullptr;
         }
 
-        // Inline password handler
         auto doPasswordFlow = [&](User& u) {
             std::string entered;
             if (u.getPassword().empty()) {
@@ -111,7 +109,80 @@ namespace gradebook {
 
         return std::unique_ptr<User, std::function<void(User*)>>(
             static_cast<User*>(userPtr),
-            [](User*) {}  // no-op deleter, since we don't own the object
+            [](User*) {} 
+        );
+    }
+
+    template<typename T>
+    std::unique_ptr<gradebook::User, std::function<void(gradebook::User*)>>
+        attemptLogin(std::vector<T>& users, gradebook::Gradebook& gradebook) {
+        using namespace gradebook;
+
+        if (users.empty()) {
+            std::cout << "No users of this type are registered.\n";
+            return nullptr;
+        }
+
+        T* userPtr = nullptr;
+        if constexpr (std::is_same_v<T, Student>) {
+            unsigned id = numericValidator<unsigned>("Enter your Student ID: ", 1, 999999);
+            for (auto& student : users) {
+                if (student.getID() == id) {
+                    userPtr = &student;
+                    break;
+                }
+            }
+        }
+        else {
+            std::string first = stringValidator("Enter your first name: ");
+            std::string last = stringValidator("Enter your last name: ");
+            for (auto& u : users) {
+                if constexpr (std::is_same_v<T, Teacher> || std::is_same_v<T, Administrator>) {
+                    if (u.getFirstName() == first && u.getLastName() == last) {
+                        userPtr = &u;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!userPtr) {
+            std::cout << "User not found.\n";
+            return nullptr;
+        }
+
+        // Password flow same as above
+        auto doPasswordFlow = [&](User& u) {
+            std::string entered;
+            if (u.getPassword().empty()) {
+                std::cout << "No password set for your account. Please create one now.\n";
+                do {
+                    entered = stringValidator("Enter new password: ");
+                } while (!isStrongPassword(entered));
+                u.setPassword(entered);
+                std::cout << "Password set successfully.\n";
+                if (gradebook.isAutosaveEnabled()) {
+                    gradebook.serializeAndSave();
+                }
+            }
+            else {
+                entered = stringValidator("Enter your password: ");
+                if (entered != u.getPassword()) {
+                    std::cout << "Incorrect password.\n";
+                    return false;
+                }
+                std::cout << "Password accepted.\n";
+            }
+            return true;
+            };
+
+        if (!doPasswordFlow(*userPtr)) {
+            return nullptr;
+        }
+
+        return std::unique_ptr<User, std::function<void(User*)>>(
+            static_cast<User*>(userPtr),
+            [](User*) {} 
         );
     }
 

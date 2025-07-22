@@ -22,10 +22,11 @@ namespace gradebook {
         return teachers;
     }
 
-    std::vector<Student>& Gradebook::getStudents() {
+    std::vector<std::unique_ptr<Student>>& Gradebook::getStudents() {
         return students;
     }
-    const std::vector<Student>& Gradebook::getStudents() const {
+
+    const std::vector<std::unique_ptr<Student>>& Gradebook::getStudents() const {
         return students;
     }
 
@@ -117,7 +118,9 @@ namespace gradebook {
         // --- Save students ---
         size_t studentCount = students.size();
         writeUnsigned((unsigned)studentCount);
-        for (const auto& student : students) {
+        for (const auto& studentPtr : students) {
+            const Student& student = *studentPtr;
+
             writeString(student.getFirstName());
             writeString(student.getLastName());
             writeString(student.getPronouns());
@@ -175,11 +178,12 @@ namespace gradebook {
             return;
         }
 
+        // Clear existing data
         school.clear();
         students.clear();
         teachers.clear();
 
-        // Reader lambdas
+        // Helper lambdas
         auto readString = [&](std::ifstream& f) {
             size_t len = 0;
             f.read(reinterpret_cast<char*>(&len), sizeof(len));
@@ -198,7 +202,9 @@ namespace gradebook {
             return v;
             };
         auto readChar = [&](std::ifstream& f) {
-            char c = '\0'; f.read(reinterpret_cast<char*>(&c), sizeof(c)); return c;
+            char c = '\0';
+            f.read(reinterpret_cast<char*>(&c), sizeof(c));
+            return c;
             };
 
         // --- Load administrators ---
@@ -215,27 +221,31 @@ namespace gradebook {
 
         // --- Load students ---
         unsigned studentCount = readUnsigned(inFile);
-        for (unsigned i = 0; i < studentCount; ++i) {
-            Student s;
-            s.setFirstName(readString(inFile));
-            s.setLastName(readString(inFile));
-            s.setPronouns(readString(inFile));
-            s.setAge(readUnsigned(inFile));
-            s.setGradeLevel(readUnsigned(inFile));
-            s.setID(readUnsigned(inFile));
-            s.setSeat(readString(inFile));
-            s.setNotes(readString(inFile));
-            s.setOverallGrade(readChar(inFile));
-            s.setGradePercent(readFloat(inFile));
+        students.reserve(studentCount);
+        std::unordered_map<unsigned, Student*> idToStudentPtr;
 
-            // Assignment scores
+        for (unsigned i = 0; i < studentCount; ++i) {
+            auto s = std::make_unique<Student>();
+            s->setFirstName(readString(inFile));
+            s->setLastName(readString(inFile));
+            s->setPronouns(readString(inFile));
+            s->setAge(readUnsigned(inFile));
+            s->setGradeLevel(readUnsigned(inFile));
+            s->setID(readUnsigned(inFile));
+            s->setSeat(readString(inFile));
+            s->setNotes(readString(inFile));
+            s->setOverallGrade(readChar(inFile));
+            s->setGradePercent(readFloat(inFile));
+
             unsigned mapSize = readUnsigned(inFile);
             for (unsigned j = 0; j < mapSize; ++j) {
                 std::string nm = readString(inFile);
                 float sc = readFloat(inFile);
-                s.setAssignmentScore(nm, sc);
+                s->setAssignmentScore(nm, sc);
             }
 
+            unsigned id = s->getID();
+            idToStudentPtr[id] = s.get();
             students.push_back(std::move(s));
         }
 
@@ -249,20 +259,14 @@ namespace gradebook {
             t.setGradeLevel(readUnsigned(inFile));
             t.setPassword(readString(inFile));
 
-            // Classroom student IDs to resolve pointers
+            // Load student IDs
             unsigned clsSize = readUnsigned(inFile);
+            std::vector<unsigned> studentIDs(clsSize);
             for (unsigned j = 0; j < clsSize; ++j) {
-                unsigned studID = readUnsigned(inFile);
-                auto it = std::find_if(
-                    students.begin(), students.end(),
-                    [&](const Student& s) { return s.getID() == studID; }
-                );
-                if (it != students.end()) {
-                    t.addStudentToClassroom(&*it);
-                }
+                studentIDs[j] = readUnsigned(inFile);
             }
 
-            // Assignments
+            // Load assignments
             unsigned asz = readUnsigned(inFile);
             for (unsigned j = 0; j < asz; ++j) {
                 Assignment a;
@@ -272,6 +276,12 @@ namespace gradebook {
             }
 
             teachers.push_back(std::move(t));
+            Teacher& refTeacher = teachers.back();
+            for (unsigned id : studentIDs) {
+                if (idToStudentPtr.count(id)) {
+                    refTeacher.addStudentToClassroom(idToStudentPtr[id]);
+                }
+            }
         }
 
         inFile.close();

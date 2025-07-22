@@ -164,6 +164,7 @@ namespace gradebook {
 			}
 		}
 	}
+
 	void closeMenu(Gradebook& gradebook) {
 		if (userCheck("Would you like to save before exiting? [Y/N]",
 			"School saved! Exiting.",

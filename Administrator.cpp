@@ -120,8 +120,9 @@ namespace gradebook {
                 );
                 Teacher* chosen = eligible[choice - 1];
 
-                gradebook.getStudents().push_back(std::move(newStudent));
-                Student* stored = &gradebook.getStudents().back();
+                auto studentPtr = std::make_unique<Student>(std::move(newStudent));
+                Student* stored = studentPtr.get();
+                gradebook.getStudents().push_back(std::move(studentPtr));
 
                 chosen->addStudentToClassroom(stored);
 
@@ -180,9 +181,8 @@ namespace gradebook {
 
             std::cout << std::string(81, '-') << "\n";
 
-            // Note: students is a vector<Student*>
             for (const Student* student : students) {
-                if (!student) continue;  // Safety check
+                if (!student) continue;
 
                 std::cout << std::left
                     << std::setw(16) << student->getFirstName()
@@ -196,7 +196,6 @@ namespace gradebook {
             std::cout << std::endl;
         }
     }
-
 
     void Administrator::saveSchoolReportToCSV(Gradebook& gradebook) {
         std::ofstream file("SchoolReport.csv");
@@ -240,7 +239,7 @@ namespace gradebook {
 
     void Administrator::menu(Gradebook& gradebook) {
             while (true) {
-                std::cout << "\n=== Administrator Menu ===\n";
+                std::cout << "=== Administrator Menu ===\n";
                 std::cout << "1. Add Teacher." << std::endl;
                 std::cout << "2. Add Student." << std::endl;
                 std::cout << "3. Overwrite Administrator Profile." << std::endl;

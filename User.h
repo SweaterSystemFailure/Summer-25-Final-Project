@@ -27,6 +27,6 @@ namespace gradebook {
         virtual std::string getFirstName() const = 0;
         virtual std::string getLastName() const = 0;
         virtual std::string getPassword() const = 0;
-      
+
     };
 }

@@ -10,10 +10,6 @@ namespace gradebook {
         std::string schoolName;
 
     public:
-        // Constructors / Destructor if needed
-        Administrator() = default;
-        ~Administrator() override = default;
-
         // Setters for Administrator-specific members
         void setAdminTitle(const std::string& entry);
         void setSchoolName(const std::string& entry);
