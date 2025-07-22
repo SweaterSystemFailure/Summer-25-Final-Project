@@ -74,32 +74,6 @@ namespace gradebook {
         std::cout << "School and administrator successfully created." << std::endl;
     }
 
-    //Login Functions
-    bool Gradebook::handlePassword(User& user) {
-        std::string enteredPassword;
-
-        if (user.getPassword().empty()) {
-            std::cout << "No password set for your account. Please create one now." << std::endl;
-            do {
-                enteredPassword = stringValidator("Enter new password: ");
-            } while (!isStrongPassword(enteredPassword));
-
-            user.setPassword(enteredPassword);
-            std::cout << "Password set successfully." << std::endl;
-            return true;
-        }
-        else {
-            enteredPassword = stringValidator("Enter your password: ");
-            if (enteredPassword == user.getPassword()) {
-                std::cout << "Password accepted." << std::endl;
-                return true;
-            }
-            else {
-                std::cout << "Incorrect password." << std::endl;
-                return false;
-            }
-        }
-    }
     //Save/Load Functions
     void Gradebook::autosaveToggle() {
         autosaveEnabled = !autosaveEnabled;
@@ -307,7 +281,7 @@ namespace gradebook {
                 Assignment a;
                 a.setAssignmentName(readString(inFile));
                 a.setPointsPossible(readFloat(inFile));
-                t.addAssignment(a, *this);  // still needs gradebook ref
+                t.getAssignments().push_back(a);
             }
 
             teachers.push_back(std::move(t));

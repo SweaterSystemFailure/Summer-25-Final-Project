@@ -1,40 +1,4 @@
 ﻿  Administrator.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'Administrator.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Administrator.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Administrator.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         with
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         [
@@ -42,49 +6,7 @@ C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Admini
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Administrator.cpp(119,130): warning C4267:         ]
   Assignment.cpp
   Gradebook.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(310,19): error C2664: 'void gradebook::Teacher::addAssignment(std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &,gradebook::Gradebook &)': cannot convert argument 1 from 'gradebook::Assignment' to 'std::vector<gradebook::Assignment,std::allocator<gradebook::Assignment>> &'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.h(39,8):
-      see declaration of 'gradebook::Teacher::addAssignment'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.cpp(310,19):
-      while trying to match the argument list '(gradebook::Assignment, gradebook::Gradebook)'
-  
   Student.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'Student.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'Student.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'Student.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
   Summer 25 Final Project.cpp
   Teacher.cpp
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(69,108): warning C4267: 'argument': conversion from 'size_t' to 'T', possible loss of data
@@ -108,46 +30,5 @@ C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teache
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:             T=unsigned int
 C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Teacher.cpp(388,102): warning C4267:         ]
   utilities.cpp
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'utilities.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'utilities.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(15,30): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15): error C2065: 'Administrator': undeclared identifier
-  (compiling source file 'utilities.cpp')
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2923: 'std::vector': 'Administrator' is not a valid template type argument for parameter '_Ty'
-  (compiling source file 'utilities.cpp')
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,15):
-      see declaration of 'Administrator'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,8): error C2976: 'std::vector': too few template arguments
-  (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\Gradebook.h(24,31): error C2955: 'std::vector': use of class template requires template argument list
-  (compiling source file 'utilities.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
-      see declaration of 'std::vector'
-  
-C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(136,12): error C2664: 'std::unique_ptr<gradebook::User,std::default_delete<gradebook::User>> gradebook::attemptLogin<gradebook::Administrator>(std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &)': cannot convert argument 1 from 'std::vector' to 'std::vector<gradebook::Administrator,std::allocator<gradebook::Administrator>> &'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.h(43,24):
-      see declaration of 'gradebook::attemptLogin'
-      C:\Users\Ben\source\repos\Summer 25 Final Project\Summer 25 Final Project\utilities.cpp(136,12):
-      while trying to match the argument list '(std::vector)'
-  
   Generating Code...
+  Summer 25 Final Project.vcxproj -> C:\Users\Ben\source\repos\Summer 25 Final Project\x64\Debug\Summer 25 Final Project.exe

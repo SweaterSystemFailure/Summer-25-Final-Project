@@ -1,5 +1,6 @@
 #include "utilities.h"
 #include <vector>
+#include <functional>
 #include <fstream>
 #include <string>
 #include <iostream>
@@ -8,6 +9,33 @@
 #include "Gradebook.h"
 
 namespace gradebook {
+	bool handlePassword(User& user) {
+		std::string enteredPassword;
+
+		if (user.getPassword().empty()) {
+			std::cout << "No password set for your account. Please create one now." << std::endl;
+			do {
+				enteredPassword = stringValidator("Enter new password: ");
+			} while (!isStrongPassword(enteredPassword));
+
+			user.setPassword(enteredPassword);
+			std::cout << "Password set successfully." << std::endl;
+			return true;
+		}
+		else {
+			enteredPassword = stringValidator("Enter your password: ");
+			if (enteredPassword == user.getPassword()) {
+				std::cout << "Password accepted." << std::endl;
+				return true;
+			}
+			else {
+				std::cout << "Incorrect password." << std::endl;
+				return false;
+			}
+		}
+	}
+
+
 	std::string stringValidator(const std::string& prompt) {
 		std::string userInput;
 		while (true) {
@@ -110,7 +138,7 @@ namespace gradebook {
 
 		const std::string filename = "gradebook.dat";
 
-		if (fileExists("gradebook.dat")) {
+		if (fileExists(filename)) {
 			std::cout << "Loading saved data..." << std::endl;
 			gradebook.deserializeAndLoad();
 		}
@@ -120,6 +148,8 @@ namespace gradebook {
 			gradebook.serializeAndSave();
 		}
 
+		std::unique_ptr<User, std::function<void(User*)>> user = nullptr;
+
 		while (true) {
 			std::cout << std::endl << "Please select a login type:" << std::endl;
 			std::cout << "  1. Administrator" << std::endl;
@@ -128,8 +158,6 @@ namespace gradebook {
 			std::cout << "  4. Exit" << std::endl;
 
 			int choice = numericValidator("Choose an option [1-4]: ", 1, 4);
-
-			std::unique_ptr<User> user = nullptr;
 
 			switch (choice) {
 			case 1:
@@ -144,6 +172,9 @@ namespace gradebook {
 			case 4:
 				closeMenu(gradebook);
 				return;
+			default:
+				user = nullptr;
+				break;
 			}
 
 			if (user) {
@@ -159,7 +190,6 @@ namespace gradebook {
 			}
 		}
 	}
-
 
 	void closeMenu(Gradebook& gradebook) {
 		if (userCheck("Would you like to save before exiting? [Y/N]",

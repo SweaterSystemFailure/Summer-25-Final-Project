@@ -26,9 +26,6 @@ namespace gradebook {
 		
 		//Admin Function
         void createSchool();
-		
-		//Login Function
-		bool handlePassword(User& user);
 
         //Binary Save/Load Functions
         void serializeAndSave();

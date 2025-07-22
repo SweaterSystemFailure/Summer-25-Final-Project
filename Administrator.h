@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "User.h"
-#include "Gradebook.h"
 
 namespace gradebook {
 
