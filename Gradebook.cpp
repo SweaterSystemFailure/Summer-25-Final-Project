@@ -64,7 +64,7 @@ namespace gradebook {
             "That's okay. Let's try again."));
 
         do {
-            password = stringValidator("Please select a strong password that is at least 8 characters long, and that contains a mix of upper and lower case characters, numbers, and special symbols.");
+            password = stringValidator("Please select a strong password that is at least 8 characters long, and that contains a mix of upper and lower case characters, numbers, and special symbols. ");
         } while (!isStrongPassword(password));
 
         myAdmin.setPassword(password);

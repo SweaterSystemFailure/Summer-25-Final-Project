@@ -52,7 +52,7 @@ namespace gradebook {
                 newTeacher.setTitle(stringValidator("Which honorific do their students address them by? "));
                 newTeacher.setFirstName(stringValidator("What is their first name? "));
                 newTeacher.setLastName(stringValidator("What is their last name? "));
-                newTeacher.setGradeLevel(numericValidator<unsigned>("Which grade do they teach? [1–12]: ", 1, 12));
+                newTeacher.setGradeLevel(numericValidator<unsigned>("Which grade do they teach? [1-12]: ", 1, 12));
                 newTeacher.printClassroomReport();
 
             } while (!userCheck(
@@ -65,7 +65,7 @@ namespace gradebook {
             std::cout << "Teacher " << newTeacher.getFirstName() << " " << newTeacher.getLastName()
                 << " has been added successfully!" << std::endl;
 
-            addMore = userCheck("Would you like to add another teacher? ",
+            addMore = userCheck("Would you like to add another teacher? [Y / N]",
                 "Okay, let's add another.",
                 "Returning to menu.");
         }
@@ -109,7 +109,7 @@ namespace gradebook {
                 std::cout << "Student will NOT be added." << std::endl;
             }
             else {
-                std::cout << "Assign student to which teacher?" << std::endl;
+                std::cout << "Assign student to which teacher? " << std::endl;
                 for (size_t i = 0; i < eligibleTeachers.size(); ++i) {
                     std::cout << i + 1 << ". "
                         << eligibleTeachers[i]->getFirstName() << " "
@@ -131,7 +131,7 @@ namespace gradebook {
                 gradebook.serializeAndSave();
             }
 
-            addMore = userCheck("Would you like to add another student? ",
+            addMore = userCheck("Would you like to add another student? [Y / N] ",
                 "Okay, let's add another.",
                 "Returning to menu.");
         }

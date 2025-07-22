@@ -196,9 +196,11 @@ namespace gradebook {
 			"School saved! Exiting.",
 			"Exiting without saving.")) {
 			gradebook.serializeAndSave();
+			std::exit(0);
 		}
 		else {
 			gradebook.clearCachedData();
+			std::exit(0);
 		}
 	}
 }
