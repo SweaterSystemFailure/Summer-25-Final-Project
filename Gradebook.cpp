@@ -93,22 +93,19 @@ namespace gradebook {
             outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
             outFile.write(str.c_str(), len);
             };
-
         auto writeUnsigned = [&](unsigned val) {
             outFile.write(reinterpret_cast<char*>(&val), sizeof(val));
             };
-
         auto writeFloat = [&](float val) {
             outFile.write(reinterpret_cast<char*>(&val), sizeof(val));
             };
-
         auto writeChar = [&](char c) {
             outFile.write(reinterpret_cast<char*>(&c), sizeof(c));
             };
 
         // --- Save administrators ---
         size_t adminCount = school.size();
-        outFile.write(reinterpret_cast<char*>(&adminCount), sizeof(adminCount));
+        writeUnsigned((unsigned)adminCount);
         for (const auto& admin : school) {
             writeString(admin.getAdminTitle());
             writeString(admin.getFirstName());
@@ -119,7 +116,7 @@ namespace gradebook {
 
         // --- Save students ---
         size_t studentCount = students.size();
-        outFile.write(reinterpret_cast<char*>(&studentCount), sizeof(studentCount));
+        writeUnsigned((unsigned)studentCount);
         for (const auto& student : students) {
             writeString(student.getFirstName());
             writeString(student.getLastName());
@@ -132,10 +129,9 @@ namespace gradebook {
             writeChar(student.getOverallGrade());
             writeFloat(student.getGradePercent());
 
-            // Assignment scores map
+            // Assignment scores
             const auto& scores = student.getAssignmentScores();
-            size_t mapSize = scores.size();
-            outFile.write(reinterpret_cast<char*>(&mapSize), sizeof(mapSize));
+            writeUnsigned((unsigned)scores.size());
             for (const auto& [name, score] : scores) {
                 writeString(name);
                 writeFloat(score);
@@ -144,7 +140,7 @@ namespace gradebook {
 
         // --- Save teachers ---
         size_t teacherCount = teachers.size();
-        outFile.write(reinterpret_cast<char*>(&teacherCount), sizeof(teacherCount));
+        writeUnsigned((unsigned)teacherCount);
         for (const auto& teacher : teachers) {
             writeString(teacher.getTitle());
             writeString(teacher.getFirstName());
@@ -152,19 +148,16 @@ namespace gradebook {
             writeUnsigned(teacher.getGradeLevel());
             writeString(teacher.getPassword());
 
-            // Classroom students (just names)
+            // Classroom students to write IDs
             const auto& cls = teacher.getClassroomStudents();
-            size_t clsSize = cls.size();
-            outFile.write(reinterpret_cast<const char*>(&clsSize), sizeof(clsSize));
+            writeUnsigned((unsigned)cls.size());
             for (const auto* sPtr : cls) {
-                writeString(sPtr->getFirstName());
-                writeString(sPtr->getLastName());
+                writeUnsigned(sPtr->getID());
             }
 
             // Assignments
             const auto& assigns = teacher.getAssignments();
-            size_t asz = assigns.size();
-            outFile.write(reinterpret_cast<char*>(&asz), sizeof(asz));
+            writeUnsigned((unsigned)assigns.size());
             for (const auto& a : assigns) {
                 writeString(a.getAssignmentName());
                 writeFloat(a.getPointsPossible());
@@ -186,36 +179,31 @@ namespace gradebook {
         students.clear();
         teachers.clear();
 
-        auto readString = [&](std::ifstream& file) {
+        // Reader lambdas
+        auto readString = [&](std::ifstream& f) {
             size_t len = 0;
-            file.read(reinterpret_cast<char*>(&len), sizeof(len));
-            std::string str(len, '\0');
-            file.read(&str[0], len);
-            return str;
+            f.read(reinterpret_cast<char*>(&len), sizeof(len));
+            std::string s(len, '\0');
+            f.read(&s[0], len);
+            return s;
             };
-
-        auto readUnsigned = [&](std::ifstream& file) {
-            unsigned val = 0;
-            file.read(reinterpret_cast<char*>(&val), sizeof(val));
-            return val;
+        auto readUnsigned = [&](std::ifstream& f) {
+            unsigned v = 0;
+            f.read(reinterpret_cast<char*>(&v), sizeof(v));
+            return v;
             };
-
-        auto readFloat = [&](std::ifstream& file) {
-            float val = 0.0f;
-            file.read(reinterpret_cast<char*>(&val), sizeof(val));
-            return val;
+        auto readFloat = [&](std::ifstream& f) {
+            float v = 0.0f;
+            f.read(reinterpret_cast<char*>(&v), sizeof(v));
+            return v;
             };
-
-        auto readChar = [&](std::ifstream& file) {
-            char c = '\0';
-            file.read(reinterpret_cast<char*>(&c), sizeof(c));
-            return c;
+        auto readChar = [&](std::ifstream& f) {
+            char c = '\0'; f.read(reinterpret_cast<char*>(&c), sizeof(c)); return c;
             };
 
         // --- Load administrators ---
-        size_t adminCount = 0;
-        inFile.read(reinterpret_cast<char*>(&adminCount), sizeof(adminCount));
-        for (size_t i = 0; i < adminCount; ++i) {
+        unsigned adminCount = readUnsigned(inFile);
+        for (unsigned i = 0; i < adminCount; ++i) {
             Administrator admin;
             admin.setAdminTitle(readString(inFile));
             admin.setFirstName(readString(inFile));
@@ -226,9 +214,8 @@ namespace gradebook {
         }
 
         // --- Load students ---
-        size_t studentCount = 0;
-        inFile.read(reinterpret_cast<char*>(&studentCount), sizeof(studentCount));
-        for (size_t i = 0; i < studentCount; ++i) {
+        unsigned studentCount = readUnsigned(inFile);
+        for (unsigned i = 0; i < studentCount; ++i) {
             Student s;
             s.setFirstName(readString(inFile));
             s.setLastName(readString(inFile));
@@ -242,21 +229,19 @@ namespace gradebook {
             s.setGradePercent(readFloat(inFile));
 
             // Assignment scores
-            size_t mapSize = 0;
-            inFile.read(reinterpret_cast<char*>(&mapSize), sizeof(mapSize));
-            for (size_t j = 0; j < mapSize; ++j) {
-                std::string assignName = readString(inFile);
-                float score = readFloat(inFile);
-                s.setAssignmentScore(assignName, score);
+            unsigned mapSize = readUnsigned(inFile);
+            for (unsigned j = 0; j < mapSize; ++j) {
+                std::string nm = readString(inFile);
+                float sc = readFloat(inFile);
+                s.setAssignmentScore(nm, sc);
             }
 
             students.push_back(std::move(s));
         }
 
         // --- Load teachers ---
-        size_t teacherCount = 0;
-        inFile.read(reinterpret_cast<char*>(&teacherCount), sizeof(teacherCount));
-        for (size_t i = 0; i < teacherCount; ++i) {
+        unsigned teacherCount = readUnsigned(inFile);
+        for (unsigned i = 0; i < teacherCount; ++i) {
             Teacher t;
             t.setTitle(readString(inFile));
             t.setFirstName(readString(inFile));
@@ -264,20 +249,22 @@ namespace gradebook {
             t.setGradeLevel(readUnsigned(inFile));
             t.setPassword(readString(inFile));
 
-            // Students
-            size_t clsSize = 0;
-            inFile.read(reinterpret_cast<char*>(&clsSize), sizeof(clsSize));
-            for (size_t j = 0; j < clsSize; ++j) {
-                Student* sPtr = new Student();
-                sPtr->setFirstName(readString(inFile));
-                sPtr->setLastName(readString(inFile));
-                t.addStudentToClassroom(sPtr);
+            // Classroom student IDs to resolve pointers
+            unsigned clsSize = readUnsigned(inFile);
+            for (unsigned j = 0; j < clsSize; ++j) {
+                unsigned studID = readUnsigned(inFile);
+                auto it = std::find_if(
+                    students.begin(), students.end(),
+                    [&](const Student& s) { return s.getID() == studID; }
+                );
+                if (it != students.end()) {
+                    t.addStudentToClassroom(&*it);
+                }
             }
 
             // Assignments
-            size_t asz = 0;
-            inFile.read(reinterpret_cast<char*>(&asz), sizeof(asz));
-            for (size_t j = 0; j < asz; ++j) {
+            unsigned asz = readUnsigned(inFile);
+            for (unsigned j = 0; j < asz; ++j) {
                 Assignment a;
                 a.setAssignmentName(readString(inFile));
                 a.setPointsPossible(readFloat(inFile));

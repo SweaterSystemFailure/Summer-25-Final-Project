@@ -79,26 +79,30 @@ namespace gradebook {
 		return assignmentScores;
 	}
 
-	//Grade Calculation
 	void Student::calculateGrade(const std::vector<Assignment>& assignments) {
 		float totalPointsPossible = 0.0f;
 		float totalPointsScored = 0.0f;
 
-		for (const auto& assign : assignments) {
-			totalPointsPossible += assign.getPointsPossible();
-			if (assignmentScores.count(assign.getAssignmentName())) {
-				totalPointsScored += assignmentScores.at(assign.getAssignmentName());
+		for (const auto& a : assignments) {
+			totalPointsPossible += a.getPointsPossible();
+			auto it = assignmentScores.find(a.getAssignmentName());
+			if (it != assignmentScores.end()) {
+				totalPointsScored += it->second;
 			}
 		}
 
 		if (totalPointsPossible > 0.0f) {
 			gradePercent = (totalPointsScored / totalPointsPossible) * 100.0f;
 		}
+		else {
+			gradePercent = 0.0f;
+		}
 
-		overallGrade = (gradePercent >= 90.0f) ? 'A' :
-			(gradePercent >= 80.0f) ? 'B' :
-			(gradePercent >= 70.0f) ? 'C' :
-			(gradePercent >= 60.0f) ? 'D' : 'F';
+		overallGrade = (gradePercent >= 90.0f) ? 'A'
+			: (gradePercent >= 80.0f) ? 'B'
+			: (gradePercent >= 70.0f) ? 'C'
+			: (gradePercent >= 60.0f) ? 'D'
+			: 'F';
 	}
 
 	//Print Functions
@@ -116,25 +120,30 @@ namespace gradebook {
 	}
 
 	void Student::printStudentReport() const {
+		// printStudent() shows name, ID, seat, notes, etc.
 		printStudent();
 
-		std::cout << std::endl << "=== Assignment Scores ===" << std::endl;
+		std::cout << std::endl
+			<< "=== Assignment Scores ===" << std::endl;
+
 		if (assignmentScores.empty()) {
 			std::cout << "No assignments have been graded yet.\n";
 		}
 		else {
-			for (const auto& pair : assignmentScores) {
-				std::cout << std::left << std::setw(20) << pair.first
+			for (const auto& [name, score] : assignmentScores) {
+				std::cout << std::left << std::setw(20) << name
 					<< "Score: " << std::fixed << std::setprecision(2)
-					<< pair.second << " pts\n";
+					<< score << " pts\n";
 			}
 		}
 
-		std::cout << std::endl;
-		std::cout << "Overall Grade: " << overallGrade
-			<< " (" << std::fixed << std::setprecision(2) << gradePercent << "%)\n";
-		
-		if (userCheck("Would you like to export this student report to CSV? [Y/N] ",
+		std::cout << std::endl
+			<< "Overall Grade: " << overallGrade
+			<< " (" << std::fixed << std::setprecision(2)
+			<< gradePercent << "%)\n";
+
+		if (userCheck(
+			"Would you like to export this student report to CSV? [Y/N] ",
 			"Exporting student report to CSV...",
 			"Skipping export.")) {
 			exportStudentReportToCSV();

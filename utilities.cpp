@@ -9,32 +9,6 @@
 #include "Gradebook.h"
 
 namespace gradebook {
-	bool handlePassword(User& user) {
-		std::string enteredPassword;
-
-		if (user.getPassword().empty()) {
-			std::cout << "No password set for your account. Please create one now." << std::endl;
-			do {
-				enteredPassword = stringValidator("Enter new password: ");
-			} while (!isStrongPassword(enteredPassword));
-
-			user.setPassword(enteredPassword);
-			std::cout << "Password set successfully." << std::endl;
-			return true;
-		}
-		else {
-			enteredPassword = stringValidator("Enter your password: ");
-			if (enteredPassword == user.getPassword()) {
-				std::cout << "Password accepted." << std::endl;
-				return true;
-			}
-			else {
-				std::cout << "Incorrect password." << std::endl;
-				return false;
-			}
-		}
-	}
-
 
 	std::string stringValidator(const std::string& prompt) {
 		std::string userInput;
@@ -161,13 +135,13 @@ namespace gradebook {
 
 			switch (choice) {
 			case 1:
-				user = attemptLogin<Administrator>(gradebook.getSchool());
+				user = attemptLogin<Administrator>(gradebook.getSchool(), gradebook);
 				break;
 			case 2:
-				user = attemptLogin<Teacher>(gradebook.getTeachers());
+				user = attemptLogin<Teacher>(gradebook.getTeachers(), gradebook);
 				break;
 			case 3:
-				user = attemptLogin<Student>(gradebook.getStudents());
+				user = attemptLogin<Student>(gradebook.getStudents(), gradebook);
 				break;
 			case 4:
 				closeMenu(gradebook);
@@ -190,7 +164,6 @@ namespace gradebook {
 			}
 		}
 	}
-
 	void closeMenu(Gradebook& gradebook) {
 		if (userCheck("Would you like to save before exiting? [Y/N]",
 			"School saved! Exiting.",

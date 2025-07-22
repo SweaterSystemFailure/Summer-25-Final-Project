@@ -74,7 +74,6 @@ namespace gradebook {
 
     void Administrator::addStudent(Gradebook& gradebook) {
         auto& teachers = gradebook.getTeachers();
-
         if (teachers.empty()) {
             std::cout << "No teachers available to assign this student to. You must add teachers first." << std::endl;
             return;
@@ -88,59 +87,65 @@ namespace gradebook {
                 newStudent.setFirstName(stringValidator("Please enter the student's first name: "));
                 newStudent.setLastName(stringValidator("Please enter the student's last name: "));
                 newStudent.setPronouns(stringValidator("Please enter the student's pronouns: "));
-                newStudent.setAge(numericValidator("Please enter the student's age: ", 4, 19));
-                newStudent.setGradeLevel(numericValidator("Please enter the student's grade: ", 1, 12));
-                newStudent.setID(numericValidator("Please enter the student's ID number: ", 1, 999999));
+                newStudent.setAge(numericValidator<unsigned>("Please enter the student's age: ", 4, 19));
+                newStudent.setGradeLevel(numericValidator<unsigned>("Please enter the student's grade: ", 1, 12));
+                newStudent.setID(numericValidator<unsigned>("Please enter the student's ID number: ", 1, 999999));
                 newStudent.setSeat(stringValidator("Please enter the student's seat location: "));
                 newStudent.setNotes(stringValidator("Enter any additional notes for this student: "));
                 newStudent.printStudent();
-            } while (!userCheck("Does this look right to you ? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
+            } while (!userCheck(
+                "Does this look right to you? [Y/N] ",
+                "Great! Let's continue.",
+                "That's okay. Let's try again."
+            ));
 
-            std::vector<Teacher*> eligibleTeachers;
-            for (auto& teacher : teachers) {
-                if (teacher.getGradeLevel() == newStudent.getGradeLevel()) {
-                    eligibleTeachers.push_back(&teacher);
-                }
-            }
+            std::vector<Teacher*> eligible;
+            for (auto& t : teachers)
+                if (t.getGradeLevel() == newStudent.getGradeLevel())
+                    eligible.push_back(&t);
 
-            if (eligibleTeachers.empty()) {
-                std::cout << "No teachers available for grade " << newStudent.getGradeLevel()
-                    << ". Student cannot be assigned." << std::endl;
-                std::cout << "Student will NOT be added." << std::endl;
+            if (eligible.empty()) {
+                std::cout << "No teacher for grade " << newStudent.getGradeLevel()
+                    << ". Student will NOT be added." << std::endl;
             }
             else {
-                std::cout << "Assign student to which teacher? " << std::endl;
-                for (size_t i = 0; i < eligibleTeachers.size(); ++i) {
-                    std::cout << i + 1 << ". "
-                        << eligibleTeachers[i]->getFirstName() << " "
-                        << eligibleTeachers[i]->getLastName() << std::endl;
+                std::cout << "Assign student to which teacher?\n";
+                for (size_t i = 0; i < eligible.size(); ++i) {
+                    std::cout << "  " << (i + 1) << ". "
+                        << eligible[i]->getFirstName() << " "
+                        << eligible[i]->getLastName() << "\n";
                 }
+                unsigned choice = numericValidator<unsigned>(
+                    "Enter the number of the teacher: ", 1, eligible.size()
+                );
+                Teacher* chosen = eligible[choice - 1];
 
-                unsigned teacherChoice = numericValidator<unsigned>("Enter the number of the teacher: ", 1, eligibleTeachers.size());
-                Teacher* chosenTeacher = eligibleTeachers[teacherChoice - 1];
+                gradebook.getStudents().push_back(std::move(newStudent));
+                Student* stored = &gradebook.getStudents().back();
 
-                gradebook.getStudents().push_back(newStudent);
+                chosen->addStudentToClassroom(stored);
 
-                Student* storedStudent = &gradebook.getStudents().back();
-
-                chosenTeacher->addStudentToClassroom(storedStudent);
-
-                std::cout << "Student " << storedStudent->getFirstName() << " " << storedStudent->getLastName()
-                    << " has been added and assigned to " << chosenTeacher->getFirstName() << " "
-                    << chosenTeacher->getLastName() << " successfully!" << std::endl;
+                std::cout << "Student "
+                    << stored->getFirstName() << " "
+                    << stored->getLastName()
+                    << " assigned to "
+                    << chosen->getFirstName() << " "
+                    << chosen->getLastName() << "!\n";
             }
 
             if (gradebook.isAutosaveEnabled()) {
                 gradebook.serializeAndSave();
             }
 
-            addMore = userCheck("Would you like to add another student? [Y / N] ",
+            addMore = userCheck(
+                "Would you like to add another student? [Y/N] ",
                 "Okay, let's add another.",
-                "Returning to menu.");
+                "Returning to menu."
+            );
         }
+
         menu(gradebook);
     }
-
 
     void Administrator::printSchoolReport(Gradebook& gradebook) const {
         const auto& teachers = gradebook.getTeachers();
