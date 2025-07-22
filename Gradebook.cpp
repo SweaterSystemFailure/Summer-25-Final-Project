@@ -155,10 +155,10 @@ namespace gradebook {
             // Classroom students (just names)
             const auto& cls = teacher.getClassroomStudents();
             size_t clsSize = cls.size();
-            outFile.write(reinterpret_cast<char*>(&clsSize), sizeof(clsSize));
-            for (const auto& s : cls) {
-                writeString(s.getFirstName());
-                writeString(s.getLastName());
+            outFile.write(reinterpret_cast<const char*>(&clsSize), sizeof(clsSize));
+            for (const auto* sPtr : cls) {
+                writeString(sPtr->getFirstName());
+                writeString(sPtr->getLastName());
             }
 
             // Assignments
@@ -268,10 +268,10 @@ namespace gradebook {
             size_t clsSize = 0;
             inFile.read(reinterpret_cast<char*>(&clsSize), sizeof(clsSize));
             for (size_t j = 0; j < clsSize; ++j) {
-                Student s;
-                s.setFirstName(readString(inFile));
-                s.setLastName(readString(inFile));
-                t.addStudentToClassroom(s);
+                Student* sPtr = new Student();
+                sPtr->setFirstName(readString(inFile));
+                sPtr->setLastName(readString(inFile));
+                t.addStudentToClassroom(sPtr);
             }
 
             // Assignments

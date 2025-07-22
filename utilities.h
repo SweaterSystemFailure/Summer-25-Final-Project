@@ -18,7 +18,7 @@ namespace gradebook {
 	T numericValidator(const std::string& prompt, T min, T max) {
 		T number;
 		while (true) {
-			std::cout << prompt << std::endl;
+			std::cout << prompt;
 			std::cin >> number;
 
 			if (std::cin.fail()) {

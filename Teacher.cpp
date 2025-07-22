@@ -39,15 +39,15 @@ namespace gradebook {
 	const std::vector<Assignment>& Teacher::getAssignments() const {
 		return assignments;
 	}
-	std::vector<Student>& Teacher::getClassroomStudents() {
+	std::vector<Student*>& Teacher::getClassroomStudents() {
 		return students;
 	}
-	const std::vector<Student>& Teacher::getClassroomStudents() const {
+	const std::vector<Student*>& Teacher::getClassroomStudents() const {
 		return students;
 	}
 
 	// Assignment Construction and Grading
-	void Teacher::addStudentToClassroom(const Student& student) {
+	void Teacher::addStudentToClassroom(Student* student) {
 		students.push_back(student);
 	}
 
@@ -64,10 +64,10 @@ namespace gradebook {
 		// Select student
 		std::cout << "Select a student to enter grades for:" << std::endl;
 		for (size_t i = 0; i < students.size(); ++i) {
-			std::cout << i + 1 << ". " << students[i].getFirstName() << " " << students[i].getLastName() << std::endl;
+			std::cout << i + 1 << ". " << students[i]->getFirstName() << " " << students[i]->getLastName() << std::endl;
 		}
 		unsigned studentChoice = numericValidator<unsigned>("Enter the number of the student: ", 1, students.size());
-		Student& selectedStudent = students[studentChoice - 1];
+		Student* selectedStudent = students[studentChoice - 1];
 
 		// Grading choice
 		std::cout << "Would you like to:" << std::endl;
@@ -80,9 +80,9 @@ namespace gradebook {
 			for (const auto& assign : assignments) {
 				std::string prompt = "Enter score for \"" + assign.getAssignmentName() + "\" (" + std::to_string(assign.getPointsPossible()) + " pts): ";
 				float score = numericValidator<float>(prompt, 0.0f, assign.getPointsPossible());
-				selectedStudent.setAssignmentScore(assign.getAssignmentName(), score);
+				selectedStudent->setAssignmentScore(assign.getAssignmentName(), score);
 			}
-			std::cout << "All grades for " << selectedStudent.getFirstName() << " " << selectedStudent.getLastName() << " have been recorded." << std::endl;
+			std::cout << "All grades for " << selectedStudent->getFirstName() << " " << selectedStudent->getLastName() << " have been recorded." << std::endl;
 
 			if (gradebook.isAutosaveEnabled()) {
 				gradebook.serializeAndSave();
@@ -99,7 +99,7 @@ namespace gradebook {
 
 			std::string prompt = "Enter score for \"" + selectedAssignment.getAssignmentName() + "\" (" + std::to_string(selectedAssignment.getPointsPossible()) + " pts): ";
 			float score = numericValidator<float>(prompt, 0.0f, selectedAssignment.getPointsPossible());
-			selectedStudent.setAssignmentScore(selectedAssignment.getAssignmentName(), score);
+			selectedStudent->setAssignmentScore(selectedAssignment.getAssignmentName(), score);
 
 			std::cout << "Grade recorded for " << selectedAssignment.getAssignmentName() << "." << std::endl;
 
@@ -113,12 +113,15 @@ namespace gradebook {
 			return;
 		}
 
-		selectedStudent.calculateGrade(assignments);
+		// Recalculate grade using full assignment list
+		selectedStudent->calculateGrade(assignments);
 	}
 
 	void Teacher::scoreAllStudents(const std::vector<Assignment>& assignments) {
-		for (auto& student : students) {
-			student.calculateGrade(assignments);
+		for (auto* student : students) {
+			if (student) {
+				student->calculateGrade(assignments);
+			}
 		}
 	}
 
@@ -177,17 +180,19 @@ namespace gradebook {
 
 		std::cout << std::string(105, '-') << std::endl;
 
-		for (const auto& s : students) {
+		for (const auto* s : students) {
+			if (!s) continue;
+
 			std::cout << std::left
-				<< std::setw(15) << s.getFirstName()
-				<< std::setw(15) << s.getLastName()
-				<< std::setw(10) << s.getPronouns()
-				<< std::setw(5) << s.getAge()
-				<< std::setw(10) << s.getID()
-				<< std::setw(10) << s.getSeat()
-				<< std::setw(20) << s.getNotes()
-				<< std::setw(10) << std::fixed << std::setprecision(2) << s.getGradePercent()
-				<< std::setw(10) << s.getOverallGrade()
+				<< std::setw(15) << s->getFirstName()
+				<< std::setw(15) << s->getLastName()
+				<< std::setw(10) << s->getPronouns()
+				<< std::setw(5) << s->getAge()
+				<< std::setw(10) << s->getID()
+				<< std::setw(10) << s->getSeat()
+				<< std::setw(20) << s->getNotes()
+				<< std::setw(10) << std::fixed << std::setprecision(2) << s->getGradePercent()
+				<< std::setw(10) << s->getOverallGrade()
 				<< std::endl;
 		}
 
@@ -207,13 +212,17 @@ namespace gradebook {
 			return;
 		}
 
-		std::vector<Student> sortedStudents = students;
+		std::vector<Student*> sortedStudents = students;
 
 		for (size_t i = 0; i < sortedStudents.size(); ++i) {
 			for (size_t j = 0; j < sortedStudents.size() - 1 - i; ++j) {
-				if (sortedStudents[j].getLastName() > sortedStudents[j + 1].getLastName() ||
-					(sortedStudents[j].getLastName() == sortedStudents[j + 1].getLastName() &&
-						sortedStudents[j].getFirstName() > sortedStudents[j + 1].getFirstName())) {
+				Student* studentA = sortedStudents[j];
+				Student* studentB = sortedStudents[j + 1];
+				if (!studentA || !studentB) continue;
+
+				if (studentA->getLastName() > studentB->getLastName() ||
+					(studentA->getLastName() == studentB->getLastName() &&
+						studentA->getFirstName() > studentB->getFirstName())) {
 					std::swap(sortedStudents[j], sortedStudents[j + 1]);
 				}
 			}
@@ -221,8 +230,9 @@ namespace gradebook {
 
 		std::cout << "List of students:" << std::endl;
 		int count = 1;
-		for (const auto& s : sortedStudents) {
-			std::cout << std::setw(2) << count++ << ". " << s.getFirstName() << " " << s.getLastName() << std::endl;
+		for (const Student* s : sortedStudents) {
+			if (!s) continue; 
+			std::cout << std::setw(2) << count++ << ". " << s->getFirstName() << " " << s->getLastName() << std::endl;
 		}
 	}
 
@@ -247,11 +257,13 @@ namespace gradebook {
 				<< std::right << std::setw(10) << "Score\n";
 			std::cout << "----------------------------------------\n";
 
-			for (const auto& student : students) {
-				auto scores = student.getAssignmentScores();
+			for (const auto* student : students) {
+				if (!student) continue;  // Safety check
+
+				auto scores = student->getAssignmentScores();
 				auto it = scores.find(assignment.getAssignmentName());
 
-				std::string studentName = student.getFirstName() + " " + student.getLastName();
+				std::string studentName = student->getFirstName() + " " + student->getLastName();
 
 				if (it != scores.end()) {
 					std::cout << std::left << std::setw(25) << studentName
@@ -264,12 +276,14 @@ namespace gradebook {
 				}
 			}
 		}
+
 		if (userCheck("Would you like to export this classroom report to CSV? [Y/N] ",
 			"Exporting report to CSV...",
 			"Skipping export.")) {
 			exportAssignmentScoresToCSV();
 		}
 	}
+
 
 	//Export
 	void Teacher::exportClassroomReportToCSV() const {
@@ -288,17 +302,19 @@ namespace gradebook {
 
 		file << "First Name,Last Name,Pronouns,Age,ID,Seat,Notes,Grade %,Letter Grade\n";
 
-		for (const auto& s : students) {
+		for (const auto* s : students) {
+			if (!s) continue;
+
 			file
-				<< std::quoted(s.getFirstName()) << ','
-				<< std::quoted(s.getLastName()) << ','
-				<< std::quoted(s.getPronouns()) << ','
-				<< s.getAge() << ','
-				<< s.getID() << ','
-				<< std::quoted(s.getSeat()) << ','
-				<< std::quoted(s.getNotes()) << ','
-				<< std::fixed << std::setprecision(2) << s.getGradePercent() << ','
-				<< s.getOverallGrade()
+				<< std::quoted(s->getFirstName()) << ','
+				<< std::quoted(s->getLastName()) << ','
+				<< std::quoted(s->getPronouns()) << ','
+				<< s->getAge() << ','
+				<< s->getID() << ','
+				<< std::quoted(s->getSeat()) << ','
+				<< std::quoted(s->getNotes()) << ','
+				<< std::fixed << std::setprecision(2) << s->getGradePercent() << ','
+				<< s->getOverallGrade()
 				<< '\n';
 		}
 
@@ -330,9 +346,11 @@ namespace gradebook {
 				<< assignment.getPointsPossible() << " pts\n";
 			outFile << "Student Name,Score\n";
 
-			for (const auto& student : students) {
-				std::string studentName = student.getFirstName() + " " + student.getLastName();
-				auto scores = student.getAssignmentScores();
+			for (const auto* student : students) {
+				if (!student) continue;
+
+				std::string studentName = student->getFirstName() + " " + student->getLastName();
+				auto scores = student->getAssignmentScores();
 				auto it = scores.find(assignment.getAssignmentName());
 
 				if (it != scores.end()) {
@@ -364,7 +382,7 @@ namespace gradebook {
 			std::cout << "6. Enter grades for an existing assignment.\n";
 			std::cout << "7. Save your work.\n";
 			std::cout << "8. Toggle autosave.\n";
-			std::cout << "9. Exit program.\n\n";
+			std::cout << "9. Log out.\n\n";
 
 			unsigned choice = numericValidator<unsigned>(
 				"Please enter the number of your selection [1-9]: ", 1, 9);
@@ -375,9 +393,10 @@ namespace gradebook {
 					std::cout << "There are no students in your class.\n";
 				}
 				else {
-					printAllStudents();
+					printAllStudents();  // Make sure printAllStudents() is updated too
 				}
 				break;
+
 			case 2: {
 				if (students.empty()) {
 					std::cout << "There are no students in your class.\n";
@@ -386,13 +405,18 @@ namespace gradebook {
 				std::cout << "Select a student to view their report:\n";
 				printAllStudents();
 				unsigned index = numericValidator<unsigned>("Enter the number of the student: ", 1, students.size());
-				const Student& selected = students[index - 1];
-				selected.printStudentReport();
-				if (userCheck("Would you like to export this report to CSV? [Y/N] ", "Saving report...", "Skipping export.")) {
-					selected.exportStudentReportToCSV();
+
+				Student* selected = students[index - 1];
+				if (selected) {
+					selected->printStudentReport();
+					if (userCheck("Would you like to export this report to CSV? [Y/N] ",
+						"Saving report...", "Skipping export.")) {
+						selected->exportStudentReportToCSV();
+					}
 				}
 				break;
 			}
+
 			case 3:
 				if (students.empty()) {
 					std::cout << "There are no students in your class.\n";
@@ -401,6 +425,7 @@ namespace gradebook {
 					printClassroomReport();
 				}
 				break;
+
 			case 4:
 				if (getAssignments().empty()) {
 					std::cout << "There are no assignments in the system.\n";
@@ -409,9 +434,11 @@ namespace gradebook {
 					printAllAssignments();
 				}
 				break;
+
 			case 5:
 				addAssignment(getAssignments(), gradebook);
 				break;
+
 			case 6:
 				if (students.empty()) {
 					std::cout << "There are no students in your class.\n";
@@ -423,18 +450,23 @@ namespace gradebook {
 					enterGrades(getAssignments(), gradebook);
 				}
 				break;
+
 			case 7:
 				gradebook.serializeAndSave();
 				break;
+
 			case 8:
 				gradebook.autosaveToggle();
 				break;
+
 			case 9:
-				closeMenu(gradebook);
+				welcomeMenu(gradebook);
 				return;
+
 			default:
 				std::cout << "Invalid option. Please try again.\n";
 			}
 		}
 	}
+
 }

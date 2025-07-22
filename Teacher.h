@@ -14,7 +14,7 @@ namespace gradebook {
 		std::string title;
 		unsigned gradeLevel;
 
-		std::vector<Student> students;
+		std::vector<Student*> students;
 		std::vector<Assignment> assignments;
 	public:
 		// Mutators
@@ -29,11 +29,11 @@ namespace gradebook {
 		std::string getPassword() const override;
 		std::vector<Assignment>& getAssignments();
 		const std::vector<Assignment>& getAssignments() const;
-		std::vector<Student>& getClassroomStudents();
-		const std::vector<Student>& getClassroomStudents() const;
+		std::vector<Student*>& getClassroomStudents();
+		const std::vector<Student*>& getClassroomStudents() const;
 
 		// Assignment Construction and Grading
-		void addStudentToClassroom(const Student& student);
+		void addStudentToClassroom(Student* student);
 		void enterGrades(const std::vector<Assignment>& assignments, Gradebook& gradebook);
 		void scoreAllStudents(const std::vector<Assignment>& assignments);
 		void addAssignment(std::vector<Assignment>& assignments, Gradebook& gradebook);

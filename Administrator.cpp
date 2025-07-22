@@ -120,13 +120,16 @@ namespace gradebook {
                 Teacher* chosenTeacher = eligibleTeachers[teacherChoice - 1];
 
                 gradebook.getStudents().push_back(newStudent);
-                chosenTeacher->addStudentToClassroom(newStudent);
 
-                std::cout << "Student " << newStudent.getFirstName() << " " << newStudent.getLastName()
+                Student* storedStudent = &gradebook.getStudents().back();
+
+                chosenTeacher->addStudentToClassroom(storedStudent);
+
+                std::cout << "Student " << storedStudent->getFirstName() << " " << storedStudent->getLastName()
                     << " has been added and assigned to " << chosenTeacher->getFirstName() << " "
                     << chosenTeacher->getLastName() << " successfully!" << std::endl;
             }
-            
+
             if (gradebook.isAutosaveEnabled()) {
                 gradebook.serializeAndSave();
             }
@@ -137,6 +140,7 @@ namespace gradebook {
         }
         menu(gradebook);
     }
+
 
     void Administrator::printSchoolReport(Gradebook& gradebook) const {
         const auto& teachers = gradebook.getTeachers();
@@ -171,19 +175,23 @@ namespace gradebook {
 
             std::cout << std::string(81, '-') << "\n";
 
-            for (const Student& student : students) {
+            // Note: students is a vector<Student*>
+            for (const Student* student : students) {
+                if (!student) continue;  // Safety check
+
                 std::cout << std::left
-                    << std::setw(16) << student.getFirstName()
-                    << std::setw(16) << student.getLastName()
-                    << std::setw(9) << student.getAge()
-                    << std::setw(11) << student.getID()
-                    << std::setw(16) << std::fixed << std::setprecision(2) << student.getGradePercent()
-                    << std::setw(13) << student.getOverallGrade()
+                    << std::setw(16) << student->getFirstName()
+                    << std::setw(16) << student->getLastName()
+                    << std::setw(9) << student->getAge()
+                    << std::setw(11) << student->getID()
+                    << std::setw(16) << std::fixed << std::setprecision(2) << student->getGradePercent()
+                    << std::setw(13) << student->getOverallGrade()
                     << "\n";
             }
             std::cout << std::endl;
         }
     }
+
 
     void Administrator::saveSchoolReportToCSV(Gradebook& gradebook) {
         std::ofstream file("SchoolReport.csv");
@@ -201,7 +209,11 @@ namespace gradebook {
             std::string teacherName = teacher.getFirstName() + " " + teacher.getLastName();
             const auto& students = teacher.getClassroomStudents();
 
-            for (const auto& student : students) {
+            for (const auto* studentPtr : students) {  // students are now pointers
+                if (!studentPtr) continue;  // just in case
+
+                const Student& student = *studentPtr;  // dereference pointer
+
                 file << std::quoted(teacherName) << ","
                     << std::quoted(student.getFirstName()) << ","
                     << std::quoted(student.getLastName()) << ","
@@ -220,7 +232,7 @@ namespace gradebook {
         file.close();
         std::cout << "School data exported successfully to SchoolReport.csv." << std::endl;
     }
-    
+
     void Administrator::menu(Gradebook& gradebook) {
             while (true) {
                 std::cout << "\n=== Administrator Menu ===\n";
@@ -258,7 +270,7 @@ namespace gradebook {
                     gradebook.autosaveToggle();
                     break;
                 case 8:
-                    closeMenu(gradebook);
+                    welcomeMenu(gradebook);
                     break;
                 default:
                     std::cout << "Invalid selection. Please try again." << std::endl;

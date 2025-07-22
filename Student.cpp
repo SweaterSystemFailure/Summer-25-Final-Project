@@ -199,7 +199,8 @@ namespace gradebook {
 				printStudentReport();
 				break;
 			case 3:
-				return;
+				welcomeMenu(gradebook);
+				break;
 			default:
 				std::cout << "Invalid selection. Please try again.\n";
 				break;
