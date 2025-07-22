@@ -10,37 +10,75 @@
 #include <vector> 
 
 namespace gradebook {
-    // Mutators
+    // === Mutators ===
+
+    /**
+     * @brief Sets the administrator's title.
+     * @param entry The new title to assign.
+     */
     void Administrator::setAdminTitle(const std::string& entry) {
         adminTitle = entry;
     }
 
+    /**
+     * @brief Sets the name of the school.
+     * @param entry The school name to assign.
+     */
     void Administrator::setSchoolName(const std::string& entry) {
         schoolName = entry;
     }
 
-    // Accessors
+    // === Accessors ===
+
+    /**
+     * @brief Retrieves the administrator's title.
+     * @return Current administrator title.
+     */
     std::string Administrator::getAdminTitle() const {
         return adminTitle;
     }
 
+    /**
+     * @brief Retrieves the administrator's first name.
+     * @return First name string.
+     */
     std::string Administrator::getFirstName() const {
         return firstName;
     }
 
+    /**
+     * @brief Retrieves the administrator's last name.
+     * @return Last name string.
+     */
     std::string Administrator::getLastName() const {
         return lastName;
     }
 
+    /**
+     * @brief Retrieves the name of the school.
+     * @return School name string.
+     */
     std::string Administrator::getSchoolName() const {
         return schoolName;
     }
 
+    /**
+     * @brief Retrieves the administrator's password.
+     * @return Password string.
+     */
     std::string Administrator::getPassword() const {
         return password;
     }
 
-    //Add Students & Teachers
+    // === Other Member Functions ===
+
+    /**
+     * @brief Creates a new teacher classroom by gathering user input.
+     * @param gradebook Reference to the Gradebook instance.
+     *
+     * Repeatedly prompts for teacher details until confirmed,
+     * then adds the teacher to the gradebook.
+     */
     void Administrator::createClassroom(Gradebook& gradebook) {
         Teacher newTeacher;
 
@@ -72,6 +110,13 @@ namespace gradebook {
         menu(gradebook);
     }
 
+    /**
+     * @brief Adds a new student to a teacher's classroom after collecting details.
+     * @param gradebook Reference to the Gradebook instance.
+     *
+     * Prompts for student info, validates it, assigns student to teacher based on grade level,
+     * and saves to the gradebook.
+     */
     void Administrator::addStudent(Gradebook& gradebook) {
         auto& teachers = gradebook.getTeachers();
         if (teachers.empty()) {
@@ -113,7 +158,7 @@ namespace gradebook {
                 for (size_t i = 0; i < eligible.size(); ++i) {
                     std::cout << "  " << (i + 1) << ". "
                         << eligible[i]->getFirstName() << " "
-                        << eligible[i]->getLastName() << "\n";
+                        << eligible[i]->getLastName() << std::endl;
                 }
                 unsigned choice = numericValidator<unsigned>(
                     "Enter the number of the teacher: ", 1, eligible.size()
@@ -131,7 +176,7 @@ namespace gradebook {
                     << stored->getLastName()
                     << " assigned to "
                     << chosen->getFirstName() << " "
-                    << chosen->getLastName() << "!\n";
+                    << chosen->getLastName() << "!" << std::endl;
             }
 
             if (gradebook.isAutosaveEnabled()) {
@@ -148,6 +193,10 @@ namespace gradebook {
         menu(gradebook);
     }
 
+    /**
+     * @brief Prints a detailed school-wide report of all teachers and their students.
+     * @param gradebook Reference to the Gradebook instance.
+     */
     void Administrator::printSchoolReport(Gradebook& gradebook) const {
         const auto& teachers = gradebook.getTeachers();
 
@@ -179,7 +228,7 @@ namespace gradebook {
                 << std::setw(13) << "Letter Grade:"
                 << std::endl;
 
-            std::cout << std::string(81, '-') << "\n";
+            std::cout << std::string(81, '-') << std::endl;
 
             for (const Student* student : students) {
                 if (!student) continue;
@@ -191,12 +240,18 @@ namespace gradebook {
                     << std::setw(11) << student->getID()
                     << std::setw(16) << std::fixed << std::setprecision(2) << student->getGradePercent()
                     << std::setw(13) << student->getOverallGrade()
-                    << "\n";
+                    << std::endl;
             }
             std::cout << std::endl;
         }
     }
 
+    /**
+     * @brief Exports the school report to a CSV file named "SchoolReport.csv".
+     * @param gradebook Reference to the Gradebook instance.
+     *
+     * Writes all teachers and their students' information in CSV format.
+     */
     void Administrator::saveSchoolReportToCSV(Gradebook& gradebook) {
         std::ofstream file("SchoolReport.csv");
 
@@ -237,49 +292,55 @@ namespace gradebook {
         std::cout << "School data exported successfully to SchoolReport.csv." << std::endl;
     }
 
+    /**
+     * @brief Main menu loop for administrator actions.
+     * @param gradebook Reference to the Gradebook instance.
+     *
+     * Presents options and calls relevant Administrator functions based on user input.
+     */
     void Administrator::menu(Gradebook& gradebook) {
-            while (true) {
-                std::cout << "=== Administrator Menu ===\n";
-                std::cout << "1. Add Teacher." << std::endl;
-                std::cout << "2. Add Student." << std::endl;
-                std::cout << "3. Overwrite Administrator Profile." << std::endl;
-                std::cout << "4. Print School Report" << std::endl;
-                std::cout << "5. Save School Report to CSV" << std::endl;
-                std::cout << "6. Save All Work." << std::endl;
-                std::cout << "7. Toggle Autosave." << std::endl;
-                std::cout << "8. Log Out." << std::endl;
+        while (true) {
+            std::cout << "=== Administrator Menu ===" << std::endl;
+            std::cout << "1. Add Teacher." << std::endl;
+            std::cout << "2. Add Student." << std::endl;
+            std::cout << "3. Overwrite Administrator Profile." << std::endl;
+            std::cout << "4. Print School Report" << std::endl;
+            std::cout << "5. Save School Report to CSV" << std::endl;
+            std::cout << "6. Save All Work." << std::endl;
+            std::cout << "7. Toggle Autosave." << std::endl;
+            std::cout << "8. Log Out." << std::endl;
 
-                unsigned choice = numericValidator<unsigned>("Choose an option [1-8]: ", 1, 8);
+            unsigned choice = numericValidator<unsigned>("Choose an option [1-8]: ", 1, 8);
 
-                switch (choice) {
-                case 1:
-                   createClassroom(gradebook);
-                    break;
-                case 2:
-                    addStudent(gradebook);
-                    break;
-                case 3:
-                    gradebook.createSchool();
-                    break;
-                case 4:
-                    printSchoolReport(gradebook);
-                    break;
-                case 5:
-                    saveSchoolReportToCSV(gradebook);
-                    break;
-                case 6:
-                    gradebook.serializeAndSave();
-                    break;
-                case 7:
-                    gradebook.autosaveToggle();
-                    break;
-                case 8:
-                    welcomeMenu(gradebook);
-                    break;
-                default:
-                    std::cout << "Invalid selection. Please try again." << std::endl;
-                   return;
-                }
+            switch (choice) {
+            case 1:
+                createClassroom(gradebook);
+                break;
+            case 2:
+                addStudent(gradebook);
+                break;
+            case 3:
+                gradebook.createSchool();
+                break;
+            case 4:
+                printSchoolReport(gradebook);
+                break;
+            case 5:
+                saveSchoolReportToCSV(gradebook);
+                break;
+            case 6:
+                gradebook.serializeAndSave();
+                break;
+            case 7:
+                gradebook.autosaveToggle();
+                break;
+            case 8:
+                welcomeMenu(gradebook);
+                break;
+            default:
+                std::cout << "Invalid selection. Please try again." << std::endl;
+                return;
             }
+        }
     }
 }

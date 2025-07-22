@@ -1,3 +1,0 @@
-TODOs:
---templatized documentation for each function
---fix classroom instancing

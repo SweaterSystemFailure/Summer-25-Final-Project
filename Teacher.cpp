@@ -141,7 +141,6 @@ namespace gradebook {
 			assignment.setAssignmentName(stringValidator("Please enter the name of this assignment: "));
 			assignment.setAssignmentDescription(stringValidator("Please enter a description of this assignment: "));
 			assignment.setPointsPossible(numericValidator("Please enter the number of points it is possible to receive on this assignment: ", 1, 500));
-			assignment.printAssignments();
 		} while (!userCheck("Does this look right to you? [Y / N] ", "Great! Let's continue", "That's okay. Let's try again."));
 
 		assignments.push_back(assignment);
@@ -481,5 +480,4 @@ namespace gradebook {
 			}
 		}
 	}
-
 }

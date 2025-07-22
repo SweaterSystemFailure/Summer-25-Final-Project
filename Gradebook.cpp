@@ -7,34 +7,66 @@
 #include <iostream>
 #include <iomanip>
 #include <map>
-
+#include <unordered_map>
 
 namespace gradebook {
-    //Accessors
+
+    // === Accessors ===
+
+    /**
+     * @brief Gets a modifiable reference to the vector of administrators.
+     * @return Reference to vector of Administrator objects.
+     */
     std::vector<Administrator>& Gradebook::getSchool() {
         return school;
     }
+
+    /**
+     * @brief Gets a modifiable reference to the vector of teachers.
+     * @return Reference to vector of Teacher objects.
+     */
     std::vector<Teacher>& Gradebook::getTeachers() {
         return teachers;
     }
 
+    /**
+     * @brief Gets a const reference to the vector of teachers.
+     * @return Const reference to vector of Teacher objects.
+     */
     const std::vector<Teacher>& Gradebook::getTeachers() const {
         return teachers;
     }
 
+    /**
+     * @brief Gets a modifiable reference to the vector of students.
+     * @return Reference to vector of unique pointers to Student objects.
+     */
     std::vector<std::unique_ptr<Student>>& Gradebook::getStudents() {
         return students;
     }
 
+    /**
+     * @brief Gets a const reference to the vector of students.
+     * @return Const reference to vector of unique pointers to Student objects.
+     */
     const std::vector<std::unique_ptr<Student>>& Gradebook::getStudents() const {
         return students;
     }
 
+    /**
+     * @brief Returns whether autosave is currently enabled.
+     * @return True if autosave is enabled; false otherwise.
+     */
     bool Gradebook::isAutosaveEnabled() const {
         return autosaveEnabled;
     }
 
-    //Admin function
+    // === Admin Function ===
+
+    /**
+     * @brief Creates a new school setup with an administrator.
+     * If a school already exists, prompts to overwrite it.
+     */
     void Gradebook::createSchool() {
         if (!school.empty()) {
             std::cout << "A school and administrator already exist in the system." << std::endl;
@@ -75,12 +107,23 @@ namespace gradebook {
         std::cout << "School and administrator successfully created." << std::endl;
     }
 
-    //Save/Load Functions
+    // === Autosave Toggle ===
+
+    /**
+     * @brief Toggles the autosave feature on or off.
+     * Prints the current status after toggling.
+     */
     void Gradebook::autosaveToggle() {
         autosaveEnabled = !autosaveEnabled;
         std::cout << "Autosave " << (autosaveEnabled ? "enabled." : "disabled.") << std::endl;
     }
 
+    // === Serialization (Save) ===
+
+    /**
+     * @brief Serializes and saves the gradebook data to a binary file ("gradebook.dat").
+     * Saves administrators, students (with assignment scores), and teachers (with classroom assignments and assignments).
+     */
     void Gradebook::serializeAndSave() {
         std::ofstream outFile("gradebook.dat", std::ios::binary);
         if (!outFile) {
@@ -88,7 +131,7 @@ namespace gradebook {
             return;
         }
 
-        // Helper lambdas
+        // Helper lambdas to write various types
         auto writeString = [&](const std::string& str) {
             size_t len = str.size();
             outFile.write(reinterpret_cast<char*>(&len), sizeof(len));
@@ -171,6 +214,12 @@ namespace gradebook {
         std::cout << "Gradebook data saved to gradebook.dat.\n";
     }
 
+    // === Deserialization (Load) ===
+
+    /**
+     * @brief Loads and deserializes gradebook data from the binary file ("gradebook.dat").
+     * Clears existing data and populates administrators, students, and teachers accordingly.
+     */
     void Gradebook::deserializeAndLoad() {
         std::ifstream inFile("gradebook.dat", std::ios::binary);
         if (!inFile) {
@@ -178,12 +227,12 @@ namespace gradebook {
             return;
         }
 
-        // Clear existing data
+        // Clear existing data before loading
         school.clear();
         students.clear();
         teachers.clear();
 
-        // Helper lambdas
+        // Helper lambdas to read various types
         auto readString = [&](std::ifstream& f) {
             size_t len = 0;
             f.read(reinterpret_cast<char*>(&len), sizeof(len));
@@ -259,14 +308,14 @@ namespace gradebook {
             t.setGradeLevel(readUnsigned(inFile));
             t.setPassword(readString(inFile));
 
-            // Load student IDs
+            // Load student IDs assigned to teacher's classroom
             unsigned clsSize = readUnsigned(inFile);
             std::vector<unsigned> studentIDs(clsSize);
             for (unsigned j = 0; j < clsSize; ++j) {
                 studentIDs[j] = readUnsigned(inFile);
             }
 
-            // Load assignments
+            // Load assignments for the teacher
             unsigned asz = readUnsigned(inFile);
             for (unsigned j = 0; j < asz; ++j) {
                 Assignment a;
@@ -277,6 +326,8 @@ namespace gradebook {
 
             teachers.push_back(std::move(t));
             Teacher& refTeacher = teachers.back();
+
+            // Link students to teacher's classroom by ID lookup
             for (unsigned id : studentIDs) {
                 if (idToStudentPtr.count(id)) {
                     refTeacher.addStudentToClassroom(idToStudentPtr[id]);
@@ -288,6 +339,11 @@ namespace gradebook {
         std::cout << "Gradebook data loaded from gradebook.dat.\n";
     }
 
+    // === Clear Cached Data ===
+
+    /**
+     * @brief Clears all cached data in memory for teachers, students, and administrators.
+     */
     void Gradebook::clearCachedData() {
         teachers.clear();
         students.clear();
