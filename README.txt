@@ -12,4 +12,5 @@ It is meant to run in your local IDE.
 This program operates under the MIT open source license.
 It's author can be reached at Benjamin.S.Fagan@gmail.com.
 A review of code and functionality can be found on YouTube at: https://youtu.be/GPwEESVG2is
-Its supplamental deck can be found here: https://docs.google.com/presentation/d/1xkMuY1ufZt3mVyA0UNK4uyvlh26SYSvmP9gCAHaY3kY/edit?usp=sharing
+Its supplamental deck can be found in Google Slides here: https://docs.google.com/presentation/d/1xkMuY1ufZt3mVyA0UNK4uyvlh26SYSvmP9gCAHaY3kY/edit?usp=sharing
+And in pdf format here: https://drive.google.com/file/d/1Mit7kTV97dstIYLXUA4wKuvb2ZT10rvN/view?usp=sharing
